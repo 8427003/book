@@ -1,7 +1,8 @@
 {
     "plugins": [
         "blog",
-        "bilibili"
+        "bilibili",
+        "styles-less"
     ],
     "pluginsConfig": {}
 }
