@@ -1,6 +1,7 @@
 {
     "plugins": [
-        "blog"
+        "blog",
+        "bilibili"
     ],
     "pluginsConfig": {}
 }
