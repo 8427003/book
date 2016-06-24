@@ -2,7 +2,8 @@
     "plugins": [
         "blog",
         "bilibili",
-        "styles-less"
+        "styles-less",
+        "tbfed-theme"
     ],
     "pluginsConfig": {}
 }
