@@ -1,9 +1,0 @@
-{
-    "plugins": [
-        "blog",
-        "bilibili",
-        "styles-less",
-        "tbfed-theme"
-    ],
-    "pluginsConfig": {}
-}
