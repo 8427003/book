@@ -3,7 +3,6 @@
 这里主要是学习搭建配置，所有环境都在本机mac上进行。
 
 # nginx+hhvm 相关知识介绍
-
 1、hhvm是facebook搞的一个将php语言编译成中间代码，然后runtime解释执行一个东西。速度嘛听贴吧的一些rd哥哥说只能比php快几倍、10倍不到吧。但是这也是一个可优化的点。网上对hhvm的评价各有不一，有人认为没必要用这个。有人说php7出来可以取代这个。但是我看到百度的只要是php服务，基本都用了这个。
 
 2、apache接入php的方式是apache的一个模块。nginx接入其它第三方服务是通过它的fastcgi基本模块。php-fpm 是php自带的一个插件用来跟其它webserver接入用。php-fpm它是一个服务，socket服务。fastcgi是一个通讯协议。
