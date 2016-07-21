@@ -44,6 +44,7 @@ vpn 翻墙 brew install hhvm 安装，官方文档有具体安装方式。这里
 ```
 
 原本以为对于接入hhvm取消这里，然后再改改就可以。结果犯错了。
+
 a、注意每个语句后面有分号结束。
 
 b、fastcgi\_param SCRIPT\_FILENAME \/scripts$fastcgi\_script\_name; 路径不正确，使用hhvm文档的才对。主要是\/scripts 这里应该使用$document\_root.不然会报404 not find!
