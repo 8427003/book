@@ -66,3 +66,6 @@ g++ -I./include hello_world.cpp -o helloworld -L./out/native -lv8 -lv8_libbase -
 改为：
 #include "../v8-platform.h"
 ```
+参考：
+include 文件目录结构如下：
+![include](assets/inlcude.png)
