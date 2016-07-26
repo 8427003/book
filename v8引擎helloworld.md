@@ -42,3 +42,9 @@ snapshot=off 会编译快一点
 ```
 
 ## 4.编译helloworld
+
+```
+g++ -I./include hello_world.cpp -o helloworld -L./out/native -pthread -lv8 -lv8_libbase -lv8_libplatform
+
+
+```
