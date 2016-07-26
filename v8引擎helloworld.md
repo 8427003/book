@@ -61,8 +61,7 @@ g++ -I./include hello_world.cpp -o helloworld -L./out/native -lv8 -lv8_libbase -
 
 2、头文件include/libplatform/libplatform.h 里面代码依赖v8-platform.h需要改为正确的路径
 
-```
 #include "v8-platform.h" 
 改为：
 #include "../v8-platform.h"
-`
+```
