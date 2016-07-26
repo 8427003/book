@@ -44,7 +44,12 @@ snapshot=off 会编译快一点
 ## 4.编译helloworld
 
 ```
-g++ -I./include hello_world.cpp -o helloworld -L./out/native -pthread -lv8 -lv8_libbase -lv8_libplatform
+g++ -I./include hello_world.cpp -o helloworld -L./out/native -lv8 -lv8_libbase -lv8_libplatform
 
-
+说明：
+-I./include 指明头文件所在目录
+-L./out/native 指明链接库根目录
+-lv8 指明libv8.dylib v8动态链接库
+-lv8_libbase 指明libv8_libbase.a
+-lv8_libplatform
 ```
