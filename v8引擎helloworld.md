@@ -53,7 +53,16 @@ g++ -I./include hello_world.cpp -o helloworld -L./out/native -lv8 -lv8_libbase -
 -lv8_libbase 指明libv8_libbase.a
 -lv8_libplatform 指明libv8_libplatform.a
 
+```
 注意：
-libv8_libplatform.a 这个静态库在新版本的v8使用时是必须要的
+
+1、libv8_libplatform.a 这个静态库在新版本的v8使用时是必须要的
 这个库依赖libv8_libbase.a，所以二者都必须有。很多时候死在了这两个库没加上。
+
+2、头文件include/libplatform/libplatform.h 里面代码依赖v8-platform.h需要改为正确的目录
+
+```
+#include "v8-platform.h" 
+改为：
+#include "../v8-platform.h"
 ```
