@@ -51,5 +51,6 @@ g++ -I./include hello_world.cpp -o helloworld -L./out/native -lv8 -lv8_libbase -
 -L./out/native 指明链接库根目录
 -lv8 指明libv8.dylib v8动态链接库
 -lv8_libbase 指明libv8_libbase.a
--lv8_libplatform
+-lv8_libplatform 指明libv8_libplatform.a
+
 ```
