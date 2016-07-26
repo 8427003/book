@@ -32,7 +32,8 @@ v8引擎跟前端所用javascript语言密切相关。学习它有助于以后�
 make native -j4 library=shared snapshot=off
 
 说明：
-这里编译为了动态链接库。这个点比较重要。在mac上会得到一个libv8.dylib文件,linux是libv8.so.
+这里编译为了动态链接库。这个点比较重要。
+在mac上会得到一个libv8.dylib文件,linux是libv8.so.
 -j4 表示用4个线程来编译
 library=shared 表示编译成动态链接库
 snapshot=off 会编译快一点
