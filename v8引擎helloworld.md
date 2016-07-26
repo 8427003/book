@@ -28,3 +28,13 @@ v8引擎跟前端所用javascript语言密切相关。学习它有助于以后�
 ```
 ## 3.编译
 
+```
+make native -j4 library=shared snapshot=off
+
+说明：
+-j4 表示用4个线程来编译
+library=shared 表示编译成动态链接库
+snapshot=off 会编译快一点
+```
+更多请参照: [Building with Gyp](https://github.com/v8/v8/wiki/Building%20with%20Gyp)
+
