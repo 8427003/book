@@ -1,6 +1,7 @@
 # 背景
 
 v8引擎跟前端所用javascript语言密切相关。学习它有助于以后对node，以及浏览器内核学习。
+官方地址：https://developers.google.com/v8/
 
 # 目标
 
