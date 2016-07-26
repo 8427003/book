@@ -41,6 +41,13 @@ snapshot=off 会编译快一点
 更多参数请参照：https://github.com/v8/v8/wiki/Building%20with%20Gyp
 ```
 
+参考：
+
+include 文件目录结构如下：
+![include](./assets/include.png)
+
+build 后native目录结构如下：
+![include](./assets/native.png)
 ## 4.编译helloworld
 
 ```
@@ -66,6 +73,17 @@ g++ -I./include hello_world.cpp -o helloworld -L./out/native -lv8 -lv8_libbase -
 改为：
 #include "../v8-platform.h"
 ```
-参考：
-include 文件目录结构如下：
-![include](assets/inlcude.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
