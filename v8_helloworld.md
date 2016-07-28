@@ -47,11 +47,56 @@ snapshot=off 会编译快一点
 
 include 文件目录结构如下：
 
-![include](./assets/include.png)
+```
+├── libplatform
+│ └── libplatform.h
+├── v8-debug.h
+├── v8-experimental.h
+├── v8-platform.h
+├── v8-profiler.h
+├── v8-testing.h
+├── v8-util.h
+├── v8-version.h
+├── v8.h
+└── v8config.h
+```
 
 build 后native目录结构如下：
 
-![include](./assets/native.png)
+```
+├── cctest
+├── d8
+├── generate-bytecode-expectations
+├── hello-world
+├── icudtl.dat
+├── libfuzzer_support.a
+├── libgmock.a
+├── libgtest.a
+├── libicui18n.dylib
+├── libicuuc.dylib
+├── libjson_fuzzer_lib.a
+├── libparser_fuzzer_lib.a
+├── libregexp_fuzzer_lib.a
+├── libv8.dylib
+├── libv8_base.a
+├── libv8_libbase.a
+├── libv8_libplatform.a
+├── libv8_libsampler.a
+├── libv8_nosnapshot.a
+├── libwasm_asmjs_fuzzer_lib.a
+├── libwasm_fuzzer_lib.a
+├── obj
+├── obj.host
+├── obj.target
+├── process
+├── unittests
+├── v8_shell
+├── v8_simple_json_fuzzer
+├── v8_simple_parser_fuzzer
+├── v8_simple_regexp_fuzzer
+├── v8_simple_wasm_asmjs_fuzzer
+└── v8_simple_wasm_fuzzer
+```
 
 
 ## 4.编译helloworld
@@ -79,12 +124,6 @@ g++ -I./include hello_world.cpp -o helloworld -L./out/native -lv8 -lv8_libbase -
 改为：
 #include "../v8-platform.h"
 ```
-
-
-
-
-
-
 
 
 
