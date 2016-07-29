@@ -25,7 +25,16 @@
 
 ## 实践日志
 
+### 1.在.vimrc下怎加如下配置：
+
+```
+if has('persistent_undo') "check if your vim version supports it 
+    set undofile "turn on the feature 
+    set undodir=$HOME/.vim/undo "directory where the undo files will be stored 
+endif
+```
+
+### 2.一定要手动创建到```$HOME/.vim/undo```目录
 
 
-
-
+最后，尽情享受undo持久化吧。
