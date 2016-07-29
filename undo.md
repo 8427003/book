@@ -25,7 +25,7 @@
 
 ## 实践日志
 
-### 1.在.vimrc下加如下配置：
+### 1.在.vimrc加如下配置：
 
 ```
 if has('persistent_undo') "check if your vim version supports it 
