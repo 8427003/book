@@ -40,15 +40,14 @@ If-None-Match:W/"57512c91-986b"
 
 # Last-Modified vs Etag
 
-https:\/\/www.w3.org\/Protocols\/rfc2616\/rfc2616-sec13.html\#sec13.3.1
+https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html#sec13.3.1
+
 
 不同点：
 
 1.Last-modified 是一个秒级修改；Etag不受秒级时间限制，可以表示更精确的时间修改。
 
 2.Etag类似于对文件作hash，是一个比last-modified更消耗性能的操作。
-
-
 
 其它：
 
