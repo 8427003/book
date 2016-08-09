@@ -58,12 +58,12 @@ https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html#sec13.3.1
 
 
 
-注意：
+# 注意：
 
 在测试这些时，浏览器的不同行为会导致不同的缓存效果。比如：后退，f5刷新，强制刷新，已经输入url敲击回车。
 
 
-参考：
+# 参考：
 
 https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching?hl=zh-cn
 
