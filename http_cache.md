@@ -26,7 +26,8 @@ If-None-Match:W/"57512c91-986b"
 
 # Expires vs Cache-Control: max-age
 
-[https:\/\/www.w3.org\/Protocols\/rfc2616\/rfc2616-sec14.html\#sec14.9](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9)
+https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9
+
 
 不同点：
 
@@ -42,7 +43,8 @@ If-None-Match:W/"57512c91-986b"
 
 # Last-Modified vs Etag
 
-[https:\/\/www.w3.org\/Protocols\/rfc2616\/rfc2616-sec13.html\#sec13.3.1](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html#sec13.3.1)
+https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html#sec13.3.1
+
 
 不同点：
 
