@@ -26,7 +26,7 @@ If-None-Match:W/"57512c91-986b"
 
 # Expires vs Cache-Control: max-age
 
-https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9
+[https:\/\/www.w3.org\/Protocols\/rfc2616\/rfc2616-sec14.html\#sec14.9](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9)
 
 不同点：
 
@@ -42,8 +42,7 @@ https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9
 
 # Last-Modified vs Etag
 
-https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html#sec13.3.1
-
+[https:\/\/www.w3.org\/Protocols\/rfc2616\/rfc2616-sec13.html\#sec13.3.1](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html#sec13.3.1)
 
 不同点：
 
@@ -54,4 +53,21 @@ https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html#sec13.3.1
 其它：
 
 如果他们俩同时被使用，二者都会被check，是一个“且”的关系。有文章说是Last-modifed && Etag，先检查Last-modifed再检查Etag（http协议规范中并没有严格规定），雅虎有个优化建议，直接去掉Etag，qunar网有些资源只有Last-modifed，没有Etag。
+
+
+
+注意：
+
+在测试这些时，浏览器的不同行为会导致不同的缓存效果。比如：后退，f5刷新，强制刷新，已经输入url敲击回车。
+
+
+参考：
+
+https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching?hl=zh-cn
+
+https://www.mnot.net/blog/2007/05/15/expires_max-age
+
+https://bryantsai.com/http-caching/
+
+
 
