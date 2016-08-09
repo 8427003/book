@@ -26,6 +26,8 @@ If-None-Match:W/"57512c91-986b"
 
 # Expires vs Cache-Control: max-age
 
+https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9
+
 不同点：
 
 1.Cache-Control: max-age 是http1.1重定义的, Expires是http1.0定义的。
