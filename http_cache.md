@@ -34,13 +34,11 @@ If-None-Match:W/"57512c91-986b"
 
 3.Cache-Control:max-age精确到秒，是一个数值；Expires：虽然也是秒级，但是一个时间字符串，eg：Wed, 17 Aug 2016 06:10:11 GMT，格式比较严格。
 
-
-
 其它：
 
 为了避免混乱，通常会将两者值设置为表达同样的时长。而且为了较好兼容http1.0,一般两者一同使用。
 
-# Last-Modified vs Etag 
+# Last-Modified vs Etag
 
 不同点：
 
