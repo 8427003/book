@@ -32,7 +32,7 @@ If-None-Match:W/"57512c91-986b"
 
 2.当两者同时出现时，Cache-Control优先级高于Expires。
 
-3.Cache-Control:max-age精确到秒，是一个数值；Expires：虽然也是秒级，但是一个时间字符串，eg：Wed, 17 Aug 2016 06:10:11 GMT，格式比较严格。
+3.Cache-Control:max-age精确到秒，是一个数值；Expires：虽然也是秒级，但是一个时间字符串，eg：Wed, 17 Aug 2016 06:10:11 GMT，格式比较严格。比如06:10:11，误写为6:10:11都是不允许的（格式严格，是有一些文章中有讨论到，这里没有作求证）。
 
 其它：
 
