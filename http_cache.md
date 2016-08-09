@@ -54,7 +54,7 @@ https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html#sec13.3.1
 
 其它：
 
-如果他们俩同时被使用，二者都会被check，是一个“且”的关系。有文章说是Last-modifed && Etag，先检查Last-modifed再检查Etag（http协议规范中并没有严格规定），雅虎有个优化建议，直接去掉Etag，qunar网有些资源只有Last-modifed，没有Etag。
+如果他们俩同时被使用，二者都会被check，是一个“且”的关系。有文章说是Last-modifed && Etag，先检查Last-modifed再检查Etag（http协议规范中并没有严格规定）。雅虎有个优化建议，直接去掉Etag，qunar网有些资源只有Last-modifed，没有Etag。
 
 
 
