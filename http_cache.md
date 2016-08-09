@@ -40,15 +40,17 @@ If-None-Match:W/"57512c91-986b"
 
 # Last-Modified vs Etag
 
+https:\/\/www.w3.org\/Protocols\/rfc2616\/rfc2616-sec13.html\#sec13.3.1
+
 不同点：
 
 1.Last-modified 是一个秒级修改；Etag不受秒级时间限制，可以表示更精确的时间修改。
 
 2.Etag类似于对文件作hash，是一个比last-modified更消耗性能的操作。
 
-3.Last-modifed 是http1.1，Etag是http1.0定义的。
+
 
 其它：
 
-如果他们俩同时被使用，二者都会被check，是一个“且”的关系。有文章说是Last-modifed && Etag，先检查Last-modifed再检查Etag.雅虎有个优化建议，直接去掉Etag，qunar网有些资源只有Last-modifed，没有Etag。
+如果他们俩同时被使用，二者都会被check，是一个“且”的关系。有文章说是Last-modifed && Etag，先检查Last-modifed再检查Etag（http协议规范中并没有严格规定），雅虎有个优化建议，直接去掉Etag，qunar网有些资源只有Last-modifed，没有Etag。
 
