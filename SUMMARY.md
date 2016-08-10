@@ -10,4 +10,5 @@
     * [php+hhvm](php.md)
 * [前端基础](front_end_base.md)
     * [http缓存](http_cache.md)
+    * [如何排查bug](如何排查bug.md)
 
