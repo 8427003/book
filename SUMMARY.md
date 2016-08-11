@@ -11,5 +11,5 @@
 * [前端基础](front_end_base.md)
     * [http缓存](http_cache.md)
     * [如何排查bug](debug_bug.md)
-    * [bigpipe与http协议头关系](bigpipe.md)
+    * [bigpipe实现与http协议头关系](bigpipe.md)
 
