@@ -99,3 +99,20 @@ require('net').createServer(function(sock) {
 
 yahoo:Best Practices for Speeding Up Your Web Site
 https://developer.yahoo.com/performance/rules.html
+
+http://www.cnblogs.com/xpress/archive/2011/07/21/2112382.html
+
+http://www.cnblogs.com/CareySon/archive/2012/04/27/HTTP-Protocol.html
+
+http://www.kafsemo.org/2015/01/03_talking-HTTP-0.9,1.0,1.1.html
+
+http://stackoverflow.com/questions/10723812/if-a-http-1-0-client-requests-connection-keep-alive-will-it-understand-chunked
+
+https://www.byvoid.com/blog/http-keep-alive-header 翻墙打开
+
+https://tools.ietf.org/html/rfc2068#section-19.7.1
+
+https://www.w3.org/Protocols/HTTP/1.0/spec.html#Augmented-BNF
+
+https://www.w3.org/Protocols/rfc2616/rfc2616.html#Augmented-BNF
+
