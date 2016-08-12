@@ -49,7 +49,7 @@ http1.1长连接时，可以用
 Content-Length 或 Transfer-Encoding: chunked
 
 ```
-其中一个。两个同时使用时，Transfer-Encoding: chunked优先级高。
+其中一个。两个同时使用时，Transfer-Encoding: chunked 优先级高。
 # 参考
 
 yahoo:Best Practices for Speeding Up Your Web Site
