@@ -16,9 +16,9 @@ echo "b";
 
 那为何还要bigpipe呢？虽然传统技术能优化这样的“白屏”时间问题。但是server能先传递字符“b”，再传递字符“a”么？显然不行。这样的话client渲染时数据“b”就在数据"a"前面了，渲染顺序就与逻辑期望的不一致了。bigpipe实现需要前后端结合，它能够灵活解决渲染顺序问题，甚至是优先级问题。
 
-# bigpipe 与 Transfer-Encoding: chunked 什么关系，http0.9能实现bigpipe么？
 
-## http0.9 vs http1.0 vs http1.1 
+
+# http0.9 vs http1.0 vs http1.1 
 0.9只支持get请求，1.0相比0.9多了post请求，1.1相比1.0没太多本质上的改变。http最开始是不支持长连接的。从1.0开始，加入了
 ```
 Connection: keep-alive
