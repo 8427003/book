@@ -19,7 +19,7 @@ echo "b";
 # bigpipe 与 Transfer-Encoding: chunked 什么关系，http0.9能实现bigpipe么？
 
 ## http0.9 vs http1.0 vs http1.1 
-0.9
+0.9只支持get请求，1.0相比0.9多了post请求。
 
 # 参考
 
