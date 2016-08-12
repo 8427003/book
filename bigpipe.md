@@ -50,9 +50,9 @@ Content-Length 或 Transfer-Encoding: chunked
 
 ```
 其中一个。两个同时使用时，Transfer-Encoding: chunked 优先级高。
-具体使用参考
 
-https://imququ.com/post/transfer-encoding-header-in-http.html
+# Content-Length vs Transfer-Encoding: chunked
+
 
 # bigpipe 与 Transfer-Encoding: chunked 什么关系
 
