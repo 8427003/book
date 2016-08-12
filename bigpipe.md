@@ -116,7 +116,7 @@ bigpipe测试时有很多缓存控制。比如nginx，或者webserver的，浏�
 # 参考
 
 yahoo:Best Practices for Speeding Up Your Web Site
-[https:\/\/developer.yahoo.com\/performance\/rules.html](https://developer.yahoo.com/performance/rules.html)
+https://developer.yahoo.com/performance/rules.html
 
 [http:\/\/www.cnblogs.com\/xpress\/archive\/2011\/07\/21\/2112382.html](http://www.cnblogs.com/xpress/archive/2011/07/21/2112382.html)
 
