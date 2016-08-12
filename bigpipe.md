@@ -54,6 +54,9 @@ Content-Length 或 Transfer-Encoding: chunked
 
 https://imququ.com/post/transfer-encoding-header-in-http.html
 
+# bigpipe 与 Transfer-Encoding: chunked 什么关系
+
+现在的
 
 # 参考
 
