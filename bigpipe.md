@@ -62,7 +62,10 @@ Content-Length 或 Transfer-Encoding: chunked
 
 ```
 而
-Content-Length 显然不适合使用。因为server不能一开始就知道整个需要传递的页面的总大小。
+Content-Length 显然不适合使用。因为server不能一开始就知道整个需要传递的页面的总大小。所以只能是
+```
+Transfer-Encoding: chunked
+```
 
 # 参考
 
