@@ -67,6 +67,8 @@ Content-Length 显然不适合使用。因为server不能一开始就知道整�
 Transfer-Encoding: chunked
 ```
 
+但是如果不考虑长连接，bigpipe是照样可以使用的。因为socket，flush一次，server端就会向client传递数据，client就能把这次的数据渲染出来。并非等待整个页面数据都传递给了client端，client端才开始渲染。
+
 # 参考
 
 yahoo:Best Practices for Speeding Up Your Web Site
