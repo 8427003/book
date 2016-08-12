@@ -63,7 +63,7 @@ Content-Length 或 Transfer-Encoding: chunked
 https://imququ.com/post/transfer-encoding-header-in-http.html
 
 
-# bigpipe 与 Transfer-Encoding: chunked 什么关系
+# bigpipe 与 Transfer-Encoding: chunked 什么关系,http0.9能实现bigpipe吗？
 
 现在使用http协议基本都是长连接。那么在长连接下只能使用
 ```
