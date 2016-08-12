@@ -40,7 +40,8 @@ Content-Length 和 Transfer-Encoding: chunked
 
 http1.0 在长连接时，必须要加
 ```
-Transfer-Encoding: chunked
+Content-Length
+
 ```
 
 # 参考
