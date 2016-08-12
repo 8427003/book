@@ -6,3 +6,7 @@
 
 衡量一个页面的性能，其中一个重要指标，是这个页面“白屏”时间。这与yahoo的优化建议```Flush the Buffer Early```有相似之处。
 
+# 参考
+
+yahoo:Best Practices for Speeding Up Your Web Site
+https://developer.yahoo.com/performance/rules.html
