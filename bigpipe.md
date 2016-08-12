@@ -71,7 +71,8 @@ Content-Length 或 Transfer-Encoding: chunked
 现在基本所有文档类型为text\/html的资源在http1.1下都是使用Transfer-Encoding: chunked。可以看看百度首页，任意其它页面。
 
 这两种方式具体使用可以参考：
-[https:\/\/imququ.com\/post\/transfer-encoding-header-in-http.html](https://imququ.com/post/transfer-encoding-header-in-http.html)
+
+https://imququ.com/post/transfer-encoding-header-in-http.html
 
 # bigpipe 与 Transfer-Encoding: chunked 什么关系,http0.9能实现bigpipe吗？
 
