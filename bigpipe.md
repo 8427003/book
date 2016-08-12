@@ -19,7 +19,15 @@ echo "b";
 # bigpipe 与 Transfer-Encoding: chunked 什么关系，http0.9能实现bigpipe么？
 
 ## http0.9 vs http1.0 vs http1.1 
-0.9只支持get请求，1.0相比0.9多了post请求，1.1相比1.0没太多本质上的改变。
+0.9只支持get请求，1.0相比0.9多了post请求，1.1相比1.0没太多本质上的改变。http最开始是不支持长连接的。从1.0开始，加入了
+```
+Connection: keep-alive
+```
+所以各位兄弟姐妹，请记住了这个头不是1.1提出的。现在的http协议基本都是1.1。除非显示加上
+```
+Connection: close
+```
+
 
 # 参考
 
