@@ -68,7 +68,7 @@ Content-Length 或 Transfer-Encoding: chunked
 
 比如ui层需要返回一个页面数据，这个页面数据由三块构成，每块数据源都是call远程服务而获得。这个时候可以等三块数据都ready了，然后计算个总的大小用content-length。但这种白屏时间就比较久，不是一个很好的方案。此时就可以用Transfer-Encoding: chunked。每当有一块ready了，就传输给client端，让它渲染（假设渲染效果没有顺序要求）。
 
-现在基本所有文档类型为text\/html的资源在http1.1下都是使用Transfer-Encoding: chunked。可以看看百度首页，任意其它页面。
+现在基本所有文档类型为text/html的资源在http1.1下都是使用Transfer-Encoding: chunked。可以看看百度首页，任意其它页面。
 
 这两种方式具体使用可以参考：
 
