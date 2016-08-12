@@ -12,7 +12,7 @@ sleep(1);
 echo "b";
 ```
 
-当server向client传递
+当server向client传递数据时，我们很容易让server先传字符“a",然后client端渲染字符“a”，当传递“b”时，再渲染“b”。并不需要server把字符“a”、“b”都收集完后整个传递给client端。
 
 # 参考
 
