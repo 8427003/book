@@ -57,7 +57,8 @@ Content-Length 或 Transfer-Encoding: chunked
 
 当数据是动态，又急需要将部分数据返回给客户端时，举个例子：
 
-比如ui层需要返回一个页面数据，这个页面数据由三块构成，每块数据源都是call持久层服务而获得。这个时候可以等三块数据都ready了，然后计算个总的大小用content-length。
+比如ui层需要返回一个页面数据，这个页面数据由三块构成，每块数据源都是call持久层服务而获得。这个时候可以等三块数据都ready了，然后计算个总的大小用content-length。但这种白屏时间就比较久，不是一个很好的方案。此时就可以用Transfer-Encoding: chunked
+
 
 
 # bigpipe 与 Transfer-Encoding: chunked 什么关系
