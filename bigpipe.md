@@ -12,7 +12,7 @@ sleep(1);
 echo "b";
 ```
 
-当server向client传递数据时，我们很容易让server先传字符“a",然后client端渲染字符“a”，当传递“b”时，再渲染“b”。并不需要server把字符“a”、“b”都收集完后才整个传递给client端，client从来没这样要求过。在于开发者怎么优化。
+当server向client传递数据时，我们很容易让server先传字符“a",然后client端渲染字符“a”，当传递“b”时，再渲染“b”。并不需要server把字符“a”、“b”都收集完后才整个传递给client端，client从来没这样要求过。在于开发者怎么优化了。
 
 那为何还要bigpipe呢？bigpipe
 
