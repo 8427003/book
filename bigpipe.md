@@ -73,13 +73,15 @@ Transfer-Encoding: chunked
 ```
 var a = "xxxxxxxx" // 多点数据，因为浏览器有buffer,多于1024个字符。
 var c = "123456789";
-require('net').createServer(function(sock) {            sock.on('data', function(data) { 
-sock.write('HTTP/1.1 200 OK\r\n'); 
-sock.write('Content-Length: '+a.length+9*2+'\r\n'); sock.write('\r\n'); 
-sock.write(a); 
-setInterval(function (){ 
-sock.write(c); }, 3000) 
-});
+require('net').createServer(function(sock) {            
+    sock.on('data', function(data) { 
+    sock.write('HTTP/1.1 200 OK\r\n'); 
+    sock.write('Content-Length: '+a.length+9*2+'\r\n');
+    sock.write('\r\n'); 
+    sock.write(a); 
+    setInterval(function (){ 
+        sock.write(c); }, 3000) 
+    });
 }).listen(9090, '127.0.0.1');
 
 ```
