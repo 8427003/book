@@ -4,7 +4,7 @@
 
 # bigpipe 解决了什么问题
 
-衡量一个页面的性能，其中一个重要指标，是这个页面“白屏”时间。这与yahoo的优化建议```Flush the Buffer Early```有相似之处。其实在传统的web实现技术中，我们已经这样干了：
+衡量一个页面的性能，其中一个重要指标，是这个页面“白屏”时间。这与yahoo的优化建议```Flush the Buffer Early```有相似之处。其实我们可以用传统的web技术就能实现是这个优化：
 
 ```
 echo "a";
@@ -12,7 +12,7 @@ sleep(1);
 echo "b";
 ```
 
-
+当server向client传递
 
 # 参考
 
