@@ -95,7 +95,7 @@ require('net').createServer(function(sock) {
 
 ```
 # 注意
-bigpipe测试时有很多缓存控制
+bigpipe测试时有很多缓存控制。比如nginx，或者webserver的，浏览器也有1024字符。
 
 # 参考
 
