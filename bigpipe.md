@@ -56,7 +56,13 @@ https://imququ.com/post/transfer-encoding-header-in-http.html
 
 # bigpipe 与 Transfer-Encoding: chunked 什么关系
 
-现在使用http协议基本都是长连接。
+现在使用http协议基本都是长连接。那么在长连接下只能使用
+```
+Content-Length 或 Transfer-Encoding: chunked
+
+```
+而
+Content-Length 显然不适合使用。因为server不能一开始就知道
 
 # 参考
 
