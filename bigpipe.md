@@ -104,8 +104,8 @@ require('net').createServer(function(sock) {
     sock.write('\r\n'); 
     sock.write(a); 
     setInterval(function (){ 
-        sock.write(c); }, 3000) 
-    });
+        sock.write(c); 
+    }, 3000);
 }).listen(9090, '127.0.0.1');
 
 ```
