@@ -94,6 +94,8 @@ require('net').createServer(function(sock) {
 }).listen(9090, '127.0.0.1');
 
 ```
+# 注意
+bigpipe测试时有很多缓存控制
 
 # 参考
 
