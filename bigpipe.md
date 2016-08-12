@@ -56,7 +56,7 @@ https://imququ.com/post/transfer-encoding-header-in-http.html
 
 # bigpipe 与 Transfer-Encoding: chunked 什么关系
 
-现在的
+现在的http协议基本都是长连接。
 
 # 参考
 
