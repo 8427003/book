@@ -29,6 +29,9 @@ Connection: close
 ```
 http1.1默认是长连接。
 
+### http 长连接
+
+
 # 参考
 
 yahoo:Best Practices for Speeding Up Your Web Site
