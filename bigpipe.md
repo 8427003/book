@@ -76,7 +76,7 @@ Content-Length 显然不适合使用。因为server不能一开始就知道整�
 Transfer-Encoding: chunked
 ```
 
-但是如果不考虑长连接，bigpipe是照样可以在http1.0甚至是http0.9使用的。因为socket，flush一次，server端就会向client传递数据，client就能把这次的数据渲染出来。并非等待整个页面数据都传递给了client端，client端才开始渲染。这与文章开始讨论 “bigpipe 解决了什么问题”一个原理。
+但是如果不考虑长连接，bigpipe是照样可以在http1.0甚至是http0.9使用的。因为socket，flush一次，server端就会向client传递数据，client就能把这次的数据渲染出来。并非等待整个页面数据都传递给了client端，client端才开始渲染。这与文章开始讨论 “bigpipe 解决了什么问题”涉及知识一样。
 
 以下是个实际例子：
 
