@@ -27,7 +27,7 @@ Connection: keep-alive
 ```
 Connection: close
 ```
-
+http1.1默认是长连接。
 
 # 参考
 
