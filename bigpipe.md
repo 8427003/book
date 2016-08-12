@@ -18,7 +18,8 @@ echo "b";
 
 # bigpipe 与 Transfer-Encoding: chunked 什么关系，http0.9能实现bigpipe么？
 
-http目前为止至少有三个版本。0.9,1.0,1.1
+## http0.9 vs http1.0 vs http1.1 
+0.9
 
 # 参考
 
