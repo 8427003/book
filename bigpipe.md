@@ -37,6 +37,7 @@ Content-Length 和 Transfer-Encoding: chunked
 
 ```
 这两种方式都可以标识不再需要数据传递，这个连接可以放到空闲池，以备它用。
+
 http1.0 在长连接时，必须要加
 ```
 Transfer-Encoding: chunked
