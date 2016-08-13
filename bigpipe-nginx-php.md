@@ -24,4 +24,8 @@ echo str_pad('world', 10000, ' ');
 Nginx对于网络请求会通过buffer进行优化，在反向代理层有proxy_buffer，在fastcgi层有fastcgi_buffer。
 由于buffer的存在，如果包比较小的话BigPipe的chunked输出很可能会被buffer住。针对这种情况，一般来说有三种方式。
 
+1.使用strpad这类函数进行填充，如：填充字符。永远将一次flush的数据填充到buffer_size。（如简单Demo所示）
 
+2.调小buffer，让数据更容易达到buffer_size。
+
+3.关闭buffer（按需）。
