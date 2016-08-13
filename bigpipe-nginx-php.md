@@ -87,6 +87,9 @@ fastcgi_param HTTP_VERSION 1.1;
 能够正常支持gzip。
 
 # 其它知识参考
+### php flush vs ob_flush
+
+
 
 
 
