@@ -20,9 +20,6 @@ echo str_pad('world', 10000, ' ');
 ```
 进行字符填充后，BigPipe效果显现了出来，hello之后过1秒后会才会出现world。
 
-
----
-
 # nginx
 Nginx对于网络请求会通过buffer进行优化，在反向代理层有proxy_buffer，在fastcgi层有fastcgi_buffer。
 由于buffer的存在，如果包比较小的话BigPipe的chunked输出很可能会被buffer住。针对这种情况，一般来说有三种方式。
@@ -85,3 +82,6 @@ fastcgi_param HTTP_VERSION 1.1;
 ```
 
 注意：在实践中，我并没有在nginx的配置里面加上这个参数配置，一样可以实现分段输出。也许是跟hhvm版本相关，这里并未进一步求证。
+
+# gzip
+能够正常支持gzip。
