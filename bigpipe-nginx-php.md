@@ -47,3 +47,19 @@ Nginx对于网络请求会通过buffer进行优化，在反向代理层有proxy_
 http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_buffering
 
 http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_buffering
+
+然而，这样带来了一个问题。线上运行中的Nginx 1.4.4版本过低，关闭proxy_buffer的指令proxy_buffering off指令原生就支持。而关闭fastcgi_buffer的fastcgi_buffering off指令需要1.5.6版本。所以百度Nginx技术小组提供的包中，1.7.8版本符合要求，我们首先需要把Nginx版本升级到了1.7.8。
+
+
+为了将影响面做得最小，只需要关闭特定模块的buffer。改nginx.conf固然可以实现，不过对于不支持嵌套if的nginx.conf来说这是个很不便捷的用法。我们可以使用X-Accel-Buffering指令按需关闭buffer。
+即从nginx的文档中我们发现
+
+_Buffering can also be enabled or disabled by passing “yes” or “no” in the “X-Accel-Buffering” response header field. This capability can be disabled using the fastcgi_ignore_headers directive._
+
+这两种buffer我们都可以配置上完全不用关闭buffer，只需要在php代码中加header把buffer优雅关闭。
+
+```
+header('X-Accel-Buffering: no');
+
+```
+
