@@ -63,3 +63,15 @@ header('X-Accel-Buffering: no');
 
 ```
 
+即最终demo：
+
+```
+header('X-Accel-Buffering: no');
+echo 'hello';
+flush();
+ob_flush();
+sleep(1);
+echo 'world';
+
+```
+# hhvm
