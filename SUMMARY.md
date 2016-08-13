@@ -12,4 +12,5 @@
     * [http缓存](http_cache.md)
     * [如何排查bug](debug_bug.md)
     * [bigpipe实现理论背景篇](bigpipe.md)
+    * [bigpipe-php+nginx实战篇](bigpipe-nginx-php.md)
 
