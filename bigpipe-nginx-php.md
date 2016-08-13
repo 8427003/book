@@ -93,7 +93,13 @@ ob_flush是flush高级缓存，
 
 flush 是flush低级缓存。
 
-一般二者须同时使用，先ob_flush，将高级缓存输出到低级缓存，再flush低级缓存。只flush低级缓存，不先flush高级缓存，低级缓存是没有东西可flush的。
+一般二者须同时使用，先ob_flush，将高级缓存输出到低级缓存，再flush低级缓存。只flush低级缓存，不先flush高级缓存，低级缓存是没有东西可flush的。注意调用顺序。参考
+
+http://stackoverflow.com/questions/4191385/php-buffer-ob-flush-vs-flush
+
+http://php.net/manual/zh/function.ob-flush.php#109314
+
+
 
 
 
