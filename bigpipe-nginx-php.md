@@ -34,7 +34,7 @@ Nginx对于网络请求会通过buffer进行优化，在反向代理层有proxy_
 3.关闭buffer（按需）。
 
 
-## 如何选择：
+##### 如何选择：
 
 第一种方式，不用调整buffer，但这种方式很不优雅，而且增加了带宽，并不是很合理。
 
@@ -42,7 +42,7 @@ Nginx对于网络请求会通过buffer进行优化，在反向代理层有proxy_
 
 因此，我们选择了对于frsui模块按需关闭proxy_buffer和fastcgi_buffer。
 
-## 详见：
+##### 详见：
 
 http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_buffering
 
