@@ -16,3 +16,4 @@ ob_flush();
 sleep(1);
 echo str_pad('world', 10000, ' ');
 ```
+进行字符填充后，BigPipe效果显现了出来，hello之后过1秒后会才会出现world。
