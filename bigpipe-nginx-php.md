@@ -1,6 +1,6 @@
 # php实现分段输出demo
 
-最简单demo：
+最简单demo:
 ```
 echo 'hello';
 flush();
