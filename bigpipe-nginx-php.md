@@ -3,8 +3,8 @@
 最简单demo:
 ```
 echo 'hello';
-flush();
 ob_flush();
+flush();
 sleep(1);
 echo 'world';
 ```
@@ -13,8 +13,8 @@ echo 'world';
 改进后demo:
 ```
 echo str_pad('hello', 10000, ' ');
-flush();
 ob_flush();
+flush();
 sleep(1);
 echo str_pad('world', 10000, ' ');
 ```
@@ -65,8 +65,8 @@ header('X-Accel-Buffering: no');
 ```
 header('X-Accel-Buffering: no');
 echo 'hello';
-flush();
 ob_flush();
+flush();
 sleep(1);
 echo 'world';
 
@@ -89,6 +89,11 @@ fastcgi_param HTTP_VERSION 1.1;
 # 其它知识参考
 ### php flush vs ob_flush
 
+ob_flush是flush高级缓存，
+
+flush 是flush低级缓存。
+
+二者须同时使用，先ob_flush，将高级缓存输出到低级缓存，再flush低级缓存。只flush低级缓存，不先flush高级缓存，低级缓存是没有东西可flush的。
 
 
 
