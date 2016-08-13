@@ -86,6 +86,9 @@ fastcgi_param HTTP_VERSION 1.1;
 # gzip
 能够正常支持gzip。
 
+# 其它知识参考
+
+
 
 # 文章来源
 转载于@David Zhang贴吧bigpipe迁移技术文档，本人加了些实践备注。
