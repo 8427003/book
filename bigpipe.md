@@ -110,6 +110,7 @@ require('net').createServer(function(sock) {
 }).listen(9090, '127.0.0.1');
 
 ```
+#### 结论：bigpipe只依赖于是否能分段输出，而socket本身就具有这样的能力。
 
 # 注意
 
