@@ -1,5 +1,6 @@
-# php实现分段输出最简单demo
+# php实现分段输出demo
 
+最简单demo
 ```
 echo 'hello';
 flush();
@@ -19,4 +20,7 @@ echo str_pad('world', 10000, ' ');
 进行字符填充后，BigPipe效果显现了出来，hello之后过1秒后会才会出现world。
 
 #nginx
+Nginx对于网络请求会通过buffer进行优化，在反向代理层有proxy_buffer，在fastcgi层有fastcgi_buffer。
+由于buffer的存在，如果包比较小的话BigPipe的chunked输出很可能会被buffer住。针对这种情况，一般来说有三种方式。
+
 
