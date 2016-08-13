@@ -10,7 +10,7 @@ echo 'world';
 ```
 这是一个最简单的BigPipe demo，然而由于fastcgi_buffer的存在，并不能看到分段输出的效果。那么，我们把程序进行一下改动，用str_pad填充一些字符以达到buffer。
 
-改进后demo：
+改进后demo:
 ```
 echo str_pad('hello', 10000, ' ');
 flush();
