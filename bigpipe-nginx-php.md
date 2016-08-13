@@ -74,4 +74,14 @@ sleep(1);
 echo 'world';
 
 ```
-# hhvm
+
+
+# hhvm 
+hhvm本身支持HTTP 1.1，但实际测试并没有效果，经过hhvm小组的诊断，需要修改ORP Runtime Webserver配置：
+
+```
+fastcgi_param HTTP_VERSION 1.1;
+
+```
+
+注意：在实践中，我并没有在nginx的配置里面加上这个参数配置，一样可以实现分段输出。
