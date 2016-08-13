@@ -29,3 +29,5 @@ Nginx对于网络请求会通过buffer进行优化，在反向代理层有proxy_
 2.调小buffer，让数据更容易达到buffer_size。
 
 3.关闭buffer（按需）。
+
+第一种方式，不用调整buffer，但这种方式很不优雅，而且增加了带宽，并不是很合理。至于调小buffer，这看起来是一个很好的思路，然而对于gzip过的数据来说，最小的buffer可能也比较大(补充：即使你把buffer设置得很小，但是gzip过后，这个值也相对较大）。因此，我们选择了对于frsui模块按需关闭proxy_buffer和fastcgi_buffer。
