@@ -1,5 +1,5 @@
 # h5适配问题
-手机屏幕有大小之分。比如iphone4屏幕就比iphone6plus小。这个小是指屏幕的width和height小。我们很期望当一个图形在iphone4上展示时稍微符合phone4的屏幕大小，较在iphone6plus上展示小。
+手机屏幕有大小之分。比如iphone4屏幕就比iphone6plus小。这个小是指屏幕的width和height小。我们很期望当一个图形在iphone4上展示时稍微小，较在iphone6plus上展示小。
 
 
 # 认识 px、dp、dip、dpi、sp
