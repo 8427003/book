@@ -1,5 +1,5 @@
 # h5适配问题
-假如一个h5页面里有一个长约10px的长方形。
+手机屏幕有大小之分。比如iphone4屏幕就比iphone6plus小。这个小
 
 
 # 认识 px、dp、dip、dpi、sp
