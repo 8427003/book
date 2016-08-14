@@ -1,7 +1,6 @@
 # h5适配问题
 
 # 认识 px、dp、dip、dpi、sp
-
 # 认识viewport
 # 小数像素问题
 # rem方案适配
