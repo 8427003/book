@@ -13,5 +13,5 @@
     * [bigpipe实现理论背景篇](bigpipe.md)
     * [bigpipe-php+nginx实战篇](bigpipe-nginx-php.md)
     * [如何排查bug](debug_bug.md)
-    * [h5适配](h5适配.md)
+    * [h5适配](h5-layout.md)
 
