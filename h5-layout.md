@@ -1,4 +1,3 @@
-
 # 认识viewport
 # 认识 px、dp、dip、dpi、sp
 # 小数像素问题
