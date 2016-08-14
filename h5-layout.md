@@ -1,2 +1,2 @@
 # rem方案适配
-# view-port缩放方案
+# viewport缩放方案
