@@ -90,7 +90,7 @@ Content-Length 显然不适合使用。因为server不能一开始就知道整�
 Transfer-Encoding: chunked
 ```
 
-但是如果不考虑长连接，bigpipe是照样可以在http1.0甚至是http0.9使用的。假设我们把content-length设置为一个非常大的值，我们就可以做到webserver分段输出，到webserver不需要传递数据时，直接关闭连接就好了。
+但是如果不考虑长连接，bigpipe是照样可以在http1.0甚至是http0.9使用的。假设我们把content-length设置为一个**非常大的值**，我们就可以做到webserver分段输出，到webserver不需要传递数据时，直接关闭连接就好了。
 
 ```
 var a = "xxxxxxxx" // 多点数据，因为浏览器有buffer,多于1024个字符。
@@ -108,6 +108,8 @@ require('net').createServer(function(sock) {
 }).listen(9090, '127.0.0.1');
 
 ```
+
+##### 结论：bigpipe只依赖于webserver和client是否有处理分段输出内容的能力，而两种消息头都可以实现。
 # 注意
 
 bigpipe测试时有很多缓存控制。比如nginx，或者webserver的，浏览器也有1024字符。比如你有两个字符片段，想通过两次数据传递，或者想看到的效果是paint两次显示出来，但是各个环节有作优化，先buffer起来，再一起传递或渲染。
