@@ -1,6 +1,6 @@
 # 个人资料
 
-![李俊](/assets/me.jpg)
+![](/assets/me.jpg)
 
 姓名: 李俊
 
