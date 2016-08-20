@@ -90,7 +90,8 @@ Content-Length 显然不适合使用。因为server不能一开始就知道整�
 Transfer-Encoding: chunked
 ```
 
-但是如果不考虑长连接，bigpipe是照样可以在http1.0甚至是http0.9使用的。因为socket，flush一次，server端就会向client传递数据，client就能把这次的数据渲染出来。并非等待整个页面数据都传递给了client端，client端才开始渲染。这与文章开始讨论 “bigpipe 解决了什么问题”涉及知识一样。
+但是如果不考虑长连接，bigpipe是照样可以在http1.0甚至是http0.9使用的。假设我们把content-length设置为一个非常大的值，我们就可以做到webserver分段输出，到webserver不需要传递数据时，直接关闭连接就好了。
+因为socket，flush一次，server端就会向client传递数据，client就能把这次的数据渲染出来。并非等待整个页面数据都传递给了client端，client端才开始渲染。这与文章开始讨论 “bigpipe 解决了什么问题”涉及知识一样。
 
 以下是个实际例子：
 
@@ -110,8 +111,6 @@ require('net').createServer(function(sock) {
 }).listen(9090, '127.0.0.1');
 
 ```
-如果我们把content-length设置为一个非常大的值，我们就可以做到webserver分段输出，到server不需要传递数据时，直接关闭连接就好了。所以http1.0也是可以实现bigpipe的。
-
 # 注意
 
 bigpipe测试时有很多缓存控制。比如nginx，或者webserver的，浏览器也有1024字符。比如你有两个字符片段，想通过两次数据传递，或者想看到的效果是paint两次显示出来，但是各个环节有作优化，先buffer起来，再一起传递或渲染。
