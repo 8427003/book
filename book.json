@@ -7,8 +7,5 @@
           "twitter": false,
           "all": false
         }
-    },
-    "structure": {
-        "readme": "SUMMARY.md"
     }
 }
