@@ -68,11 +68,11 @@ Content-Length 或 Transfer-Encoding: chunked
 
 比如ui层需要返回一个页面数据，这个页面数据由三块构成，每块数据源都是call远程服务而获得。这个时候可以等三块数据都ready了，然后计算个总的大小用content-length。但这种白屏时间就比较久，不是一个很好的方案。此时就可以用Transfer-Encoding: chunked。每当有一块ready了，就传输给client端，让它渲染（假设渲染效果没有顺序要求）。
 
-现在基本所有文档类型为text/html的资源在http1.1下都是使用Transfer-Encoding: chunked。可以看看百度首页，任意其它页面。
+现在基本所有文档类型为text\/html的资源在http1.1下都是使用Transfer-Encoding: chunked。可以看看百度首页，任意其它页面。
 
 这两种方式具体使用可以参考：
 
-https://imququ.com/post/transfer-encoding-header-in-http.html
+[https:\/\/imququ.com\/post\/transfer-encoding-header-in-http.html](https://imququ.com/post/transfer-encoding-header-in-http.html)
 
 # bigpipe 与 Transfer-Encoding: chunked 什么关系,http0.9能实现bigpipe吗？
 
@@ -110,7 +110,7 @@ require('net').createServer(function(sock) {
 }).listen(9090, '127.0.0.1');
 
 ```
-##### 结论：bigpipe只依赖于是否能分段输出，而socket本身就具有这样的能力。
+如果我们把content-length设置为一个非常大的值，我们就可以做到webserver分段输出，到server不需要传递数据时，直接关闭连接就好了。所以http1.0也是可以实现bigpipe的。
 
 # 注意
 
@@ -119,21 +119,21 @@ bigpipe测试时有很多缓存控制。比如nginx，或者webserver的，浏�
 # 参考
 
 yahoo:Best Practices for Speeding Up Your Web Site
-https://developer.yahoo.com/performance/rules.html
+[https:\/\/developer.yahoo.com\/performance\/rules.html](https://developer.yahoo.com/performance/rules.html)
 
-http://www.cnblogs.com/xpress/archive/2011/07/21/2112382.html
+[http:\/\/www.cnblogs.com\/xpress\/archive\/2011\/07\/21\/2112382.html](http://www.cnblogs.com/xpress/archive/2011/07/21/2112382.html)
 
-http://www.cnblogs.com/CareySon/archive/2012/04/27/HTTP-Protocol.html
+[http:\/\/www.cnblogs.com\/CareySon\/archive\/2012\/04\/27\/HTTP-Protocol.html](http://www.cnblogs.com/CareySon/archive/2012/04/27/HTTP-Protocol.html)
 
-http://www.kafsemo.org/2015/01/03_talking-HTTP-0.9,1.0,1.1.html
+[http:\/\/www.kafsemo.org\/2015\/01\/03\_talking-HTTP-0.9,1.0,1.1.html](http://www.kafsemo.org/2015/01/03_talking-HTTP-0.9,1.0,1.1.html)
 
-http://stackoverflow.com/questions/10723812/if-a-http-1-0-client-requests-connection-keep-alive-will-it-understand-chunked
+[http:\/\/stackoverflow.com\/questions\/10723812\/if-a-http-1-0-client-requests-connection-keep-alive-will-it-understand-chunked](http://stackoverflow.com/questions/10723812/if-a-http-1-0-client-requests-connection-keep-alive-will-it-understand-chunked)
 
-https://www.byvoid.com/blog/http-keep-alive-header 翻墙打开
+[https:\/\/www.byvoid.com\/blog\/http-keep-alive-header](https://www.byvoid.com/blog/http-keep-alive-header) 翻墙打开
 
-https://tools.ietf.org/html/rfc2068#section-19.7.1
+[https:\/\/tools.ietf.org\/html\/rfc2068\#section-19.7.1](https://tools.ietf.org/html/rfc2068#section-19.7.1)
 
-https://www.w3.org/Protocols/HTTP/1.0/spec.html#Augmented-BNF
+[https:\/\/www.w3.org\/Protocols\/HTTP\/1.0\/spec.html\#Augmented-BNF](https://www.w3.org/Protocols/HTTP/1.0/spec.html#Augmented-BNF)
 
-https://www.w3.org/Protocols/rfc2616/rfc2616.html#Augmented-BNF
+[https:\/\/www.w3.org\/Protocols\/rfc2616\/rfc2616.html\#Augmented-BNF](https://www.w3.org/Protocols/rfc2616/rfc2616.html#Augmented-BNF)
 
