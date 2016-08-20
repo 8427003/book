@@ -1,5 +1,3 @@
-{% include "./SUMMARY.md" %}
-
 # 个人资料
 
 姓名: 李俊
