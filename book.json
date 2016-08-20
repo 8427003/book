@@ -1,5 +1,3 @@
 {
-    "structure":{
-        "readme": "SUMMARY.md"
-    }
+    "structure.readme": "SUMMARY.md"
 }
