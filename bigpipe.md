@@ -107,9 +107,11 @@ require('net').createServer(function(sock) {
     });
 }).listen(9090, '127.0.0.1');
 
+然后ctrl+c结束webserver进程,表示close流。
 ```
 
 ##### 结论：bigpipe只依赖于webserver和client是否有处理分段输出内容的能力，而两种消息头都可以实现。
+
 # 注意
 
 bigpipe测试时有很多缓存控制。比如nginx，或者webserver的，浏览器也有1024字符。比如你有两个字符片段，想通过两次数据传递，或者想看到的效果是paint两次显示出来，但是各个环节有作优化，先buffer起来，再一起传递或渲染。
