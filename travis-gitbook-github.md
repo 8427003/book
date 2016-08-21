@@ -41,4 +41,4 @@ git add -Agit commit -m "rebuild pages at ${rev}"git push -q upstream HEAD:maste
 
 ```
 
-2. "\.travis.yml"
+2."\.travis.yml"
