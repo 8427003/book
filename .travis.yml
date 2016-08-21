@@ -1,7 +1,8 @@
-language: "node"
-install:
-
+language: "node_js"
+node_js:
+  - "node"
 script:
+ - "console.log(1123123);"
 after_success:
   - bash deploy.sh
 env:
