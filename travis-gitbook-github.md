@@ -26,7 +26,9 @@ https://github.com/settings/tokens
 
 set -o errexit -o nounset
 
-if [ "$TRAVIS_BRANCH" != "master" ]then echo "This commit was made against the $TRAVIS_BRANCH and not the master! No deploy!" exit 0fi
+if [ "$TRAVIS_BRANCH" != "master" ]then echo "This commit was made against the $TRAVIS_BRANCH and not the master! No deploy!" 
+exit 0
+fi
 
 rev=$(git rev-parse --short HEAD)
 
@@ -38,7 +40,11 @@ git remote add upstream "https://$GH_TOKEN@github.com/lijun401338/lijun401338.gi
 
 echo "www.css3.io" > CNAME
 
-git add -Agit commit -m "rebuild pages at ${rev}"git push -q upstream HEAD:master
+git add -A
+
+git commit -m "rebuild pages at ${rev}"
+
+git push -q upstream HEAD:master
 
 ```
 
@@ -46,7 +52,15 @@ git add -Agit commit -m "rebuild pages at ${rev}"git push -q upstream HEAD:maste
 2.文件：.travis.yml
 
 ```yml
-language: "node_js"node_js: - "node"install: - "npm install gitbook -g" - "npm install -g gitbook-cli"script: - "gitbook build"after_success: - "sh deploy.sh"
-
+language: "node_js"
+node_js:
+ - "node"
+install:
+ - "npm install gitbook -g"
+ - "npm install -g gitbook-cli"
+script:
+ - "gitbook build"
+after_success:
+ - "sh deploy.sh"
 
 ```
