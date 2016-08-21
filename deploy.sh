@@ -20,7 +20,7 @@ git remote add upstream "https://$GH_TOKEN@github.com/8427003/book.git"
 git fetch upstream
 git reset upstream/gh-pages
 
-echo "blog.css3.io" > CNAME
+#echo "blog.css3.io" > CNAME
 
 touch .
 
