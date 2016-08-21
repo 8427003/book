@@ -26,8 +26,10 @@ https://github.com/settings/tokens
 
 set -o errexit -o nounset
 
-if [ "$TRAVIS_BRANCH" != "master" ]then echo "This commit was made against the $TRAVIS_BRANCH and not the master! No deploy!" 
-exit 0
+if [ "$TRAVIS_BRANCH" != "master" ]
+then 
+    echo "This commit was made against the $TRAVIS_BRANCH and not the master! No deploy!" 
+    exit 0
 fi
 
 rev=$(git rev-parse --short HEAD)
@@ -49,7 +51,7 @@ git push -q upstream HEAD:master
 ```
 
 
-2.文件：.travis.yml
+2.文件：[.travis.yml](https://raw.githubusercontent.com/8427003/book/master/.travis.yml)
 
 ```yml
 language: "node_js"
