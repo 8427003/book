@@ -1,4 +1,4 @@
-# 目录
+# Summary
 
 * [介绍](README.md)
 * [Shell](huan_jing.md)
@@ -8,6 +8,7 @@
 * [开始实践](getting_started.md)
     * [v8引擎helloworld](v8_helloworld.md)
     * [php+hhvm](php.md)
+    * [gitbook生成静态blog发布到github托管](travis-gitbook-github.md)
 * [前端基础](front_end_base.md)
     * [http缓存](http_cache.md)
     * [bigpipe实现理论背景篇](bigpipe.md)
