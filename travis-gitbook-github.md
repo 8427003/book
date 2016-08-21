@@ -18,7 +18,8 @@ https://github.com/settings/tokens
 在travis对应的源setting里增加一个Environment Variables，key为"GH_TOKEN",值为token字符串
 
 ### 3.将以下文件增加到github源里
-1. deploy.sh
+
+1.文件：deploy.sh
 
 ```shell
 #!/bin/bash
@@ -41,4 +42,10 @@ git add -Agit commit -m "rebuild pages at ${rev}"git push -q upstream HEAD:maste
 
 ```
 
-2."\.travis.yml"
+
+2.文件：.travis.yml
+
+```
+language: "node_js"node_js: - "node"install: - "npm install gitbook -g" - "npm install -g gitbook-cli"script: - "gitbook build"after_success: - "sh deploy.sh"
+
+```
