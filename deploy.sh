@@ -22,8 +22,7 @@ git reset upstream/master
 
 echo "www.css3.io" > CNAME
 
-touch .
 
-git add -A .
+git add -A
 git commit -m "rebuild pages at ${rev}"
 git push -q upstream HEAD:master
