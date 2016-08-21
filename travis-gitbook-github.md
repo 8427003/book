@@ -40,3 +40,5 @@ echo "www.css3.io" > CNAME
 git add -Agit commit -m "rebuild pages at ${rev}"git push -q upstream HEAD:master
 
 ```
+
+2. "\.travis.yml"
