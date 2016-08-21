@@ -1,4 +1,6 @@
+language: "node"
 install:
+
 script:
 after_success:
   - bash deploy.sh
