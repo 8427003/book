@@ -16,14 +16,14 @@ git init
 git config user.name "8427003"
 git config user.email "8427003@qq.com"
 
-git remote add upstream "https://$GH_TOKEN@github.com/8427003/book.git"
+git remote add upstream "https://$GH_TOKEN@github.com/lijun401338/lijun401338.github.io.git"
 git fetch upstream
-git reset upstream/gh-pages
+git reset upstream/master
 
-#echo "blog.css3.io" > CNAME
+echo "www.css3.io" > CNAME
 
 touch .
 
 git add -A .
 git commit -m "rebuild pages at ${rev}"
-git push -q upstream HEAD:gh-pages
+git push -q upstream HEAD:master
