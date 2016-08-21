@@ -19,7 +19,7 @@ https://github.com/settings/tokens
 
 ### 3.将以下文件增加到github源里
 
-1.文件：deploy.sh
+1.文件：[deploy.sh](https://raw.githubusercontent.com/8427003/book/master/deploy.sh)
 
 ```shell
 #!/bin/bash
