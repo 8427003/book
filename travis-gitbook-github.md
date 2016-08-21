@@ -9,17 +9,30 @@
 ---
 
 # 步骤
-### 1.去github生成tokens
+
+### 1.注册一个travis号，加入需要持续集成的github源。
+
+### 2.去github生成tokens
 
 以便travis脚本通过调用github api时不用密码上传代码到github仓库。github设置地址
 https://github.com/settings/tokens
 
-### 2.将生成的token增加到travis环境变量中
+### 3.将生成的token增加到travis环境变量中
 在travis对应的源setting里增加一个Environment Variables，key为"GH_TOKEN",值为token字符串
 
-### 3.将以下文件增加到github源里
+### 4.将以下文件增加到github源里
 
 1.文件：[deploy.sh](https://raw.githubusercontent.com/8427003/book/master/deploy.sh)
+
+我这里是将源码托管到我的
+https://github.com/8427003/book
+
+将生成的静态文件托管到我的组织项目
+https://github.com/lijun401338/lijun401338.github.io
+（因为我发现组织GitHub Pages比gh-pages方式静态blog访问速度更快)，这里也可以托管到当前项目分支gh-pages（如果没有必须先手动创建）。deploy脚本需要根据自己的情况配置。
+
+
+
 
 ```shell
 #!/bin/bash
