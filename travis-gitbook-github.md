@@ -29,7 +29,7 @@ https://github.com/8427003/book
 
 将生成的静态文件托管到我的组织项目
 https://github.com/lijun401338/lijun401338.github.io
-（因为我发现组织GitHub Pages比gh-pages方式静态blog访问速度更快)，这里也可以托管到当前项目分支gh-pages（如果没有必须先手动创建）。deploy脚本需要根据自己的情况配置。
+（因为我发现组织GitHub Pages比Project Pages方式静态blog访问速度更快)，这里也可以托管到当前项目分支gh-pages（如果没有必须先手动创建）。deploy脚本需要根据自己的情况配置。
 
 
 更多
