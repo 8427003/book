@@ -45,7 +45,7 @@ git add -Agit commit -m "rebuild pages at ${rev}"git push -q upstream HEAD:maste
 
 2.文件：.travis.yml
 
-```
+```yml
 language: "node_js"node_js: - "node"install: - "npm install gitbook -g" - "npm install -g gitbook-cli"script: - "gitbook build"after_success: - "sh deploy.sh"
 
 ```
