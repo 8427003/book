@@ -57,7 +57,9 @@ git config user.email "8427003@qq.com"
 
 git remote add upstream "https://$GH_TOKEN@github.com/lijun401338/lijun401338.github.io.git"
 
-git fetch upstreamgit reset upstream/master
+git fetch upstream
+
+git reset upstream/master
 
 echo "www.css3.io" > CNAME
 
