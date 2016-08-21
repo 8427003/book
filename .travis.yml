@@ -2,7 +2,7 @@ language: "node_js"
 node_js:
   - "node"
 script:
- - "console.log(1123123);"
+ - "echo 123;"
 after_success:
   - bash deploy.sh
 env:
