@@ -110,4 +110,4 @@ wireshark得到如下记录:
 
 # 申明
 
-实验环境基于mac，postman，wireshark，传递参数大小仅验证了 `hehe` 和 “1000个字符” 长度数据。
+实验环境基于mac，postman，wireshark，传递参数大小仅验证了字符`hehe` 和 “1000个字符” 长度数据。可能具有一定不准确性。
