@@ -35,7 +35,7 @@ http://gold.xitu.io/entry/57597bd45bbb500053c88b4c
 
 # 实验
 
-我们先跑一段基于node平台的webserver程序，开始监听[http:\/\/127.0.0.1:9090](http://127.0.0.1:9090)
+我们先跑一段基于node平台的webserver程序，开始监听http://127.0.0.1:9090
 
 ```javascript
 
