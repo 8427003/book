@@ -73,7 +73,7 @@ wireshark得到如下记录:
 
 **再测试POST请求**
 
-参数为hehe，用json格式传
+参数为hehe
 
 图post-1
 
