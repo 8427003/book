@@ -27,10 +27,13 @@
 
 而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。
 
+参考这篇文章的观点：
+
+http://gold.xitu.io/entry/57597bd45bbb500053c88b4c
+
 情况真的是这样么？我们来验证下！
 
-参考这篇文章的观点：
-http://gold.xitu.io/entry/57597bd45bbb500053c88b4c
+
 
 # 实验
 
