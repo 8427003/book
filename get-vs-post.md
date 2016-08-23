@@ -53,6 +53,8 @@ require('net').createServer(function(sock) {
 ```
 打开[wireshark](https://www.wireshark.org/),捕获Loopback接口（因为我们捕获的是服务端地址是127.0.0.1，不需要捕获其它网卡接口），过滤规则:`tcp.port == 9090`
 
+**测试GET请求**
+
 我们先用postman发起**get**请求并带一个**`test`**参数即`http://127.0.0.1:9090/?test`。
 
 wireshark得到如下记录:
@@ -67,3 +69,13 @@ wireshark得到如下记录:
 
 从图get-2发现这一帧确实发送了消息头和实体（当前选中行应该是表示消息头结束，下面就是body）
 从图get-1也看到，第6帧是webserver端给postman的响应。证明get请求已发送完毕。
+
+
+**再测试POST请求**
+
+参数为hehe，用json格式传
+
+图post-1
+
+图post-2
+
