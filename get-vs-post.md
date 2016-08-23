@@ -57,7 +57,13 @@ require('net').createServer(function(sock) {
 
 wireshark得到如下记录:
 
+图get-1
 ![](/assets/get-1.png)
 
-当前选中帧，
+当前选中帧，为postman向webserver发送数据的帧。点开进一步观察
 
+图get-2
+![](/assets/get-2.png)
+
+从图get-2发现这一帧确实发送了消息头和实体（当前选中行应该是表示消息头结束，下面就是body）
+从
