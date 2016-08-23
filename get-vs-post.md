@@ -29,7 +29,7 @@
 
 参考这篇文章的观点：
 
-[http:\/\/gold.xitu.io\/entry\/57597bd45bbb500053c88b4c](http://gold.xitu.io/entry/57597bd45bbb500053c88b4c)
+http://gold.xitu.io/entry/57597bd45bbb500053c88b4c
 
 情况真的是这样么？我们来验证下！
 
