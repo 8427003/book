@@ -51,3 +51,5 @@ require('net').createServer(function(sock) {
 }).listen(9090, '127.0.0.1');
 
 ```
+打开[wireshark](https://www.wireshark.org/),捕获loopback接口（因为我们捕获的是127.0.0.1，不需要捕获其它网卡接口）
+
