@@ -56,6 +56,7 @@ require('net').createServer(function(sock) {
 我们先用postman发起**get**请求并带一个**`test`**参数即`http://127.0.0.1:9090/?test`。
 
 wireshark得到如下记录:
+
 ![](/assets/get-1.png)
 
 当前选中帧，
