@@ -20,8 +20,12 @@
 
 * GET参数通过URL传递，POST放在Request body中。
 
+
 **然后有人提出了一个杀手锏的区别，99%的人都不知道，那就是：GET产生一个TCP数据包；POST产生两个TCP数据包。**
 情况真的是这样么？我们来验证下！
+
+参考这篇文章的观点：
+http://gold.xitu.io/entry/57597bd45bbb500053c88b4c
 
 # 实验
 
@@ -78,6 +82,8 @@ wireshark得到如下记录:
 图post-1
 ![](/assets/post-1.png)
 
-
 图post-2
+![](/assets/post-2.png)
 
+似乎我们在这一帧直接就看到了请求body我们的参数`hehe`.**看来并不是发送了两个数据包。
+**
