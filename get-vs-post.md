@@ -20,6 +20,8 @@ http://gold.xitu.io/entry/57597bd45bbb500053c88b4c
 
 # 实验
 
+
+
 我们先跑一段基于node平台的webserver程序，开始监听http://127.0.0.1:9090
 
 ```javascript
@@ -105,3 +107,7 @@ wireshark得到如下记录:
 1. get请求确实只发送了1个包
 
 2. post请求在参数少时也只看见发送了1个包，在参数增大时，发现确实在消息头和body被分割成了两个包，甚至根据body大小，分割成更多包。
+
+# 申明
+
+实验环境基于mac，postman，wireshark，传递参数大小仅验证了 `hehe` 和 “1000个字符” 长度数据。
