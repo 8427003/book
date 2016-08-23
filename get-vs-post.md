@@ -53,4 +53,6 @@ require('net').createServer(function(sock) {
 ```
 打开[wireshark](https://www.wireshark.org/),捕获Loopback接口（因为我们捕获的是服务端地址是127.0.0.1，不需要捕获其它网卡接口），过滤规则:`tcp.port == 9090`
 
+我们先用postman发起get请求
+
 
