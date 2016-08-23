@@ -66,4 +66,4 @@ wireshark得到如下记录:
 ![](/assets/get-2.png)
 
 从图get-2发现这一帧确实发送了消息头和实体（当前选中行应该是表示消息头结束，下面就是body）
-从图get-1也看到，第6帧是webserver端给postman的响应。证明get请求发送完毕。
+从图get-1也看到，第6帧是webserver端给postman的响应。证明get请求已发送完毕。
