@@ -55,5 +55,5 @@ require('net').createServer(function(sock) {
 
 我们先用postman发起**get**请求，wireshark得到如下记录:
 
-![](/assets/get-1.png)
 
+当前选中帧，
