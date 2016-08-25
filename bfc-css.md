@@ -12,3 +12,8 @@ BFC(Block Formatting Contexts), 这东西在css里经常被谈论到。它是一
 * content-box
 
     width = 内容的宽度
+    height = 内容高度
+
+* border-box
+    
+    width = border + padding + 内容的宽度
