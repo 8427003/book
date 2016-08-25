@@ -1,5 +1,5 @@
 # 背景
-BFC(Block Formatting Contexts), 这东西在css里经常被谈论到。它是一个非常抽象的概念，难以让人理解。这里谈谈我个人的看法。
+BFC(Block Formatting Contexts), 这东西在css里经常被谈论到。它是一个非常抽象的概念，难以让人理解。这里谈谈我个人的看法。还容易与盒模型区分不开。
 
 # BFC vs 盒子模型
 
@@ -21,3 +21,4 @@ BFC(Block Formatting Contexts), 这东西在css里经常被谈论到。它是一
     height = border + padding + 内容的高度
 
 说得通俗点就是，一个盒子的大小，你可以从外面量，你也可以从里面量来说明一个盒子有多大。只要大家都认同就行，只是标准不一样而已。**盒子模型更多在意的是盒子本身属性的问题。**
+
