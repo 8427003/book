@@ -29,7 +29,7 @@ Block Formatting Contexts，我们先理解什么是`Formatting Contexts`。
 
 `Contexts` 代码里面有过这个单词吧-上下文。上下文是个啥东西，在程序里我们是通常用来放东西的，一段程序往里面放，一段程序从里面取，其它地方还取不到。可以理解为容器或者一个限定范围。那么在我们css里可以理解为一块区域，表示一个范围。
 
-`Formatting Contexts` 合一起，就代表一块限定区域长啥样子的意思，格式化上下文。
+`Formatting Contexts` 合一起，就代表一块限定区域长啥样子的意思，即格式化上下文。
 
 
 
