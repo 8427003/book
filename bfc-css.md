@@ -34,4 +34,6 @@ Block Formatting Contexts，我们先理解什么是`Formatting Contexts`。
 
 `Block`就好理解了，管你是胖的、瘦的，还是长的、圆的，或者是块级的、行内的。仅仅代表规则不同，给不同规则取个名字罢了。
 
+最后，`Block Formatting Contexts` 在css中我理解为，在一个限定范围中，元素之间，或者元素里面，如何布局，或者位置计算的一个规则名称
+
 
