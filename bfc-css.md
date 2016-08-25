@@ -42,3 +42,15 @@ Block Formatting Contexts，我们先理解什么是`Formatting Contexts`。
 
 # 参考
 
+http://rainey.space/2016/07/02/Ni_Zhen_De_Liao_Jie_He_Mo_Xing_Ma/
+
+http://www.cnblogs.com/WebShare-hilda/p/4700682.html
+
+https://xinranliu.me/2012-10-21-what-is-block-formatting-context/
+
+https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Visual_formatting_model
+
+https://www.sitepoint.com/understanding-block-formatting-contexts-in-css/
+
+http://alexbai1991.github.io/2015/03/27/cssbfc/
+
