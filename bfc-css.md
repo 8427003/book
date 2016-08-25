@@ -3,8 +3,11 @@ BFC(Block Formatting Contexts), 这东西在css里经常被谈论到。它是一
 
 # BFC vs 盒子模型
 
-盒子模型分
-* box-sizing
+最常用盒子模型
 * content-box
 * border-box
 
+不同的属性意味着对大小的计算不同
+
+* content-box
+    width = 内容的宽度
