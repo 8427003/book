@@ -7,7 +7,7 @@ BFC(Block Formatting Contexts), 这东西在css里经常被谈论到。它是一
 * content-box
 * border-box
 
-不同的属性意味着对大小的计算不同
+**不同的属性意味着对大小的计算不同**
 
 * content-box
 
@@ -17,3 +17,7 @@ BFC(Block Formatting Contexts), 这东西在css里经常被谈论到。它是一
 * border-box
     
     width = border + padding + 内容的宽度
+    
+    height = border + padding + 内容的高度
+
+说得通俗点就是，一个盒子的大小，你可以从外面量，你也可以从里面量来说明一个盒子有多大。只要大家都认同就行，只是标准不一样而已。
