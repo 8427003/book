@@ -40,4 +40,5 @@ Block Formatting Contexts，我们先理解什么是`Formatting Contexts`。
 
 它与盒子模型概念的区别在于盒子模型更多强调这个盒子本身的属性计算的规则，而`Block Formatting Contexts`强调在一个局部范围、盒子里面，或者盒子之间的一个布局或者位置计算的规则。
 
+# 参考
 
