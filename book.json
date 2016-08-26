@@ -8,7 +8,10 @@
           "all": false
         }
     },
-    "plugins": ["ga"],
+    "plugins": [
+        "ga",
+        "duoshuo"
+    ],
     "pluginsConfig": {
        "ga": {
             "token": "UA-48397157-2",
@@ -16,6 +19,10 @@
                 "cookieName": "www.css3.io",
                 "cookieDomain": "www.css3.io"
             }
-       }
+       },
+       "duoshuo": {
+            "short_name": "css3-io",
+            "theme": "default"
+        }
     }
 }
