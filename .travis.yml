@@ -4,7 +4,8 @@ node_js:
 install:
   - "npm install gitbook -g"
   - "npm install -g gitbook-cli"
+  - "gitbook install"
 script:
- - "gitbook build"
+  - "gitbook build"
 after_success:
   - "sh deploy.sh"

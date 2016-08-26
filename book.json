@@ -7,5 +7,15 @@
           "twitter": false,
           "all": false
         }
+    },
+    "plugins": ["ga"],
+    "pluginsConfig": {
+       "ga": {
+            "token": "UA-48397157-2",
+            "configuration": {
+                "cookieName": "www.css3.io",
+                "cookieDomain": "www.css3.io"
+            }
+       }
     }
 }
