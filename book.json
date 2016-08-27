@@ -11,7 +11,7 @@
     "plugins": [
         "ga",
         "duoshuo",
-        "baidu"
+        "baidu_gio"
     ],
     "pluginsConfig": {
        "ga": {
@@ -25,8 +25,9 @@
             "short_name": "css3-io",
             "theme": "default"
         },
-        "baidu": {
+        "baidu_giou": {
             "token": "3b06928c84dad0b03dc0fdca98e190c9"
         }
+
     }
 }
