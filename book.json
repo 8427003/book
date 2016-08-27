@@ -11,7 +11,8 @@
     "plugins": [
         "ga",
         "duoshuo",
-        "baidu_gio"
+        "baidu_gio",
+        "toggle-chapters"
     ],
     "pluginsConfig": {
        "ga": {
@@ -28,6 +29,5 @@
         "baidu_gio": {
             "token": "3b06928c84dad0b03dc0fdca98e190c9"
         }
-
     }
 }
