@@ -10,7 +10,8 @@
     },
     "plugins": [
         "ga",
-        "duoshuo"
+        "duoshuo",
+        "disqus"
     ],
     "pluginsConfig": {
        "ga": {
@@ -23,6 +24,9 @@
        "duoshuo": {
             "short_name": "css3-io",
             "theme": "default"
+        },
+        "disqus": {
+            "shortName": "css3io"
         }
     }
 }
