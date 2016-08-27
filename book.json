@@ -10,7 +10,7 @@
     },
     "plugins": [
         "ga",
-        "disqus",
+        "duoshuo",
         "baidu"
     ],
     "pluginsConfig": {
@@ -21,8 +21,9 @@
                 "cookieDomain": "www.css3.io"
             }
        },
-        "disqus": {
-            "shortName": "css3io"
+       "duoshuo": {
+            "short_name": "css3-io",
+            "theme": "default"
         },
         "baidu": {
             "token": "3b06928c84dad0b03dc0fdca98e190c9"
