@@ -11,7 +11,7 @@
     "plugins": [
         "ga",
         "duoshuo",
-        "baidu"
+        "baiduana"
     ],
     "pluginsConfig": {
        "ga": {
