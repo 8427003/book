@@ -15,7 +15,10 @@ function Sub () {
 Sub.prototype = new Super();
 ```
 
-缺点：不能向Super传递参数，引用类型属性被实例共享。因此有了借用构造函数。
+缺点：
+
+1. 不能向Super传递参数。
+2. 引用类型属性被实例共享。
 
 
 # 2.借用构造函数（伪造对象、经典继承）
@@ -123,8 +126,50 @@ var person = {
     friends: ["Shelby", "Court", "Van"]
 }
 
-var person1 = ctreateAnother(person);
+var person1 = createAnother(person);
+person1.friends.push('person1');
 person1.sayHi();
+
+
+var person2 = createAnother(person);
+
+// "Shelby", "Court", "Van", "person1"
+console.log(person2.friends);
 ```
 
 缺点：函数`sayHi()`依然被重复创建，引用类型属性依然存在共享问题。
+
+
+# 6. 寄生组合式继承
+
+```javascript
+
+function object (o) {
+    function F () {}
+    F.prototype = o;
+    
+    return new F();
+}
+
+function inheritPrototype (Sub, Super) {
+    var proto = object(Super.prototype);
+    proto.constructor = Sub;
+    Sub.prototype = proto;
+}
+
+function Super () {
+    this.
+}
+
+function Sub () {
+    Super.call(this);
+}
+inheritPrototype(Sub, Super);
+
+```
+
+
+
+
+
+
