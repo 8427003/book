@@ -110,7 +110,7 @@ console.log(person.frends);
 
 说明： 
 
-在ECMAScript5得到规范 `Object.create()`
+    在ECMAScript5得到规范 `Object.create()`
 
 
 # 5. 寄生式继承
