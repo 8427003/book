@@ -175,6 +175,7 @@ inheritPrototype(Sub, Super);
 
 ```
 
+说明：解决了引用属性共享问题，是最理想的继承范式。
 
 
 
