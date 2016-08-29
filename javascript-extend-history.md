@@ -39,7 +39,7 @@ function Sub () {
 }
 
 ```
-缺点：要求所有类的方法必须在构造函数中定义,如同Super中的`getAge`方法。Sub也不能调用Super原型里的方法。
+缺点：要求所有类的方法必须在构造函数中定义,如同Super中的`getAge`方法。函数被重复创建。Sub也不能调用Super原型里的方法.
 
 
 # 3.组合继承
@@ -62,7 +62,62 @@ Sub.prototype = new Super();
 ```
 优点： 解决了属性为引用类型时实例是共享的问题（原型中的引用被实例中的引用值覆盖），子类也能用使用原型中的方法。比较常用。
 
-# 3.
+---
+
+# 4.原型式继承（道格拉斯）
+
+```javascript
+
+function object (o) {
+    function F () {}
+    F.prototype = o;
+    return new F();
+}
+
+var person = {
+    name: 'name',
+    friends: ['A', 'B']
+}
+
+var person1 = object(person);
+person1.name = 'name1';
+person1.frends.push('C');
+
+var person2 = object(person);
+person2.name = 'name2';
+person2.frends.push('D');
+
+// A B C D
+console.log(person.frends);
+```
+
+缺点：依然存在引用类型属性共享问题。
+
+适用场景：不必兴师动众创建构造函数，只是想让一个对象与另一个对象保持类似的情况下。
+
+说明： 在ECMAScript5得到规范 `Object.create()`
 
 
+# 5. 寄生式继承
 
+```javascript
+
+function createAnother (original) {
+    var clone = object(original);
+    clone.sayHi = function () {
+        alert("hi");
+    }
+
+    return clone;
+}
+
+var person = {
+    name: "Nicholas",
+    friends: ["Shelby", "Court", "Van"]
+}
+
+var person1 = ctreateAnother(person);
+person1.sayHi();
+```
+
+缺点：函数`sayHi()`依然被重复创建
