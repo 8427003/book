@@ -23,8 +23,6 @@ Sub.prototype = new Super();
 
 # 2.借用构造函数（伪造对象、经典继承）
 
-
-
 ```javascript
 
 function Super () {
