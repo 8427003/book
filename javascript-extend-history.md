@@ -4,6 +4,7 @@
 
 function Super () {
     this.name = 'name';
+    this.colors = ['red', 'black']
 }
 Super.prototype.getName = function () {
     return this.name;
@@ -14,10 +15,10 @@ function Sub () {
 Sub.prototype = new Super();
 ```
 
-缺点：不能向Super传递参数，因此有了借用构造函数
+缺点：不能向Super传递参数，引用类型属性被实例共享。因此有了借用构造函数。
 
 
-# 2.借用构造函数
+# 2.借用构造函数（伪造对象、经典继承）
 
 
 
@@ -47,6 +48,7 @@ function Sub () {
 
 function Super () {
     this.name = 'name';
+    this.colors = ['red', 'black'];
 }
 Super.prototype.getName = function () {
     return this.name;
@@ -58,11 +60,9 @@ function Sub () {
 Sub.prototype = new Super();
 
 ```
+优点： 解决了属性为引用类型时实例是共享的问题（原型中的引用被实例中的引用值覆盖），子类也能用使用原型中的方法。比较常用。
 
-
-
-
-
+# 3.
 
 
 
