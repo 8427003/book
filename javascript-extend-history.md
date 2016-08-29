@@ -120,4 +120,4 @@ var person1 = ctreateAnother(person);
 person1.sayHi();
 ```
 
-缺点：函数`sayHi()`依然被重复创建
+缺点：函数`sayHi()`依然被重复创建，引用类型属性依然存在共享问题。
