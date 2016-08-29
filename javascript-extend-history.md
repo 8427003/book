@@ -102,6 +102,13 @@ console.log(person.frends);
 
 ```javascript
 
+function object (o) {
+    function F () {}
+    F.prototype = o;
+
+    return new F();
+}
+
 function createAnother (original) {
     var clone = object(original);
     clone.sayHi = function () {
