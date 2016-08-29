@@ -165,7 +165,7 @@ function inheritPrototype (Sub, Super) {
 }
 
 function Super () {
-    this.
+
 }
 
 function Sub () {
