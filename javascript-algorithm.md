@@ -1,6 +1,7 @@
 # 折半查找算法
 
-```
+```javascript
+
 var data = [3, 12];
 var goal = 3;
 
