@@ -36,6 +36,4 @@ function bSearch(goal, array, indexStart, indexEnd) {
 console.log(bSearch(goal, data, 0, data.length - 1));
 
 
-
-
 ```
