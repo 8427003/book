@@ -64,16 +64,12 @@ Array.prototype.quickSort = function () {
             leftArr.push(val);
         }
     });
-    return leftArr.quickSort().concat(goal, rightArr.quickSort());
 
+    return leftArr.quickSort().concat(goal, rightArr.quickSort());
 }
 
 var arr = [5, 2, 3, 4, 5];
 console.log(arr.quickSort());
 
 ```
-
-var arr = \[5, 2, 3, 4, 5\];
-
-console.log\(arr.quickSort\(\)\);
 
