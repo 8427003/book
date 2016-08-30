@@ -23,7 +23,6 @@ function bSearch(goal, array, indexStart, indexEnd) {
          // 不能是indexStart = mid,
          // 用于开头 indexStart > indexEnd 跳出判断。
          indexStart = mid + 1; 
-
      }
      else if (array[mid] > goal) {
          
