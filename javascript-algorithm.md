@@ -73,3 +73,39 @@ console.log(arr.quickSort());
 
 ```
 
+# 按多健值排序
+```js
+
+var by = function () {
+    var args = arguments || [];
+    
+    return function (a, b) {
+        var key = '';
+        for (var i = 0; i < args.length; i ++) {
+            key = args[i];
+
+            if(a[key] === b[key]) {
+
+                //最后一个key如果还等，着视为相等
+                if (i === args.length - 1) {
+                    return 0;
+                }
+                continue;
+            }
+            
+            return a[key] < b[key] ? -1 : 1;
+        }
+    }
+}
+var obj = [
+    {id: 3, name: 'b'},
+    {id: 1, name: 'a'},
+    {id: 2, name: 'b'},
+    {id: 1, name: 'c'}
+]
+
+// 先按name排序，name相等再按id排序
+console.log(obj.sort(by('name', 'id')));
+
+```
+
