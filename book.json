@@ -1,8 +1,7 @@
 {
     "links": {
         "gitbook": false,
-        "sharing": {
-          "google": false,
+        "sharing": { "google": false,
           "facebook": false,
           "twitter": false,
           "all": false
@@ -11,8 +10,7 @@
     "plugins": [
         "ga",
         "duoshuo",
-        "baidu_gio",
-        "toggle-chapters"
+        "baidu_gio"
     ],
     "pluginsConfig": {
        "ga": {
