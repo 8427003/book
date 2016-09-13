@@ -9,7 +9,7 @@ script:
   - "gitbook build"
 after_success:
   - "sh deploy.sh"
-  - "apt-get install sshpass"
+  - "sudo apt-get install -y sshpass"
   - "touch a.xx"
   - "sshpass -p 'wozinima' scp -P 29134 ./a.xx root@23.106.135.188:/root/"
 
