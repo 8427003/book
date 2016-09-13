@@ -7,5 +7,5 @@ addons:
 install: true
 script: true
 after_success:
-  - "sshpass -p 'wozinima' ssh -p 29134 root@23.106.135.188 /root/test.sh"
+  - "sshpass -p 'wozinima' ssh -p 29134 -o stricthostkeychecking=no root@23.106.135.188 /root/test.sh"
 
