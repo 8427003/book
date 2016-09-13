@@ -9,8 +9,5 @@ install: true
 script: true
 after_success:
   - "sudo apt-get install -y sshpass"
-  - "export SSHPASS=wozinima"
-  - "mkdir hehe2"
-  - "touch ./hehe2/a.x"
-  - "sshpass -e scp -P 29134 ./hehe2 root@23.106.135.188:/root/"
+  - "sshpass -p 'wozinima' ssh -p 29134 root@23.106.135.188 /root/test.sh"
 
