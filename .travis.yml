@@ -1,5 +1,8 @@
 language: "node_js"
 sudo: true
+addons:
+    ssh_known_hosts:
+    - "23.106.135.188"
 node_js:
   - "node"
 install:
