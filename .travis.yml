@@ -5,15 +5,12 @@ addons:
     - "23.106.135.188"
 node_js:
   - "node"
-install:
-  - "npm install gitbook -g"
-  - "npm install -g gitbook-cli"
-  - "gitbook install"
-script:
-  - "gitbook build"
+install: true
+script: true
 after_success:
-  - "sh deploy.sh"
   - "sudo apt-get install -y sshpass"
-  - "touch a.xx"
-  - "sshpass -p 'wozinima' scp -P 29134 ./a.xx root@23.106.135.188:/root/"
+  - "export SSHPASS=wozinima"
+  - "mkdir hehe2"
+  - "touch ./hehe2/a.x"
+  - "sshpass -e scp -P 29134 ./hehe2 root@23.106.135.188:/root/"
 
