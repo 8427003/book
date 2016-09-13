@@ -9,5 +9,5 @@ install: true
 script: true
 after_success:
   - "sudo apt-get install -y sshpass"
-  - "sshpass -p 'wozinima' ssh -p 29134 root@23.106.135.188 /root/test.sh"
+  - "sudo sshpass -p 'wozinima' ssh -p 29134 root@23.106.135.188 /root/test.sh"
 
