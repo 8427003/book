@@ -14,7 +14,6 @@ script:
 after_success:
 - sh deploy.sh
 - export SSHPASS=$DEPLOY_PASS
-- touch a.xx
 - sshpass -e scp -P 29134 -o stricthostkeychecking=no -r ./_book/* root@$DEPLOY_HOST:/root/nginx/html/
 env:
   global:
