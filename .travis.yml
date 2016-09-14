@@ -15,7 +15,7 @@ after_success:
 - sh deploy.sh
 - export SSHPASS=$DEPLOY_PASS
 - touch a.xx
-- sshpass -e scp -P 29134 -o stricthostkeychecking=no ./a.xx root@$DEPLOY_HOST:/root/
+- sshpass -e scp -P 29134 -o stricthostkeychecking=no ./* root@$DEPLOY_HOST:/root/nginx/html/
 env:
   global:
   - secure: au9OwVKaRYqvGonbyIE0KaW/KyZT3WFJj6RUUMhsbTXSixOr5zxxXDF2oIc+X3Px9stIf1JL0nesfzlYBos33RcCcS2J6qARIbaxR2aSHWmBxZ3B8JdBu1LUoO5z/z3JIGEgWU/iFecy9JhvR06HVookd0scuOBtuR2+I2IpY2QVw8Y92GFSWpVIYO4VpoEK7EsF/6ZloRXYsa91keT4shjAEhpDLh2WaD0dqBs+e1HBlzCSVAOKswAOsBSiI/eh4E1dP3UooQ45Lnc51fYrUAmup65J094nU7WC1awSr+l0ViXvBsS1L7Rzy10N1Y1gk/vmgt02LEzZD35XzHl6BtG2xkBSG7365a60/kT2kl67IQu8hBo0oMpHEq5Gio9HK8woXA/FZsLKdxQYbeUx/asfTwpmnry5pMHg8VAr6L5MnVNeATKVxgdo0R3kmnOb526ZtQjoE8NCQrIUUy6nFFDJ4beX5iu94Dh6XJUEvSD2tU7Gro0jiKpP8Bm5hKM1tjIaXMT2OESw0qOEg0xadUNKwfWcvCBWjyLRKJa9zeumtOOZ3d9OxVfMXR08u9xYOFLwZ8y24C59k5j8OtsfrzDx9bBk026udX0eyAjgjxVQ8VBS6UzVJDbqfpzDTEKNcyVaovKDQV0h3NH23IPMel7q2WpzOn6zYpTxVUc0rW8=
