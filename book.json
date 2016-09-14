@@ -1,4 +1,10 @@
 {
+    "title":" 前端笔记",
+    "description": "前端笔记(www.css3.io)是李俊(8427003@qq.com)个人技术blog",
+    "keywords": "123123",
+    "styles": {
+        "website": "styles/website.css"
+    },
     "links": {
         "gitbook": false,
         "sharing": { "google": false,
