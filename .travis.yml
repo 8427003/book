@@ -1,11 +1,22 @@
-sudo: "required"
-language: "bash"
+language: node_js
 addons:
-    apt:
-        packages:
-            - "sshpass"
-install: true
-script: true
+  apt:
+    packages:
+    - sshpass
+node_js:
+- node
+install:
+- npm install gitbook -g
+- npm install -g gitbook-cli
+- gitbook install
+script:
+- gitbook build
 after_success:
-  - "sshpass -p 'wozinima' ssh -p 29134 -o stricthostkeychecking=no root@23.106.135.188 /root/test.sh"
-
+- sh deploy.sh
+- export SSHPASS=$DEPLOY_PASS
+- touch a.xx
+- sshpass -e scp -P 29134 -o stricthostkeychecking=no ./a.xx root@DEPLOY_HOST:/root/
+env:
+  global:
+  - secure: au9OwVKaRYqvGonbyIE0KaW/KyZT3WFJj6RUUMhsbTXSixOr5zxxXDF2oIc+X3Px9stIf1JL0nesfzlYBos33RcCcS2J6qARIbaxR2aSHWmBxZ3B8JdBu1LUoO5z/z3JIGEgWU/iFecy9JhvR06HVookd0scuOBtuR2+I2IpY2QVw8Y92GFSWpVIYO4VpoEK7EsF/6ZloRXYsa91keT4shjAEhpDLh2WaD0dqBs+e1HBlzCSVAOKswAOsBSiI/eh4E1dP3UooQ45Lnc51fYrUAmup65J094nU7WC1awSr+l0ViXvBsS1L7Rzy10N1Y1gk/vmgt02LEzZD35XzHl6BtG2xkBSG7365a60/kT2kl67IQu8hBo0oMpHEq5Gio9HK8woXA/FZsLKdxQYbeUx/asfTwpmnry5pMHg8VAr6L5MnVNeATKVxgdo0R3kmnOb526ZtQjoE8NCQrIUUy6nFFDJ4beX5iu94Dh6XJUEvSD2tU7Gro0jiKpP8Bm5hKM1tjIaXMT2OESw0qOEg0xadUNKwfWcvCBWjyLRKJa9zeumtOOZ3d9OxVfMXR08u9xYOFLwZ8y24C59k5j8OtsfrzDx9bBk026udX0eyAjgjxVQ8VBS6UzVJDbqfpzDTEKNcyVaovKDQV0h3NH23IPMel7q2WpzOn6zYpTxVUc0rW8=
+  - secure: UNNTuwdw11rGuF4pCEGqkX+pQXE8CAmdFUuKdH/vfAeumThmVEWvtqxNyWG2IoSGH/CTRFDOX3wCRS0AmUMBgR1h9bjvzGfMeLpx7p78lO0xyxuqpIx6hRHbNOxAorS66CprdxyF3T/JzNAqUGpUKD2DFYmMk0i7chIot4TyAAVoSipbQE+Nmhg17B7psGEV8za7BZUAyjCJ9hN9MkvhrOokpyjEtVfCJymdlMjAGeGSbFHS8UHJj9dpffP1SEgSOnPAqWl5MB37ZTcrewnXlI4pI+9XXs1wsLo3jbkpaQNysFISfc2HMrjxQC+9F2Q16Zud9CKzmq6tPvm1I0my+Gdlq6d88bUVMfGF0TgFhgiyGTEnsF/vy89P+NALpf9ZjMcP08916fwbneModNNGVfGWC0bhXszv38CoD0jsnMwcEJc6qov8T4K8CAr1rGFLhWnf8VWIIYAowyJ/i4CCgi9M2+JsbnYgE5y8FQ1sMOITngkpBSQXZA6Nni1/krUk8/tHiyISBGLlsFzmWHaMdD5qLGk1zY1vsCQtMo45pmUNXil17aVa7ighC99josj0dEXa/7EycWtxMhpHSNNOMQo6gZzhQboHXLR5GzUCbB/kADP9qK38wYphTMyENrBkxrluiqD/K6YyK234SDmTHPaCh5fIpmGG7Ekpht+2YYI=
