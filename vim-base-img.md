@@ -1,6 +1,5 @@
 vim一言不合，一张图
 
-
 ![vim](/assets/Vim-mindmap.png)
 
 
