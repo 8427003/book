@@ -11,9 +11,6 @@ keywords: travis,travis-ci,sshpass,stricthostkeychecking,部署到远程服务�
 sshpass -p woshimima scp -P 29134 -o stricthostkeychecking=no -r ./_book/* root@www.css3.io:/nginx/html/
 
 ```
-
-##  部署脚本介绍
-
 **持续集成自动化运行脚本最大的一个问题在于脚本在运行的时候是没有一个交互界面的，所以你不可以输入密码，不可以输入yes回车键确认。而我们常用的一些shell命令是有一些交互的，比如scp、ssh 是要输入密码的，所以我们必须通过一些其它方式来解决这一类问题。**
 
 1. sshpass 是一个简单的命令行工具，scp的时候会提示输入密码，这个工具的作用是可以将密码预先设置，从而使脚本可以自动化。
