@@ -40,7 +40,7 @@ travis encrypt DEPLOY_USER=<csun-username>
 travis encrypt DEPLOY_PASS=<csun-password> 
 
 ```
-在有`travis.yml` 文件的项目中运行以上命令时，travis会自动注入`global`节点到`travis.yml` 文件中。如果不是，你也可以从命令行得到值后，copy加密后的值进`travis.yml`文件，最后`travis.yml`看起来像这样：
+在有`travis.yml` 文件的项目中运行以上命令时，travis会自动注入`global`节点到`travis.yml` 文件中。如果不是，你也可以从命令行得到值后copy加密后的值进`travis.yml`文件。`travis.yml`看起来像这样：
 
 ```
 env: 
@@ -48,7 +48,7 @@ env:
     - secure: "..." 
     - secure: "..." 
 ```
-最后我们部署脚本就可以直接使用变量了
+我们部署脚本就可以直接使用变量了
 
 ```
 export SSHPASS=$DEPLOY_PASS
