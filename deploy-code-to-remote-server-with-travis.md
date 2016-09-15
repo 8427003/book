@@ -1,3 +1,7 @@
+---
+keywords: travis, sshpass,stricthostkeychecking,部署到远程服务器
+---
+
 # 背景
 
 我的blog代码托管在github上，想通过[travis](https://travis-ci.org)在提交代码时自动发布到远程服务器指定目录。本篇文章主要介绍利用travis持续集成来完成此项工作。
