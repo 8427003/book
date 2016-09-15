@@ -1,5 +1,5 @@
 ---
-keywords: travis, sshpass,stricthostkeychecking,部署到远程服务器
+keywords: travis, sshpass,stricthostkeychecking,部署到远程服务器, deploy, remote server
 ---
 
 # 背景
