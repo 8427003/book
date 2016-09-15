@@ -1,8 +1,14 @@
 {% extends template.self %}
 
-{% block description %}{{ page.description|d(page.title+'，前端笔记（www.css3.io)是一个技术blog，作者为李俊。',true)}}{% endblock %}
+{% block title %}{{ page.title }} | {{config.title|d("www.css3.io", true) }}{% endblock %}
+
+{% block description %}{{ page.description|d(page.title+'，cocoo前端笔记（www.css3.io)是一个技术blog，作者为李俊。',true)}}{% endblock %}
 
 {% block head %}
-<meta name="keywords" content="{{page.title}},{{ page.keywords+',' if page.keywords else "" }}前端笔记,www.css3.io,李俊的个人blog">
+<meta name="keywords" content="{{page.title}},{{ page.keywords+',' if page.keywords else "" }}cocoo前端笔记,www.css3.io">
+    {{ super() }}
+{% endblock %}
+
+{% block body%}
     {{ super() }}
 {% endblock %}
