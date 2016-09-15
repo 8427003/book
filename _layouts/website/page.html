@@ -2,13 +2,31 @@
 
 {% block title %}{{ page.title }} | {{config.title|d("www.css3.io", true) }}{% endblock %}
 
-{% block description %}{{ page.description|d(page.title+'，cocoo前端笔记（www.css3.io)是一个技术blog，作者为李俊。',true)}}{% endblock %}
+{% block description %}{{ page.description|d(page.title+'，cocoo前端笔记(www.css3.io)是一个技术blog，作者为李俊。',true)}}{% endblock %}
 
 {% block head %}
-<meta name="keywords" content="{{page.title}},{{ page.keywords+',' if page.keywords else "" }}cocoo前端笔记,www.css3.io">
+<meta name="keywords" content="{{ page.keywords if page.keywords else page.title }},cocoo前端笔记,www.css3.io">
     {{ super() }}
 {% endblock %}
 
 {% block body%}
     {{ super() }}
+{% endblock %}
+
+{% block javascript %}
+    {{ super() }}
+    <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
 {% endblock %}
