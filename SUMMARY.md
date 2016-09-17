@@ -9,6 +9,7 @@
     * [v8引擎helloworld](v8_helloworld.md)
     * [php+hhvm](php.md)
     * [gitbook生成静态blog通过travis发布到github托管](travis-gitbook-github.md)
+    * [通过travis部署代码到远程服务器](deploy-code-to-remote-server-with-travis.md)
 * [前端基础](front_end_base.md)
     * [http缓存](http_cache.md)
     * [bigpipe实现理论背景篇](bigpipe.md)
