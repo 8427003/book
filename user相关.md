@@ -61,3 +61,31 @@ usermod -s /bin/ksh -d /home/z –g developer sam
 此命令将用户sam的登录Shell修改为ksh，主目录改为/home/z，用户组改为developer。
 
 ---
+
+## 查询
+
+当前登陆用户:
+```
+> w
+> who
+```
+查看自己的用户名
+```
+> whoami
+```
+查看用户信息
+```
+> finger root
+> id root
+
+```
+查看用户登陆记录
+```
+> last #查看登录成功的用户记录
+> lastb #查看登录不成功的用户记录
+```
+查看所有用户
+```
+> cut -d : -f 1 /etc/passwd
+> cat /etc/passwd |awk -F \: '{print $1}'
+```
