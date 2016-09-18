@@ -1,5 +1,7 @@
 # User
 
+
+
 ## **useradd** _选项_ _用户名_
 
 选项：
@@ -14,9 +16,7 @@
 
 ```
 
-
-
-例子：
+例子1：
 
 ```
 useradd –d /usr/sam -m sam
@@ -24,6 +24,7 @@ useradd –d /usr/sam -m sam
 此命令创建了一个用户sam，
 其中-d和-m选项用来为登录名sam产生一个主目录/usr/sam（/usr为默认的用户主目录所在的父目录）。
 
+例子2：
 
 ```
 useradd -s /bin/sh -g group –G adm,root gem
@@ -31,6 +32,7 @@ useradd -s /bin/sh -g group –G adm,root gem
 此命令新建了一个用户gem，该用户的登录Shell是/bin/sh，
 它属于group用户组，同时又属于adm和root用户组，其中group用户组是其主组。
 
+---
 
 ## **userdel** _选项_ _用户名_
 
@@ -44,7 +46,7 @@ userdel -r sam
 此命令删除用户sam在系统文件中（主要是/etc/passwd, /etc/shadow, /etc/group等）的记录，同时删除用户的主目录。
 
 
-
+---
 
 ## **usermod** 选项 用户名
 
@@ -57,3 +59,5 @@ usermod -s /bin/ksh -d /home/z –g developer sam
 
 ```
 此命令将用户sam的登录Shell修改为ksh，主目录改为/home/z，用户组改为developer。
+
+---
