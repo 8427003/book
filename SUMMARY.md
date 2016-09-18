@@ -1,6 +1,8 @@
 # Summary
 
 * [关于我](README.md)
+* Linux
+    * [linux文件权限](linux文件权限.md)
 * [Shell](huan_jing.md)
     * [命令行快捷键](ming_ling_xing_kuai_jie_jian.md)
 * [VIM](vim.md)
