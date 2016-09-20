@@ -11,4 +11,5 @@
 
 * [二维码生成器](https://chrome.google.com/webstore/detail/%E4%BA%8C%E7%BB%B4%E7%A0%81qr%E7%A0%81%E7%94%9F%E6%88%90%E5%99%A8qr-code-generato/pflgjjogbmmcmfhfcnlohagkablhbpmg) 将浏览器地址栏的url一建生成二维码，适合h5开发
 
-* [json格式化]() 此类软件有很多，独爱这一个，简单实用。
+* [JSON Formatter]() 此类软件有很多，独爱这一个，简单实用。
+
