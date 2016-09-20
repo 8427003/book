@@ -31,6 +31,32 @@ cat: foot.txt: No such file or directory
 
 # 文件描述符
 
-输出分**标准输出(standard output)**与**标准错误（standard error）**。在Unix系统中, [任何东西都是文件](https://en.wikipedia.org/wiki/Everything_is_a_file)，包括标准输出和标准错误。任何打开的文件都有一个**文件描述符**与之对应，你可以理解为每个打开的文件分配了一个id,操作文件只需要操作与之对应的id就行了。标准输出的文件描述符为`1`,标准错误的文件描述符为`2`
+输出分**标准输出(standard output)**与**标准错误（standard error）**。在Unix系统中, [任何东西都是文件](https://en.wikipedia.org/wiki/Everything_is_a_file)，包括标准输出和标准错误。任何打开的文件都有一个**文件描述符**与之对应，你可以理解为每个打开的文件分配了一个id,操作文件只需要操作与之对应的id就行了。**标准输出的文件描述符为`1`,标准错误的文件描述符为`2`**
+
+先前的脚本
+```
+$ cat foot.txt > output.txt
+```
+等同于
+
+```
+$ cat foot.txt 1> output.txt
+
+```
+只是将标准输出定向到了output.txt中，而标准错误并没有定向到output.txt中。
+
+脚本
+```
+$ cat foot.txt > output.txt
+cat: foot.txt: No such file or directory
+```
+在文件不存在时，想要把信息定向到output.txt，应该改为
+
+```
+$ cat foot.txt 2> output.txt
+```
+
+
+
 
 
