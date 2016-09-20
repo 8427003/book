@@ -26,4 +26,4 @@
 
 [个人简历](https://www.css3.io/resume.html)
 
-[工具栈](https://www.css3.io/resume.html）
+[工具栈](https://www.css3.io/resume.html)
