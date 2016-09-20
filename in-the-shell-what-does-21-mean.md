@@ -58,18 +58,26 @@ $ cat foot.txt 2> output.txt
 
 # 2>&1
 
-既想把标准输出和标准错误都定向到output.txt文件，时你就得这么写了
+既想把标准输出和标准错误都定向到output.txt文件，这时你就得这么写了
 
 ```
-cat foot.txt >output.txt 2>&1
+$ cat foot.txt >output.txt 2>&1
 ```
 
-&1 表示标准输出，多个&符号是因为
+**它表示现将标准输出定向到文件output.txt中，然后将标准错误定向到标准输出中**，等同于将标准输出和标准错误一同输出到output.txt文件中。&1 表示标准输出，多个&符号是因为
 
 ```
-cat foot.txt >output.txt 2>1
+$ cat foot.txt >output.txt 2>1
 ```
 代表把标准错误定向到**文件1**中，**并非标准输出**中。
 
+
+# 其它问题
+## 将 2>&1 放到前面
+```
+$ cat foot.txt 2>&1 >output.txt
+
+```
+这样是不行的，
 
 
