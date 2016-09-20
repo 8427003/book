@@ -45,3 +45,5 @@
 * [sourceTree](https://www.sourcetreeapp.com/) 最好用的git图像界面客户端
 
 * [SwitchHosts](http://oldj.github.io/SwitchHosts/) 切换hosts，可预设置多种方案，好用
+
+* [webstrom](https://www.jetbrains.com/webstorm/) debug代码时用，检测编码时用，平时不用
