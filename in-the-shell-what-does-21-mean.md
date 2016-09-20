@@ -102,3 +102,14 @@ $ cat foot.txt 1>out.txt 2>out.txt
 
 ```
 但是这种打开了两次文件foot.txt, 而且结果还会相互覆盖。
+
+
+# 参考
+
+http://blog.csdn.net/ithomer/article/details/9288353
+
+http://www.cnblogs.com/caolisong/archive/2007/04/25/726896.html
+
+http://askubuntu.com/questions/635065/what-is-the-differences-between-and-21
+
+http://www.brianstorti.com/understanding-shell-script-idiom-redirect/
