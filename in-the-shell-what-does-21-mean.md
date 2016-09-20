@@ -64,7 +64,7 @@ $ cat foot.txt 2> output.txt
 $ cat foot.txt >output.txt 2>&1
 ```
 
-**它表示现将标准输出定向到文件output.txt中，然后将标准错误定向到标准输出中**，等同于将标准输出和标准错误一同输出到output.txt文件中。&1 表示标准输出，多个&符号是因为
+**它表示现将标准输出定向到文件output.txt中，然后将标准错误定向到标准输出中**，等同于将标准输出和标准错误一同输出到output.txt文件中。&1 表示标准输出，多个&符号是因为脚本解析问题
 
 ```
 $ cat foot.txt >output.txt 2>1
