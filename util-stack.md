@@ -29,3 +29,15 @@
 * [keycastr](https://github.com/keycastr/keycastr) 显示正在敲击的键在屏幕上，分享视频时可用
 
 * [tickeys](http://www.yingdev.com/projects/tickeys) 让普通键盘出发机械键盘声音，用了后会有抛弃机械键盘的想法，建议不要使用。
+
+---
+
+# 开发相关
+
+* vim [个人配置](https://github.com/8427003/cocoVim/blob/master/simple/.vimrc) 作了一些基础功能优化和完善，适合前端。
+
+* [kaleidoscope](http://xclient.info/search/s/kaleidoscope/) diff两个文件夹, 我用过的最好用的diff。
+
+* [xmind](http://xclient.info/s/xmind.html) 思维导图
+
+* [Genymotion](https://www.genymotion.com/) 手机模拟，虚拟机，最快的
