@@ -13,3 +13,6 @@
 
 * [JSON Formatter]() 此类软件有很多，独爱这一个，简单实用。
 
+* [octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc) github生成左侧导航树，方便文件浏览
+
+* [octolinker](https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp) github依赖模块跳转，方便读源码
