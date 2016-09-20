@@ -43,3 +43,5 @@
 * [Genymotion](https://www.genymotion.com/) 手机模拟，虚拟机，最快的
 
 * [sourceTree](https://www.sourcetreeapp.com/) 最好用的git图像界面客户端
+
+* [SwitchHosts](http://oldj.github.io/SwitchHosts/) 切换hosts，可预设置多种方案，好用
