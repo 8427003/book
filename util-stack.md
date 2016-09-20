@@ -16,3 +16,8 @@
 * [octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc) github生成左侧导航树，方便文件浏览
 
 * [octolinker](https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp) github依赖模块跳转，方便读源码
+
+---
+
+# mac 相关
+* [alfred](https://www.alfredapp.com/) 不解释，no1当仁不让，本人用的个人收费版，唯一让我出钱的软件。
