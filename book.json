@@ -15,7 +15,8 @@
         "baidu_gio",
         "-search",
         "-lunr",
-        "-sharing"
+        "-sharing",
+        "sitemap"
     ],
     "pluginsConfig": {
        "ga": {
@@ -31,6 +32,9 @@
         },
         "baidu_gio": {
             "token": "3b06928c84dad0b03dc0fdca98e190c9"
+        },
+        "sitemap": {
+            "hostname": "https://www.css3.io/"
         }
     }
 }
