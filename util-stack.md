@@ -47,3 +47,20 @@
 * [SwitchHosts](http://oldj.github.io/SwitchHosts/) 切换hosts，可预设置多种方案，好用
 
 * [webstrom](https://www.jetbrains.com/webstorm/) debug代码时用，检测编码时用，平时不用
+
+---
+
+# 翻墙
+
+* [版瓦工vps](https://bandwagonhost.com/) 一年10几美元，稳定服役1年了，速度一般能看youtube 720p。但是最近封杀了pptp等端口服务，只能支持shadowsocks，和openvpn了。
+
+* [kvmla](https://www.kvmla.com/) 香港vps，有同事买说稳定服役1.5年已经，速度快。
+
+* [云梯vpn](https://www.yuntibit.com/) ping了下发现香港服务器居然是rackspace（国际4大vps商之一）买的。
+
+
+---
+# 常去网站
+* [Hacker News](https://news.ycombinator.com/) 很多牛逼项目，创业项目，程序员必看网站
+
+
