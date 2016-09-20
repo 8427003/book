@@ -78,6 +78,6 @@ $ cat foot.txt >output.txt 2>1
 $ cat foot.txt 2>&1 >output.txt
 
 ```
-这样是不行的，
+这样是不行的，这代表将标准错误定向到标准输出中（注意，此时的标准输出为控制台屏幕）
 
 
