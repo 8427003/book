@@ -52,7 +52,7 @@
 
 # 翻墙
 
-* [版瓦工vps](https://bandwagonhost.com/) 一年10几美元，稳定服役1年了，速度一般能看youtube 720p。但是最近封杀了pptp等端口服务，只能支持shadowsocks，和openvpn了。
+* [版瓦工vps](https://bandwagonhost.com/) 一年10几美元，本人现在用的，稳定服役1年了，速度一般能看youtube 720p。但是最近封杀了pptp等端口服务，只能支持shadowsocks，和openvpn了。
 
 * [kvmla](https://www.kvmla.com/) 香港vps，有同事买说稳定服役1.5年已经，速度快。
 
