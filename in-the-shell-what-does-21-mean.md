@@ -43,7 +43,7 @@ $ cat foot.txt > output.txt
 $ cat foot.txt 1> output.txt
 
 ```
-只是将标准输出定向到了output.txt中，而标准错误并没有定向到output.txt中。
+只是将标准输出定向到了output.txt中，**而标准错误并没有**定向到output.txt中。
 
 脚本
 ```
@@ -56,7 +56,20 @@ cat: foot.txt: No such file or directory
 $ cat foot.txt 2> output.txt
 ```
 
+# 2>&1
 
+既想把标准输出和标准错误都定向到output.txt文件，时你就得这么写了
+
+```
+cat foot.txt >output.txt 2>&1
+```
+
+&1 表示标准输出，多个&符号是因为
+
+```
+cat foot.txt >output.txt 2>1
+```
+代表把标准错误定向到**文件1**中，**并非标准输出**中。
 
 
 
