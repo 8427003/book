@@ -12,9 +12,12 @@ install:
 script:
 - gitbook build
 after_success:
-- sh deploy.sh
 - export SSHPASS=$DEPLOY_PASS
+
+# 直接将产物scp到vps太慢了，国外服务器传国内服务器。
 #- sshpass -e scp  -o stricthostkeychecking=no -r ./_book/* lijun@$www.css3.io:/home/lijun/www/
+
+- sh deploy-to-github.sh
 - sshpass -e scp  -o stricthostkeychecking=no ./deploy-to-vps.sh lijun@www.css3.io:/home/lijun/
 - sshpass -e ssh  -o stricthostkeychecking=no lijun@www.css3.io "sh ./deploy-to-vps.sh"
 env:
