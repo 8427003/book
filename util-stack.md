@@ -21,3 +21,11 @@
 
 # mac 相关
 * [alfred](https://www.alfredapp.com/) 不解释，no1当仁不让，本人用的个人收费版，唯一让我出钱的软件。
+
+* [Dr. Cleaner](https://itunes.apple.com/us/app/dr.-cleaner-clean-disk-space/id921458519?mt=12) 清理系统垃圾，免费软件，好用
+
+* [licecap](https://github.com/justinfrankel/licecap) 屏幕捕捉，生成gif小动画，实用
+
+* [keycastr](https://github.com/keycastr/keycastr) 显示正在敲击的键在屏幕上，分享视频时可用
+
+* [tickeys](http://www.yingdev.com/projects/tickeys) 让普通键盘出发机械键盘声音，用了后会有抛弃机械键盘的想法，建议不要使用。
