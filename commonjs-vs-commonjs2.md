@@ -6,7 +6,9 @@
 
 CommonJs spec defines only exports. But module.exports is used by node.js and many other CommonJs implementations.
 
-commonjs mean pure CommonJscommonjs2 also includes the module.exports stuff.
+commonjs mean pure CommonJs
+
+commonjs2 also includes the module.exports stuff.
 
 这里引用了 https://github.com/webpack/webpack/issues/1114 的回答，commonjs vs commonjs2 这两个概念问题迎刃而解。
 
