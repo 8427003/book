@@ -12,7 +12,7 @@ commonjs mean pure CommonJscommonjs2 also includes the module.exports stuff.
 
 那到底**module.exports vs exports** 区别是什么呢？
 
-个人看了很多文章任然懵，觉得这篇文章https://www.sitepoint.com/understanding-module-exports-exports-node-js/ 解释得比较到位。
+个人看了很多文章，任然懵，觉得这篇文章https://www.sitepoint.com/understanding-module-exports-exports-node-js/ 解释得比较到位。
 
 **理解关键点**
 
@@ -25,7 +25,7 @@ commonjs mean pure CommonJscommonjs2 also includes the module.exports stuff.
         };
 
     ```
-2. module.exports => {} <= exports 指向同一个对象。
+2. module.exports => {} <= exports 指向同一个对象。 两者最好不要同时使用。
 
     ```
     // exports 仅适用于：
@@ -39,7 +39,7 @@ commonjs mean pure CommonJscommonjs2 also includes the module.exports stuff.
     ```
     **我又产生了一个疑问，exports 看起来是多余的。它所能做的，module.exports都能实现。**
 
-其实一点也没错，nodejs 官方文档中提及https://nodejs.org/docs/latest/api/modules.html#modules_exports_alias
+3. 其实**2中的疑问**一点也没错，nodejs 官方文档中提及https://nodejs.org/docs/latest/api/modules.html#modules_exports_alias
   **exports** 只是**module.exports**的一个**别名** 还提示当你搞不清楚的时候，就用module.exports。
 
 # 总结
