@@ -90,4 +90,4 @@ git reset hash(B) --hard
 
 ```
 执行命令后本地的commit history就被干掉了
-当执行 `git push` 的时候，会被提示不能提交，但凡修改历史跟origin有冲突的，都必须强项覆盖提交，这时大胆执行`git push -f`同步到origin.
+当执行 `git push` 的时候，会被提示不能提交。但凡修改历史跟origin有冲突的，都必须强项覆盖提交，这时大胆执行`git push -f`同步到origin.
