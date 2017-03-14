@@ -38,4 +38,4 @@ A <- B <- C <- D
 git revert hash(B)..HEAD
 
 ```
-注意
+注意这个hash的取值，是B， 不是C的commit hash
