@@ -11,3 +11,12 @@ A <- B <- C <- D
 说明：尖头方向表示parent节点，及`A <- B` 表示先提交了A，再提交了B
 
 
+**现在不想要D了**
+
+```
+git revert hash(D) 
+
+```
+执行命令后会让填写 message
+
+git push
