@@ -11,6 +11,8 @@
   * [Shell中 2&gt;&1理解](in-the-shell-what-does-21-mean.md)
 * [VIM](vim.md)
   * [undo持久化](undo.md)
+* git
+  * [回滚](hui-gun.md)
 * [开始实践](getting_started.md)
   * [v8引擎helloworld](v8_helloworld.md)
   * [php+hhvm](php.md)
@@ -28,6 +30,4 @@
   * [javascript简单算法](javascript-algorithm.md)
 * Rect服务端渲染
   * [commonjs vs commonjs2](commonjs-vs-commonjs2.md)
-* git
-  * [回滚](hui-gun.md)
 
