@@ -72,7 +72,7 @@ A <- B <- C <- D <- E(revert)
 
 `revert hash..HEAD` 这个hash对应的commit不会被删除，会删除到它的后一次commit
 
-revert 会产生新的提交，并不会真正删除history。
+`revert` 会产生新的提交，并不会真正删除history。
 
 # reset
 
@@ -91,3 +91,13 @@ git reset hash(B) --hard
 ```
 执行命令后本地的commit history就被干掉了
 当执行 `git push` 的时候，会被提示不能提交。但凡修改历史跟origin有冲突的，都必须强项覆盖提交，这时大胆执行`git push -f`同步到origin.
+
+这里reset --hard 表示暂存区，工作区都不需要保留回滚回来的代码。如果不加，会出现这种情况，比如 `git reset hash(B) --hard`, 那么删除掉的C， D的文件会进入工作区。
+
+**小节：**
+
+`reset` 命令就不玩这么花了，因为这东西很危险，一般建议不允许在公共分支操作。试想下，如果你在公共分支删了几个history，可能会影响别人。
+
+
+# 总结
+如果在公共分支上回滚，那么revert应该是首选，reset就用在自己拉的私有分支（或者确定除了你自己，没人跟你用同一分支了。比如你个人的github master分支）
