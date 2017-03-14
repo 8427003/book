@@ -19,4 +19,7 @@ git revert hash(D)
 ```
 执行命令后会让填写 message
 
+```
 git push
+
+```
