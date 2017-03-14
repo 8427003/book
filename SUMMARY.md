@@ -28,8 +28,6 @@
   * [javascript简单算法](javascript-algorithm.md)
 * Rect服务端渲染
   * [commonjs vs commonjs2](commonjs-vs-commonjs2.md)
-
-## git
-
-* [回滚](git/hui-gun.md)
+* git
+  * [回滚](hui-gun.md)
 
