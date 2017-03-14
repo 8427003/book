@@ -103,8 +103,16 @@ A <- B
 
 **小节：**
 
-`reset` 命令就不玩这么花了，因为这东西很危险，一般建议不允许在公共分支操作。试想下，如果你在公共分支删了几个history，可能会影响别人。
+`reset` 命令就不玩这么花了，因为这东西很危险，一般建议不允许在公共分支操作。试想下，如果你在公共分支删了几个history，可能会[影响别人](https://www.atlassian.com/git/tutorials/merging-vs-rebasing?section=the-golden-rule-of-rebasing)。
 
 
 # 总结
 如果在公共分支上回滚，那么revert应该是首选，reset就用在自己拉的私有分支（或者确定除了你自己，没人跟你用同一分支了。比如你个人的github master分支）
+
+# 参考
+
+https://github.com/geeeeeeeeek/git-recipes/wiki/5.2-%E4%BB%A3%E7%A0%81%E5%9B%9E%E6%BB%9A%EF%BC%9AReset%E3%80%81Checkout%E3%80%81Revert%E7%9A%84%E9%80%89%E6%8B%A9
+
+https://www.atlassian.com/git/tutorials/merging-vs-rebasing?section=the-golden-rule-of-rebasing
+
+https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting
