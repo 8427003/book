@@ -95,9 +95,8 @@ git reset hash(B) --hard
 
 ```
 A <- B
+
 ```
-
-
 当执行 `git push` 的时候，会被提示不能提交。但凡修改历史跟origin有冲突的，都必须强项覆盖提交，这时大胆执行`git push -f`同步到origin.
 
 这里reset --hard 表示暂存区，工作区都不需要保留回滚回来的代码。如果不加，会出现这种情况，比如 `git reset hash(B) --hard`, 那么删除掉的C， D的文件会进入工作区。
