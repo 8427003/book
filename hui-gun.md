@@ -17,9 +17,11 @@ A <- B <- C <- D
 git revert hash(D) 
 
 ```
-执行命令后会让填写 message
+执行命令后会让填写 message, 相当于一次commit, 此时多了一次提交F，如下 
 
 ```
-git push
-
+A <- B <- C <- D <- F(merge)
 ```
+
+但是 D 这次的提交会被干掉，于是回滚成功。
+
