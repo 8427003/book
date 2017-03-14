@@ -92,6 +92,7 @@ git reset hash(B) --hard
 注意，这里B的hash，而非C的。
 
 执行命令后本地的commit history就被干掉了
+
 ```
 A <- B
 ```
