@@ -13,7 +13,6 @@ A <- B <- C <- D
 
 **现在不想要D了**
 
-
 ```
 git revert hash(D) 
 
