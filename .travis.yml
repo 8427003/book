@@ -18,7 +18,7 @@ after_success:
 #- sshpass -e scp  -o stricthostkeychecking=no -r ./_book/* lijun@$www.css3.io:/home/lijun/www/
 
 - sh deploy-to-github.sh
-- sshpass -e scp  -o stricthostkeychecking=no ./deploy-to-vps.sh lijun@www.css3.io:/home/lijun/
+  #- sshpass -e scp  -o stricthostkeychecking=no ./deploy-to-vps.sh lijun@www.css3.io:/home/lijun/
 - sshpass -e ssh  -o stricthostkeychecking=no lijun@www.css3.io "sh ./deploy-to-vps.sh"
 env:
   global:
