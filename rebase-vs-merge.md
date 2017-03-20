@@ -3,11 +3,9 @@
 如果用一句话来描述 `git rebase` 和 `git merge`的**最大**区别，那就是：
 两种合并所产生的log不一样。
 
-# merge
 
 ![](/assets/merge.png)
 
-# rebase
 
 ![](/assets/rebase.png)
 
