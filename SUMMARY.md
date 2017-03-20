@@ -13,6 +13,7 @@
   * [undo持久化](undo.md)
 * git
   * [回滚](hui-gun.md)
+  * [3图带你理解rebase和merge](rebase-vs-merge.md)
 * [开始实践](getting_started.md)
   * [v8引擎helloworld](v8_helloworld.md)
   * [php+hhvm](php.md)
