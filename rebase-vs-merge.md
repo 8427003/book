@@ -9,6 +9,11 @@
 
 ![](/assets/rebase.png)
 
+# 小结
+
+从上图中看，rebase与merge的区别有些体现了，即它们产生的log tree不一样。我们放大这种效果再看
+
+
 # merge vs rebase
 
 ![](/assets/rebase-vs-merge.png)
