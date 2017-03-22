@@ -11,6 +11,7 @@
     },
     "plugins": [
         "ga",
+        "duoshuo",
         "baidu_gio",
         "-search",
         "-lunr",
@@ -25,6 +26,10 @@
                 "cookieDomain": "www.css3.io"
             }
        },
+       "duoshuo": {
+            "short_name": "css3-io",
+            "theme": "default"
+        },
         "baidu_gio": {
             "token": "3b06928c84dad0b03dc0fdca98e190c9"
         },
