@@ -36,7 +36,7 @@ CentOS-fasttrack.repo  epel.repo          webtatic-archive.repo
 
 # 当切换repository后依然下载老版本软件包
 
-你会发现，你即使加了一个epel的源，有时候还是下的老版本。原理很简单，你所有的源里面，最高版本就是那个老版本包。举个实际例子，`yum install nodejs` 的时候，即使你有epel也只能安装0.10.x的版本。其实有解决方案的，这种情况你去看官方是否提供了一个源，比如nodejs官方就提供[https://nodejs.org/en/download/package-manager/\#enterprise-linux-and-fedora.](https://nodejs.org/en/download/package-manager/#enterprise-linux-and-fedora.通过命令，你会下载一个rpm包，然后安装这个rpm包，会增加一个新的源。我这里就多了一个)  通过命令，你会下载一个nodesource-release-el6-1.noarch.rpm包，然后安装这个rpm包，**会增加一个新的源**。我这里就多了一个 **nodesource-el6.repo**源（这个源里面仅仅放了nodejs相关的软件包，及其依赖包），此时你再去 yum install nodejs，就会发现安装的是新版本了。
+你会发现，你即使加了一个epel的源，有时候还是下的老版本。原理很简单，你所有的源里面，最高版本就是那个老版本包。举个实际例子，`yum install nodejs` 的时候，即使你有epel也只能安装0.10.x的版本。其实有解决方案的，这种情况你去看官方是否提供了一个源，比如nodejs官方就提供[https://nodejs.org/en/download/package-manager/\#enterprise-linux-and-fedora.](https://nodejs.org/en/download/package-manager/#enterprise-linux-and-fedora.通过命令，你会下载一个rpm包，然后安装这个rpm包，会增加一个新的源。我这里就多了一个)  通过命令，你会下载一个**nodesource-release-el6-1.noarch.rpm**包，然后安装这个rpm包，**会增加一个新的源**。我这里就多了一个 **nodesource-el6.repo**源（这个源里面仅仅放了nodejs相关的软件包，及其依赖包），此时你再去 yum install nodejs，就会发现安装的是新版本了。
 
 # 参考
 
