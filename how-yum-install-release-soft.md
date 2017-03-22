@@ -14,9 +14,9 @@
 
 # yum repository
 
-repository 简单来说就是对应一个url，这个url是个列表，里面有很多的软件包。当yum install xxx, 就在里面去查找xxx 以及xxx的依赖。如果这repository里放的xxx是一个低版本的，我们安装的就是个低版本的软件了。
+repository 简单来说就是对应一个url（专业叫镜像地址），这个url是个列表，里面有很多的软件包。当yum install xxx, 就在里面去查找xxx 以及xxx的依赖。如果这repository里放的xxx是一个较低版本的，我们安装的就是个低版本的软件了。
 
-yum 可以同时使用多个 repository，一搬在/etc/yum.repos.d/ 路径下，比如我就有这么多
+yum 可以同时使用多个 repository，一搬在`/etc/yum.repos.d/ `路径下，比如我就有这么多
 
 ```
 CentOS-Base.repo       CentOS-Media.repo  epel-testing.repo      webtatic.repo
@@ -26,15 +26,13 @@ CentOS-fasttrack.repo  epel.repo          webtatic-archive.repo
 
 # .repo
 
-打开.repo文件看，会发现一个.repo文件里面有多个节点，每个节点对应了一个url，这就是我们前面提到的装有很多软件包的url了。节点叫什么名字并不重要，一个.repo里可以包含1个或者多个节点。当yum install xxx安装时，会在每个节点对应的url去查找（前提是每个节都启动了），默认滴会安装xxx最新的一个版本。当然你可以yum list xxx 列出所有的版本，选择安装。yum search xxx是搜索，这个和list 有区别，list是只列出name， search 会去找name, descript等信息包含xxx的软件包。更多可以了解[** yum list vs yum search**](https://www.centos.org/docs/5/html/yum/sn-searching-packages.html)。
+打开`.repo`文件看，会发现一个`.repo`文件里面有多个节点，每个节点对应了一个url，这就是我们前面提到的装有很多软件包的url了。节点叫什么名字并不重要，一个`.repo`里可以包含1个或者多个节点。当`yum install xxx`安装时，会在每个节点对应的url去查找（前提是每个节都启动了），默认滴会安装xxx最新的一个版本。当然你可以`yum list xxx` 列出所有的版本，选择安装。`yum search xxx`是搜索，这个和**list** 有区别，**list**是只列出_name_， **search** 会去找_name_, _descr（每个包拥有一些基本信息name，desc等等）_等信息包含xxx的软件包。更多可以了解[** yum list vs yum search**](https://www.centos.org/docs/5/html/yum/sn-searching-packages.html)。
 
-其中，有个两个.repo非常重要，默认滴CentOS-Base.repo是主要的一个repository，里面指向了官方的源镜像地址。但是也有不够用的情况，所以[epel.repo](https://fedoraproject.org/wiki/EPEL)这个扩展包源就排上用场了，很多时候，会安装老的版本包，加入一个不一样的源，就可能安装一个新版本包了。因为这个新的源里面就有个比较新版的包，yum install xxx**会优先安装高版本**，epel就不多介绍了，还有一些有意思的源，这些源之所以有多种，是因为每个源里的包功能上不一样，比如有些源可能专放一些驱动，有些源专放一些其它工具等等。
+其中，有个两个**.repo**非常重要，默认滴**CentOS-Base.repo**是主要的一个repository，里面指向了官方的源镜像地址。但是也有不够用的情况，所以[**epel.repo**](https://fedoraproject.org/wiki/EPEL)这个扩展包源就排上用场了，很多时候，会安装老的版本包，加入一个不一样的源，就可能安装一个新版本包了。因为这个新的源里面就有个比较新版的包，`yum install xxx`**会优先安装高版本**，**epel**就不多介绍了，还有一些有意思的源，这些源之所以有多种，是因为每个源里的包功能上不一样，比如有些源可能专放一些驱动，有些源专放一些其它工具等等。
 
 # 如何为yum加入新的repository
 
-你完全可以copy一个.repo，然后手动去改里面的url。也有更方便的方案，就直接yum install 安装，比如epel就可以_yum install epel_
-
--release.（官方提供了这样一个包，其它源里面也可以搜到）安装后，/etc/yum.repos.d/  路径下就多一个epel.repo文件了，已经自动配置好了。这种自动安装对比手动还是挺好的，因为你不必去记住url。有一个问题，多个源尽量不要混着使用，可能引发依赖问题，或者严重的软件跑不起来，更多参考[http://dag.wiee.rs/rpm/FAQ.php\#D1。针对这个问题，我的理解是，混合使用源下载的依赖可能来自其它的源，而其它的源下载的依赖包并非你安装包期望的版本，或者是底层的存储架构（想要个x86](http://dag.wiee.rs/rpm/FAQ.php#D1。针对这个问题，我的理解是，混合使用源下载的依赖可能来自其它的源，而其它的源下载的依赖包并非你安装包期望的版本，或者是底层的存储架构（想要个x86) 64的下了i386 32的）。具体也没见文章说得很清楚，这里自己也有疑问，估计是yum的设计并非针对多个源混用，面对混用源，依赖方面做得有些不足。
+你完全可以copy一个`.repo`，然后手动去改里面的url。也有更方便的方案，就直接`yum install `安装，比如epel就可以_`yum install epel-release`_.（官方提供了这样一个包，其它源里面也可以搜到）安装后，`/etc/yum.repos.d/ ` 路径下就多一个**epel.repo**文件了，已经自动配置好了。这种自动安装对比手动还是挺好的，因为你不必去记住url。有一个问题，多个源尽量不要混着使用，可能引发依赖问题，或者严重的软件跑不起来，更多参考[http://dag.wiee.rs/rpm/FAQ.php\#D1。 ](http://dag.wiee.rs/rpm/FAQ.php#D1。针对这个问题，我的理解是，混合使用源下载的依赖可能来自其它的源，而其它的源下载的依赖包并非你安装包期望的版本，或者是底层的存储架构（想要个x86)针对这个问题，我的理解是，混合使用源下载的依赖可能来自其它的源，而其它的源下载的依赖包并非你安装包期望的版本，或者是底层的存储架构（想要个x86 64的下了i386 32的）具体也没见文章说得很清楚，这里自己也有疑问，估计是yum的设计并非针对多个源混用，面对混用源，依赖方面做得有些不足。
 
 # 当切换repository后依然下载老版本软件包
 
