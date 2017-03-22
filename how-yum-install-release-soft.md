@@ -16,7 +16,7 @@
 
 repository 简单来说就是对应一个url（专业叫镜像地址），这个url是个列表，里面有很多的软件包。当yum install xxx, 就在里面去查找xxx 以及xxx的依赖。如果这repository里放的xxx是一个较低版本的，我们安装的就是个低版本的软件了。
 
-yum 可以同时使用多个 repository，一搬在`/etc/yum.repos.d/ `路径下，比如我就有这么多
+yum 可以同时使用多个 repository，一搬在`/etc/yum.repos.d/`路径下，比如我就有这么多
 
 ```
 CentOS-Base.repo       CentOS-Media.repo  epel-testing.repo      webtatic.repo
@@ -32,11 +32,11 @@ CentOS-fasttrack.repo  epel.repo          webtatic-archive.repo
 
 # 如何为yum加入新的repository
 
-你完全可以copy一个`.repo`，然后手动去改里面的url。也有更方便的方案，就直接`yum install `安装，比如epel就可以_`yum install epel-release`_.（官方提供了这样一个包，其它源里面也可以搜到）安装后，`/etc/yum.repos.d/ ` 路径下就多一个**epel.repo**文件了，已经自动配置好了。这种自动安装对比手动还是挺好的，因为你不必去记住url。有一个问题，多个源尽量不要混着使用，可能引发依赖问题，或者严重的软件跑不起来，更多参考[http://dag.wiee.rs/rpm/FAQ.php\#D1。 ](http://dag.wiee.rs/rpm/FAQ.php#D1。针对这个问题，我的理解是，混合使用源下载的依赖可能来自其它的源，而其它的源下载的依赖包并非你安装包期望的版本，或者是底层的存储架构（想要个x86)针对这个问题，我的理解是，混合使用源下载的依赖可能来自其它的源，而其它的源下载的依赖包并非你安装包期望的版本，或者是底层的存储架构（想要个x86 64的下了i386 32的）具体也没见文章说得很清楚，这里自己也有疑问，估计是yum的设计并非针对多个源混用，面对混用源，依赖方面做得有些不足。
+你完全可以copy一个`.repo`，然后手动去改里面的url。也有更方便的方案，就直接`yum install`安装，比如epel就可以`yum install epel-release`.（官方提供了这样一个包，其它源里面也可以搜到）安装后，`/etc/yum.repos.d/` 路径下就多一个**epel.repo**文件了，已经自动配置好了。这种自动安装对比手动还是挺好的，因为你不必去记住url。有一个问题，多个源尽量不要混着使用，可能引发依赖问题，或者严重的软件跑不起来，更多参考[http://dag.wiee.rs/rpm/FAQ.php\#D1。 ](http://dag.wiee.rs/rpm/FAQ.php#D1。针对这个问题，我的理解是，混合使用源下载的依赖可能来自其它的源，而其它的源下载的依赖包并非你安装包期望的版本，或者是底层的存储架构（想要个x86)针对这个问题，我的理解是，混合使用源下载的依赖可能来自其它的源，而其它的源下载的依赖包并非你安装包期望的版本，或者是底层的存储架构（想要个x86 64的下了i386 32的）具体也没见文章说得很清楚，这里自己也有疑问，估计是yum的设计并非针对多个源混用，面对混用源，依赖方面做得有些不足。
 
 # 当切换repository后依然下载老版本软件包
 
-你会发现，你即使加了一个epel的源，有时候还是下的老版本。原理很简单，你所有的源里面，最高版本就是那个老版本包。举个实际例子，yum install nodejs 的时候，即使你有epel也只能安装0.10.x的版本。其实有解决方案的，这种情况你去看官方是否提供了一个源，比如nodejs官方就提供[https://nodejs.org/en/download/package-manager/\#enterprise-linux-and-fedora.通过命令，你会下载一个rpm包，然后安装这个rpm包，会增加一个新的源。我这里就多了一个](https://nodejs.org/en/download/package-manager/#enterprise-linux-and-fedora.通过命令，你会下载一个rpm包，然后安装这个rpm包，会增加一个新的源。我这里就多了一个) nodesource-el6.repo源（这个源里面仅仅放了nodejs相关的软件包，及其依赖包），此时你再去 yum install nodejs，就会发现安装的是新版本了。
+你会发现，你即使加了一个epel的源，有时候还是下的老版本。原理很简单，你所有的源里面，最高版本就是那个老版本包。举个实际例子，`yum install nodejs` 的时候，即使你有epel也只能安装0.10.x的版本。其实有解决方案的，这种情况你去看官方是否提供了一个源，比如nodejs官方就提供[https://nodejs.org/en/download/package-manager/\#enterprise-linux-and-fedora.](https://nodejs.org/en/download/package-manager/#enterprise-linux-and-fedora.通过命令，你会下载一个rpm包，然后安装这个rpm包，会增加一个新的源。我这里就多了一个)  通过命令，你会下载一个rpm包，然后安装这个rpm包，**会增加一个新的源**。我这里就多了一个 **nodesource-el6.repo**源（这个源里面仅仅放了nodejs相关的软件包，及其依赖包），此时你再去 yum install nodejs，就会发现安装的是新版本了。
 
 # 参考
 
