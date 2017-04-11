@@ -63,6 +63,20 @@ http://www.w3.org/TR/2012/WD-css3-flexbox-20120322/
 
 这个版本是2012年提出的，它实际是`display: flexbox`的最后一个版本。并非指的是`diplay:flex` 之所以我们要提这个点，是因为你看到2012年字眼的时候，一定要认清楚，到底说的是 `display: flexbox` 还是 `display: flex` \( [canuse notes 2 Only supports the 2012 syntax\)](https://caniuse.com/#search=flex)  这里指的是 `display: flexbox` 稍后我们谈兼容性是详细说明）
 
+
+
+| 常用属性版本对照表 |
+| :---: |
+
+
+| Final syntax | 2009 syntax | 2011 hybrid syntax |
+| :--- | :--- | :--- |
+| display: flex | display: box | display: flexbox |
+| flex-direction: row | box-orient: horizontal | box-orient: horizontal |
+| justify-content: flex-start | box-pack: start | box-pack: start |
+| align-items: flex-start | box-align: start | box-align: start |
+| flex: 1 | box-flex: 1 | flex: 1 |
+
 ### 兼容性
 
 [https://caniuse.com/\#search=flex](https://caniuse.com/#search=flex)     import china数据 可以看到如下notes
@@ -90,15 +104,39 @@ Most partial support refers to supporting an older version of the specification 
 
 1.如果我们是使用手机端开发（ie不考虑了）
 
-那我们可以使用2009年版本就够了。
+那我们可以使用2009年版本就够了。且只需要写`display: -webkit-box` 参见附2
 
 2.如果我们使用pc端支持主流浏览器，不考虑ie9及其以下ie浏览器（主流的火狐，ie，safari，chrome，**不考虑opera**）
 
 那我们必须使用 2009\(火狐老版本，chrome老版本，android老版本 ，ios 老版本），2011（ie10\)
 
-3.至于2012版本是否使用得看你是否支持Opera浏览器，参见附
+3.至于2012版本是否使用得看你是否支持Opera浏览器，参见附1
 
-### 附
+### 附1
 
-为什单拿opera说，opera在caniuse 上面只显示了**不支持\(版本10.1, 11.5\)**，以及带**-webkit-前缀支持\(版本15,16\)**以及**完全支持\(版本17及其以后）**，从opera的历史版本来看，并没有某个版本只支持notes1，这说明什么，opera**只支持2012年版本语法（及当前最新flex语法标准）**。对比chrome\(版本4-20，只支持带前缀 2009版本语法，版本20以后支持2012语法）那么，新的chrome（像这种第三方浏览器，更新比较容易，我们一般关注较新的版本）会支持2012语法，它会向前兼容，支持2009语法。**像前兼容不仅体现在这里，凡事老版本带前缀的，新版本不需要带前缀与之同时也会向前兼容带设备前缀属性。**
+为什单拿opera说，opera在caniuse 上面只显示了**不支持\(版本10.1, 11.5\)**，以及带**-webkit-前缀支持\(版本15,16\)**以及**完全支持\(版本17及其以后）**，从opera的历史版本来看，并没有某个版本只支持notes1，这说明什么，opera**只支持2012年版本语法（及当前最新flex语法标准）**。对比chrome\(版本4-20，只支持带前缀 2009版本语法，版本20以后支持2012语法）那么，新的chrome（像这种第三方浏览器，更新比较容易，我们一般关注较新的版本）会支持2012语法，它会向前兼容，支持2009语法。同时还向前兼容设备前缀。
+
+### **附2:**
+
+**像前兼容不仅体现在这里（附1），凡事老版本带前缀的，新版本不需要带前缀与之同时也会向前兼容带设备前缀属性。**
+
+举例：chrome \(版本21-28 支持带前缀flex，及代码必须这样写`display: -webkit-flex` \), 而chrome\(版本29及其以后不需要前缀也可以，及`display: flex` ，但是版本29以后的浏览器也是识别`display: -webkit-flex` ,所以chrome版本在29及其以后，就写带前缀的属性就行`display: -webkit-flex`
+
+### **其它**
+
+flex布局掌握核心的两个属性就够了，有些属性存在兼容性问题尽量不要使用，使用时要特别注意
+
+https://github.com/philipwalton/flexbugs
+
+# 参考：
+
+https://dev.opera.com/articles/advanced-cross-browser-flexbox/\#fallbacks
+
+http://stackoverflow.com/questions/17447807/cross-browser-support-for-css-flexbox
+
+https://www.w3.org/TR/css-flexbox-1/
+
+# 
+
+
 
