@@ -138,7 +138,7 @@ android\(新老版本），ios（新老版本）,其它webkit系 浏览器。他
 
 为什单拿opera说，opera在caniuse 上面只显示了**不支持\(版本10.1, 11.5\)**，以及带**-webkit-前缀支持\(版本15,16\)**以及**完全支持\(版本17及其以后）**，从opera的历史版本来看，并没有某个版本只支持notes1，这说明什么，opera**只支持2012年版本语法（及当前最新flex语法标准）**。按道理应该是这样，但是经测试opera （版本444）支持2009带前缀，这里caniuse并没体现，估计opera也是webkit内核系导致
 
-### **附（使用前缀与否）:**
+### **附（使用前缀与否）**
 
 **凡事老版本带前缀的且出现在caniuse列表里，新版本不需要带前缀与之同时也会向前兼容带设备前缀属性。**
 
@@ -154,7 +154,7 @@ android\(新老版本），ios（新老版本）,其它webkit系 浏览器。他
 
 [https://www.w3.org/TR/css-flexbox-1/](https://www.w3.org/TR/css-flexbox-1/)
 
-https://github.com/philipwalton/flexbugs
+[https://github.com/philipwalton/flexbugs](https://github.com/philipwalton/flexbugs)
 
 # 
 
