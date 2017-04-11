@@ -102,7 +102,7 @@ Most partial support refers to supporting an older version of the specification 
 
 **1.如果我们是使用手机端开发（ie不考虑了）**
 
-那我们可以使用2009年版本就够了。且只需要写`display: -webkit-box` 参见附2
+那我们可以使用2009年版本就够了。**且只需要写`display: -webkit-box`** 参见附2
 
 **2.如果我们使用pc端支持主流浏览器（火狐，ie，safari，chrome），不考虑ie9及其以下ie浏览器**
 
