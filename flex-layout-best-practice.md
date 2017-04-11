@@ -63,8 +63,6 @@ http://www.w3.org/TR/2012/WD-css3-flexbox-20120322/
 
 这个版本是2012年提出的，它实际是`display: flexbox`的最后一个版本。并非指的是`diplay:flex` 之所以我们要提这个点，是因为你看到2012年字眼的时候，一定要认清楚，到底说的是 `display: flexbox` 还是 `display: flex` \( [canuse notes 2 Only supports the 2012 syntax\)](https://caniuse.com/#search=flex)  这里指的是 `display: flexbox` 稍后我们谈兼容性是详细说明）
 
-
-
 | 常用属性版本对照表 |
 | :---: |
 
@@ -106,9 +104,9 @@ Most partial support refers to supporting an older version of the specification 
 
 那我们可以使用2009年版本就够了。且只需要写`display: -webkit-box` 参见附2
 
-2.如果我们使用pc端支持主流浏览器，不考虑ie9及其以下ie浏览器（主流的火狐，ie，safari，chrome，**不考虑opera**）
+2.如果我们使用pc端支持主流浏览器（火狐，ie，safari，chrome，**不考虑opera**），不考虑ie9及其以下ie浏览器
 
-那我们必须使用 2009\(火狐老版本，chrome老版本，android老版本 ，ios 老版本），2011（ie10\)
+那我们必须使用** 2009语法**\(火狐老版本，chrome老版本，android老版本 ，ios 老版本）和 **2011语法**（ie10\)
 
 3.至于2012版本是否使用得看你是否支持Opera浏览器，参见附1
 
@@ -126,15 +124,15 @@ Most partial support refers to supporting an older version of the specification 
 
 flex布局掌握核心的两个属性就够了，有些属性存在兼容性问题尽量不要使用，使用时要特别注意
 
-https://github.com/philipwalton/flexbugs
+[https://github.com/philipwalton/flexbugs](https://github.com/philipwalton/flexbugs)
 
 # 参考：
 
-https://dev.opera.com/articles/advanced-cross-browser-flexbox/\#fallbacks
+[https://dev.opera.com/articles/advanced-cross-browser-flexbox/\#fallbacks](https://dev.opera.com/articles/advanced-cross-browser-flexbox/#fallbacks)
 
-http://stackoverflow.com/questions/17447807/cross-browser-support-for-css-flexbox
+[http://stackoverflow.com/questions/17447807/cross-browser-support-for-css-flexbox](http://stackoverflow.com/questions/17447807/cross-browser-support-for-css-flexbox)
 
-https://www.w3.org/TR/css-flexbox-1/
+[https://www.w3.org/TR/css-flexbox-1/](https://www.w3.org/TR/css-flexbox-1/)
 
 # 
 
