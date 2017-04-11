@@ -104,13 +104,19 @@ Most partial support refers to supporting an older version of the specification 
 
 那我们可以使用2009年版本就够了。**且只需要写**`display: -webkit-box` 参见附2
 
-
-
 **2.如果我们使用pc端支持主流浏览器（火狐，ie，safari，chrome），不考虑ie9及其以下ie浏览器**
 
 那我们必须使用** 2009语法**\(火狐新老版本，chrome新老版本，android新老版本 ，ios 新老版本， 为何兼容浏览器新老版本且可以同时省去2012语法见附（属性向前兼容））和 **2011语法**（ie10\)
 
 这里注意必须同时使用：**2009语法带前缀（不带前缀的感觉没必要写）+2011带前缀**
+
+
+
+### **其它**
+
+flex布局掌握核心的两个属性就够了，有些属性存在兼容性问题尽量不要使用，使用时要特别注意
+
+[https://github.com/philipwalton/flexbugs](https://github.com/philipwalton/flexbugs)
 
 ### 附（属性向前兼容）
 
@@ -127,12 +133,6 @@ Most partial support refers to supporting an older version of the specification 
 举例：chrome \(版本21-28 支持带前缀flex，及代码必须这样写`display: -webkit-flex` \), 而chrome\(版本29及其以后不需要前缀也可以，及`display: flex` ，但是版本29以后的浏览器也是识别`display: -webkit-flex` ,所以chrome版本在29及其以后，就写带前缀的属性就行`display: -webkit-flex`
 
 而火狐（版本2-21 支持2009语法带前缀，版本22及其以后完全支持2012语法，注意版本历史中，并没有出现2012语法带前缀支持），所以火狐能识别`display: -moz-box` ,`display:flex` 但并不识别`display: -moz-flex`
-
-### **其它**
-
-flex布局掌握核心的两个属性就够了，有些属性存在兼容性问题尽量不要使用，使用时要特别注意
-
-[https://github.com/philipwalton/flexbugs](https://github.com/philipwalton/flexbugs)
 
 # 六、参考：
 
