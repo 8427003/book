@@ -112,6 +112,14 @@ android\(新老版本），ios（新老版本）,其它webkit系 浏览器。他
 
 这里注意必须同时使用：**2009语法带前缀（不带前缀的感觉没必要写）+2011带前缀**
 
+```css
+.flexbox { 
+    display: -webkit-box; 
+    display: -moz-box; 
+    display: -ms-flexbox;
+}
+```
+
 ### **其它**
 
 flex布局掌握核心的两个属性就够了，有些属性存在兼容性问题尽量不要使用，使用时要特别注意
