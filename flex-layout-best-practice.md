@@ -61,7 +61,7 @@ http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/ （2009年 display: box）
 http://www.w3.org/TR/2012/WD-css3-flexbox-20120322/
 ```
 
-这个版本是2012年提出的，它实际是`display: flexbox`的最后一个版本。并非指的是`diplay:flex` 之所以我们要提这个点，是因为你看到2012年字眼的时候，一定要认清楚，到底说的是 `display: flexbox` 还是 `display: flex` \( [canuse notes 2 Only supports the 2012 syntax\)](https://caniuse.com/#search=flex)  这里指的是 `display: flexbox` 稍后我们谈兼容性是详细说明）
+这个版本是2012年提出的，它实际是`display: flexbox`的最后一个版本。并非指的是`diplay:flex` 之所以我们要提这个点，是因为你看到2012年字眼的时候，一定要认清楚，到底说的是 `display: flexbox` 还是 `display: flex` \( [canuse notes 2 Only supports the 2012 syntax\)](https://caniuse.com/#search=flex)  这里指的是 `display: flexbox` 稍后我们谈兼容性将进一步说明）
 
 | 常用属性版本对照表 |
 | :---: |
@@ -109,8 +109,6 @@ Most partial support refers to supporting an older version of the specification 
 那我们必须使用** 2009语法**\(火狐新老版本，chrome新老版本，android新老版本 ，ios 新老版本， 为何兼容浏览器新老版本且可以同时省去2012语法见附（属性向前兼容））和 **2011语法**（ie10\)
 
 这里注意必须同时使用：**2009语法带前缀（不带前缀的感觉没必要写）+2011带前缀**
-
-
 
 ### **其它**
 
