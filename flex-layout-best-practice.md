@@ -18,7 +18,7 @@
 
 2.当然我们可以使用sass库。
 
-比如[https://github.com/mastastealth/sass-flex-mixin，或者优秀的compass](https://github.com/mastastealth/sass-flex-mixin，或者优秀的compass)  [http://compass-style.org/reference/compass/css3/flexbox/。但是我理解不是所有的人都喜欢使用一个库来解决问题，也不是所有人都喜欢使用sass（像我这样更喜less的人就比较迷茫，当然less库也有，但是我没找到一star比较高的）](http://compass-style.org/reference/compass/css3/flexbox/。但是我理解不是所有的人都喜欢使用一个库来解决问题，也不是所有人都喜欢使用sass（像我这样更喜less的人就比较迷茫，当然less库也有，但是我没找到一star比较高的）)
+比如[https://github.com/mastastealth/sass-flex-mixin](https://github.com/mastastealth/sass-flex-mixin，或者优秀的compass) ，或者优秀的compass [http://compass-style.org/reference/compass/css3/flexbox/。](http://compass-style.org/reference/compass/css3/flexbox/。但是我理解不是所有的人都喜欢使用一个库来解决问题，也不是所有人都喜欢使用sass（像我这样更喜less的人就比较迷茫，当然less库也有，但是我没找到一star比较高的）) 但是我理解不是所有的人都喜欢使用一个库来解决问题，也不是所有人都喜欢使用sass（像我这样更喜less的人就比较迷茫，当然less库也有，但是我没找到一star比较高的）
 
 # 期望
 
