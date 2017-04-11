@@ -100,13 +100,21 @@ Most partial support refers to supporting an older version of the specification 
 
 # 五、使用场景最佳实践总结
 
-**1.如果我们是使用手机端开发（ie等非weikit系内核不考虑了）**
+#### **1.如果我们是使用手机端开发（ie等非weikit系内核不考虑了）**
 
 android\(新老版本），ios（新老版本）,其它webkit系 浏览器。他们都**支持2009版本带前缀**，以及**2012版本**。
 
 我们可以使用2009年版本就够了（见**附属性向前兼容**）：**且只需要写**`display: -webkit-box`**（不带前缀的感觉没必要写）**
 
-**2.如果我们使用pc端支持主流浏览器（火狐，ie，safari，chrome），不考虑ie9及其以下ie浏览器**
+```css
+.flexbox { 
+    display: -webkit-box; 
+}
+```
+
+
+
+#### **2.如果我们使用pc端支持主流浏览器（火狐，ie，safari，chrome），不考虑ie9及其以下ie浏览器**
 
 那我们必须使用** 2009语法**\(火狐新老版本，chrome新老版本，android新老版本 ，ios 新老版本， 为何兼容浏览器新老版本且可以同时省去2012语法见**附属性向前兼容**）和 **2011语法**（ie10+\)
 
@@ -120,11 +128,9 @@ android\(新老版本），ios（新老版本）,其它webkit系 浏览器。他
 }
 ```
 
-### **其它**
+#### 总的来说按你想兼容浏览器，支持的最老语法版本来写就对了，webkit ，moz 支持的最老语法版本为2009，ms支持的最老语法版本为2011
 
-flex布局掌握核心的两个属性就够了，有些属性存在兼容性问题尽量不要使用，使用时要特别注意
 
-[https://github.com/philipwalton/flexbugs](https://github.com/philipwalton/flexbugs)
 
 ### 附（属性向前兼容）
 
