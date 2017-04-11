@@ -154,6 +154,8 @@ android\(新老版本），ios（新老版本）,其它webkit系 浏览器。他
 
 [https://www.w3.org/TR/css-flexbox-1/](https://www.w3.org/TR/css-flexbox-1/)
 
+https://github.com/philipwalton/flexbugs
+
 # 
 
 
