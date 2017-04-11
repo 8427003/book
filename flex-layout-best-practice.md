@@ -4,7 +4,7 @@
 
 有文章指出，我们混合三个版本来实现更多浏览器兼容性（更多参考[https://css-tricks.com/using-flexbox/](https://css-tricks.com/using-flexbox/%29。但是这种方案在实践中使用起来并不太友好。) \)。但是这种方案在实践中使用起来并不太友好：
 
-1.我们手动写三种版本，太复杂，如下
+1.假如我们手动写三种版本，太复杂，如下
 
 ```css
 .flexbox { 
