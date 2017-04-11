@@ -102,7 +102,7 @@ Most partial support refers to supporting an older version of the specification 
 
 **1.如果我们是使用手机端开发（ie不考虑了）**
 
-android\(新老版本），ios（新老版本）,其它webkit系 浏览器。他们都支持2009版本带前缀，以及2012版本
+android\(新老版本），ios（新老版本）,其它webkit系 浏览器。他们都支持2009版本带前缀，以及2012版本。
 
 我们可以使用2009年版本就够了：**且只需要写**`display: -webkit-box`
 
