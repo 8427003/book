@@ -130,7 +130,7 @@ flex布局掌握核心的两个属性就够了，有些属性存在兼容性问�
 
 [https://github.com/philipwalton/flexbugs](https://github.com/philipwalton/flexbugs)
 
-# 参考：
+# 六、参考：
 
 [https://dev.opera.com/articles/advanced-cross-browser-flexbox/\#fallbacks](https://dev.opera.com/articles/advanced-cross-browser-flexbox/#fallbacks)
 
