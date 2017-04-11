@@ -86,7 +86,7 @@ Most partial support refers to supporting an older version of the specification 
 4 Partial support is due to large amount of bugs present (see known issues)
 ```
 
-这里的 notes1 中的old flexbox指的是2009年的版本`display: -webkit-box`，notes2 指的是2011年的 `display: flexbox` 版本
+这里的 notes1 中的o**ld flexbox**指的是2009年的版本`display: -webkit-box`，notes2 指的是2011年的 `display: flexbox` 版本
 
 ### 兼容性小**结分析**
 
