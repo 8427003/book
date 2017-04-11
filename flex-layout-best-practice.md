@@ -79,6 +79,8 @@ http://www.w3.org/TR/2012/WD-css3-flexbox-20120322/
 
 [https://caniuse.com/\#search=flex](https://caniuse.com/#search=flex)     import china数据 可以看到如下notes
 
+![](/assets/canisue-flex.png)
+
 ```
 Most partial support refers to supporting an older version of the specification or an older syntax.
 1 Only supports the old flexbox specification and does not support wrapping.
@@ -112,8 +114,6 @@ android\(新老版本），ios（新老版本）,其它webkit系 浏览器。他
 }
 ```
 
-
-
 #### **2.如果我们使用pc端支持主流浏览器（火狐，ie，safari，chrome），不考虑ie9及其以下ie浏览器**
 
 那我们必须使用** 2009语法**\(火狐新老版本，chrome新老版本，android新老版本 ，ios 新老版本， 为何兼容浏览器新老版本且可以同时省去2012语法见**附属性向前兼容**）和 **2011语法**（ie10+\)
@@ -129,8 +129,6 @@ android\(新老版本），ios（新老版本）,其它webkit系 浏览器。他
 ```
 
 #### 总的来说按你想兼容浏览器，支持的最老语法版本来写就对了，webkit ，moz 支持的最老语法版本为2009，ms支持的最老语法版本为2011
-
-
 
 ### 附（属性向前兼容）
 
