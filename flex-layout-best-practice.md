@@ -2,7 +2,7 @@
 
 在前端布局这块儿 [CSS Flexible Box Layout](https://www.w3.org/TR/css-flexbox-1/) 使用得相当广泛了。但是这个css属性并非想象的那么简单，它有3个大版本的语法规范，这导致了我们在实际使用中不知道使用哪个版本。
 
-有文章指出，我们混合三个版本来实现更多浏览器兼容性（更多参考[https://css-tricks.com/using-flexbox/\)。但是这种方案在实践中使用起来并不太友好。](https://css-tricks.com/using-flexbox/%29。但是这种方案在实践中使用起来并不太友好。)
+有文章指出，我们混合三个版本来实现更多浏览器兼容性（更多参考[https://css-tricks.com/using-flexbox/](https://css-tricks.com/using-flexbox/%29。但是这种方案在实践中使用起来并不太友好。) \)。但是这种方案在实践中使用起来并不太友好：
 
 1.我们手动写三种版本，太复杂，如下
 
