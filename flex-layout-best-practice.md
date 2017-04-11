@@ -1,4 +1,4 @@
-# 背景
+# 一、背景
 
 在前端布局这块儿 [CSS Flexible Box Layout](https://www.w3.org/TR/css-flexbox-1/) 使用得相当广泛了。但是这个css属性并非想象的那么简单，它有3个大版本的语法规范，这导致了我们在实际使用中不知道使用哪个版本。
 
@@ -20,11 +20,11 @@
 
 比如[https://github.com/mastastealth/sass-flex-mixin](https://github.com/mastastealth/sass-flex-mixin，或者优秀的compass) ，或者优秀的compass [http://compass-style.org/reference/compass/css3/flexbox/。](http://compass-style.org/reference/compass/css3/flexbox/。但是我理解不是所有的人都喜欢使用一个库来解决问题，也不是所有人都喜欢使用sass（像我这样更喜less的人就比较迷茫，当然less库也有，但是我没找到一star比较高的）) 但是我理解不是所有的人都喜欢使用一个库来解决问题，也不是所有人都喜欢使用sass（像我这样更喜less的人就比较迷茫，当然less库也有，但是我没找到一star比较高的）
 
-# 期望
+# 二、期望
 
 有没有不依赖库，能够像用一般的css属性一样使用flex布局。答案当然是有的，只是你必须对flex语法的三个版本充分理解，尤其是每个版本对应的浏览器兼容性。
 
-#### 理解三个版本
+# 三、理解三个版本
 
 打开标准  [https://www.w3.org/TR/css-flexbox-1/](https://www.w3.org/TR/css-flexbox-1/)
 
@@ -75,7 +75,7 @@ http://www.w3.org/TR/2012/WD-css3-flexbox-20120322/
 | align-items: flex-start | box-align: start | box-align: start |
 | flex: 1 | box-flex: 1 | flex: 1 |
 
-### 兼容性
+# 四、通过caniuse进行兼容性分析
 
 [https://caniuse.com/\#search=flex](https://caniuse.com/#search=flex)     import china数据 可以看到如下notes
 
@@ -98,21 +98,23 @@ Most partial support refers to supporting an older version of the specification 
 
 3.android 火狐, ios safari等基本与2一致
 
-### 使用场景最佳实践总结
+# 五、使用场景最佳实践总结
 
-1.如果我们是使用手机端开发（ie不考虑了）
+**1.如果我们是使用手机端开发（ie不考虑了）**
 
 那我们可以使用2009年版本就够了。且只需要写`display: -webkit-box` 参见附2
 
-2.如果我们使用pc端支持主流浏览器（火狐，ie，safari，chrome），不考虑ie9及其以下ie浏览器
+**2.如果我们使用pc端支持主流浏览器（火狐，ie，safari，chrome），不考虑ie9及其以下ie浏览器**
 
 那我们必须使用** 2009语法**\(火狐新老版本，chrome新老版本，android新老版本 ，ios 新老版本）和 **2011语法**（ie10\)
 
-这里注意必须同时使用**2009语法带前缀+2012不带前缀**+**2012带前缀 参见附（使用前缀与否）**
+这里注意必须同时使用：
 
-### 附1
+**2009语法带前缀（不带前缀的感觉没必要写）+2012不带前缀**+**2012带前缀 参见附（使用前缀与否）**
 
-为什单拿opera说，opera在caniuse 上面只显示了**不支持\(版本10.1, 11.5\)**，以及带**-webkit-前缀支持\(版本15,16\)**以及**完全支持\(版本17及其以后）**，从opera的历史版本来看，并没有某个版本只支持notes1，这说明什么，opera**只支持2012年版本语法（及当前最新flex语法标准）**。对比chrome\(版本4-20，只支持带前缀 2009版本语法，版本20以后支持2012语法）那么，新的chrome（像这种第三方浏览器，更新比较容易，我们一般关注较新的版本）会支持2012语法，它会向前兼容，支持2009语法。同时还向前兼容设备前缀。
+### 附（opera 是webkit系）
+
+为什单拿opera说，opera在caniuse 上面只显示了**不支持\(版本10.1, 11.5\)**，以及带**-webkit-前缀支持\(版本15,16\)**以及**完全支持\(版本17及其以后）**，从opera的历史版本来看，并没有某个版本只支持notes1，这说明什么，opera**只支持2012年版本语法（及当前最新flex语法标准）**。对比chrome\(版本4-20，只支持带前缀 2009版本语法，版本20以后支持2012语法）那么，新的chrome（像这种第三方浏览器，更新比较容易，我们一般关注较新的版本）会支持2012语法，它会向前兼容，支持2009语法。按道理应该是这样，但是经测试opera （版本444）支持2009带前缀，这里caniuse并没体现，估计opera也是webkit内核系导致
 
 ### **附（使用前缀与否）:**
 
