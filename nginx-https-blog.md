@@ -2,7 +2,7 @@
 
 /etc/nginx/sites-available/www.css3.io.conf
 
-```
+```nginx
 server {
         listen       80;
         server_name  www.css3.io css3.io;
