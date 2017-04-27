@@ -28,15 +28,11 @@ server {
 }
 ```
 
+# 二、let's encrypt
 
+进入官网[https://letsencrypt.org/，通过](https://letsencrypt.org/，通过) [https://letsencrypt.org/getting-started/](https://letsencrypt.org/getting-started/) 找到 [many more ACME clients to choose from](https://letsencrypt.org/docs/client-options/)
 
-# 二、let's encrypt 
-
- 进入官网https://letsencrypt.org/，通过 https://letsencrypt.org/getting-started/ 找到 [many more ACME clients to choose from](https://letsencrypt.org/docs/client-options/)
-
-nginx [acme-nginx](https://github.com/kshcherban/acme-nginx) 按照文档生成\`\`` sudo acme-nginx -d css3.io -d www.css3.io`
-
-
+nginx [acme-nginx](https://github.com/kshcherban/acme-nginx) 按照文档生成`sudo acme-nginx -d css3.io -d www.css3.io`
 
 # 三、自动续期
 
@@ -47,11 +43,9 @@ MAILTO=8427003@qq.com
 12 11 10 * * root /usr/local/bin/acme-nginx -d css3.io -d www.css3.io >> /var/log/letsencrypt.log
 ```
 
-
-
 # 参考
 
-https://letsencrypt.org/
+[https://letsencrypt.org/](https://letsencrypt.org/)
 
-https://github.com/kshcherban/acme-nginx
+[https://github.com/kshcherban/acme-nginx](https://github.com/kshcherban/acme-nginx)
 
