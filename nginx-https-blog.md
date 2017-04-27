@@ -30,7 +30,7 @@ server {
 
 # 二、let's encrypt
 
-进入官网[https://letsencrypt.org/，通过](https://letsencrypt.org/，通过) [https://letsencrypt.org/getting-started/](https://letsencrypt.org/getting-started/) 找到 [many more ACME clients to choose from](https://letsencrypt.org/docs/client-options/)
+进入官网[https://letsencrypt.org/](https://letsencrypt.org/，通过)  通过 [https://letsencrypt.org/getting-started/](https://letsencrypt.org/getting-started/) 找到 [many more ACME clients to choose from](https://letsencrypt.org/docs/client-options/)
 
 nginx [acme-nginx](https://github.com/kshcherban/acme-nginx) 按照文档生成`sudo acme-nginx -d css3.io -d www.css3.io`
 
