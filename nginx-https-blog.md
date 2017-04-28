@@ -2,7 +2,7 @@
 
 ## 1. 先安check openssl版本
 
-先用`openssl version`查看openssl 版本，如版本过低需要[https://www.openssl.org/](https://www.openssl.org/) 下载最新安装。此前在openss1.0.0作为依赖编译nginx后发现http2并没有工作。安装后执行 `openssl`如发现
+先用`openssl version`查看openssl 版本\(必须&gt;=1.0.2\)，如版本过低需要[https://www.openssl.org/](https://www.openssl.org/) 下载最新安装。此前在openss1.0.0作为依赖编译nginx后发现http2并没有工作。安装后执行 `openssl`如发现
 
 ```
 openssl: error while loading shared libraries: libssl.so.1.1: cannot open shared object file: No such file or directory
