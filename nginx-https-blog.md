@@ -1,6 +1,6 @@
 # 一、nginx
 
-## 1. 先安check openssl版本
+## 1. 先check openssl版本
 
 先用`openssl version`查看openssl 版本\(必须&gt;=1.0.2\)，如版本过低需要[https://www.openssl.org/](https://www.openssl.org/) 下载最新安装。此前在openss1.0.0作为依赖编译nginx后发现http2并没有工作。安装后执行 `openssl`如发现
 
