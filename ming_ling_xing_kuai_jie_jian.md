@@ -118,6 +118,8 @@ c + . 最后一个参数
 
     修改  r lg=lg (zsh)
 
+    c+ ] = esc
+
 ### 9. 高效tab 切换
 
 ```
@@ -128,7 +130,6 @@ c + . 最后一个参数
 其它方式2：Alfred
 
 给当前应用指定输入法，比如切换到微信使用中文，切换到iterm2 使用英文：keyboard pilot
-
 ```
 
 ### 10.  命令行不可或缺神器
@@ -151,8 +152,13 @@ ssh dev@css3.io               Open Password Manager  dev(去passwd manager添加
 
 测试命令：
 #dev
-
 ```
 
+# 参考
 
+[https://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell-for-ubuntu-debian-suse-redhat-linux-etc/](https://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell-for-ubuntu-debian-suse-redhat-linux-etc/)
+
+[https://ss64.com/bash/syntax-keyboard.html](https://ss64.com/bash/syntax-keyboard.html)
+
+https://codingstyle.cn/topics/137 
 
