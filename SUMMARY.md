@@ -7,7 +7,6 @@
   * [linux文件权限](linux-file-permissions.md)
   * [user相关](linux-cmd-user.md)
   * [如何使用yum安装最新软件包](how-yum-install-release-soft.md)
-* [Shell](huan_jing.md)
   * [让命令行飞](ming_ling_xing_kuai_jie_jian.md)
   * [Shell中 2&gt;&1理解](in-the-shell-what-does-21-mean.md)
 * [VIM](vim.md)
