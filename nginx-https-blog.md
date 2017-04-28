@@ -2,7 +2,7 @@
 
 ## 1. 先安check openssl版本
 
-先用` openssl verstion `查看openssl 版本，如版本过低需要https://www.openssl.org/ 下载最新安装。此前在openss1.0.0作为依赖编译nginx后发现http2并没有工作。安装后执行 `openssl `如发现
+先用`openssl verstion`查看openssl 版本，如版本过低需要[https://www.openssl.org/](https://www.openssl.org/) 下载最新安装。此前在openss1.0.0作为依赖编译nginx后发现http2并没有工作。安装后执行 `openssl`如发现
 
 ```
 openssl: error while loading shared libraries: libssl.so.1.1: cannot open shared object file: No such file or directory
@@ -18,7 +18,7 @@ ln -s /usr/local/lib64/libcrypto.so.1.1 /usr/lib64/libcrypto.so.1.1
 
 ## 2. 源码编译安装nginx
 
-依赖https://nginx.org/en/docs/http/ngx\_http\_v2\_module.html 模块
+依赖[https://nginx.org/en/docs/http/ngx\_http\_v2\_module.html](https://nginx.org/en/docs/http/ngx_http_v2_module.html) 模块
 
 ## 3. 配置
 
@@ -50,7 +50,7 @@ server {
 }
 ```
 
-# 二、let's encrypt 
+# 二、let's encrypt
 
 进入官网[https://letsencrypt.org/](https://letsencrypt.org/，通过)  通过 [https://letsencrypt.org/getting-started/](https://letsencrypt.org/getting-started/) 找到 [many more ACME clients to choose from](https://letsencrypt.org/docs/client-options/)
 
@@ -71,8 +71,6 @@ nginx [acme-nginx](https://github.com/kshcherban/acme-nginx) 按照文档生成`
 MAILTO=8427003@qq.com
 12 11 10 * * root /usr/local/bin/acme-nginx -d css3.io -d www.css3.io >> /var/log/letsencrypt.log
 ```
-
-
 
 # 参考
 
