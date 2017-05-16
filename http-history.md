@@ -34,19 +34,15 @@ pipelining技术可以让它们并行发送请求，但是有一点要求，响�
 
 终于说到了重点，后来啊有个牛逼的组织（她们的使命是推进http更快）就在spdy的基础上提出一个正式的规范[http2](https://http2.github.io/), h2的连接模型跟spdy一样，这里就不多讨论了，关于h2的更深入的讨论将在之后的文章中更新。
 
-
-
 ### 参考：
 
-https://http2.github.io/
+[https://http2.github.io/](https://http2.github.io/)
 
-http://www.guypo.com/http-pipelining-not-so-fast-nor-slow/
+[http://www.guypo.com/http-pipelining-not-so-fast-nor-slow/](http://www.guypo.com/http-pipelining-not-so-fast-nor-slow/)
 
-https://devcentral.f5.com/blogs/us/http-pipelining-a-security-risk-without-real-performance-benefits
+[https://devcentral.f5.com/blogs/us/http-pipelining-a-security-risk-without-real-performance-benefits](https://devcentral.f5.com/blogs/us/http-pipelining-a-security-risk-without-real-performance-benefits)
 
-http://stackoverflow.com/questions/14810890/what-are-the-disadvantages-of-using-http-
+http://stackoverflow.com/questions/14810890/what-are-the-disadvantages-of-using-http-pipelining
 
-pipelininghttps://varvy.com/pagespeed/slow-start.html
-
-
+[https://varvy.com/pagespeed/slow-start.html](https://varvy.com/pagespeed/slow-start.html)
 
