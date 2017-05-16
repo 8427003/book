@@ -42,7 +42,9 @@ pipelining技术可以让它们并行发送请求，但是有一点要求，响�
 
 [https://devcentral.f5.com/blogs/us/http-pipelining-a-security-risk-without-real-performance-benefits](https://devcentral.f5.com/blogs/us/http-pipelining-a-security-risk-without-real-performance-benefits)
 
-http://stackoverflow.com/questions/14810890/what-are-the-disadvantages-of-using-http-pipelining
+[http://stackoverflow.com/questions/14810890/what-are-the-disadvantages-of-using-http-pipelining](http://stackoverflow.com/questions/14810890/what-are-the-disadvantages-of-using-http-pipelining)
 
 [https://varvy.com/pagespeed/slow-start.html](https://varvy.com/pagespeed/slow-start.html)
+
+https://http2.github.io/faq/\#general-questions
 
