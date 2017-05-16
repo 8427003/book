@@ -20,11 +20,33 @@ http大致经历了0.9、1.0、和现在我们用的1.1三个重要的版本。
 
 ![](/assets/http2-pipelining.png)
 
-pipelining技术可以让它们并行发送请求，但是有一点要求，响应必须按发送请求的顺序发回，那么会导致在响应阶段依然会被block住，这个问题专业术语叫[Head-of-line blocking](https://en.wikipedia.org/wiki/Head-of-line_blocking)\(队头阻塞）。百科上讲得有些复杂，其实是pipelining技术要求响应必须按请求顺序返回，要是你第一个请求的响应时间太长（比如是一个大图片），或者丢包等等，那第二个请求的响应就不好处理了，它必须得让第一个请求相应完毕后才能响应。因此后面的响应会被前面的响应卡住。（这里为何设计得如此坑，为何不一步到位解决问题，我理解pipelining只是一个track的方案，在解决问题的同时还必须考虑兼容以前的浏览器等因素，以至于不能一步到位。纯属个人推测！）理论上看，http pipelining 应该让http得到部分优化（它至少让请求并行发出去了），但是从实践中数据分析，这项技术并没有让http得到太多提升可参考文章http://www.guypo.com/http-pipelining-not-so-fast-nor-slow/，加上在定这项技术标准的时候留给实现者的自由发挥空间太大，导致实现上也是各有不同，而且很复杂。所以现在浏览器基本都是默认关闭这项技术。
+pipelining技术可以让它们并行发送请求，但是有一点要求，响应必须按发送请求的顺序发回，那么会导致在响应阶段依然会被block住，这个问题专业术语叫[Head-of-line blocking](https://en.wikipedia.org/wiki/Head-of-line_blocking)\(队头阻塞）。百科上讲得有些复杂，其实是pipelining技术要求响应必须按请求顺序返回，要是你第一个请求的响应时间太长（比如是一个大图片），或者丢包等等，那第二个请求的响应就不好处理了，它必须得让第一个请求相应完毕后才能响应。因此后面的响应会被前面的响应卡住。（这里为何设计得如此坑，为何不一步到位解决问题，我理解pipelining只是一个track的方案，在解决问题的同时还必须考虑兼容以前的浏览器等因素，以至于不能一步到位。纯属个人推测！）理论上看，http pipelining 应该让http得到部分优化（它至少让请求并行发出去了），但是从实践中数据分析，这项技术并没有让http得到太多提升可参考文章[http://www.guypo.com/http-pipelining-not-so-fast-nor-slow/，加上在定这项技术标准的时候留给实现者的自由发挥空间太大，导致实现上也是各有不同，而且很复杂。所以现在浏览器基本都是默认关闭这项技术。](http://www.guypo.com/http-pipelining-not-so-fast-nor-slow/，加上在定这项技术标准的时候留给实现者的自由发挥空间太大，导致实现上也是各有不同，而且很复杂。所以现在浏览器基本都是默认关闭这项技术。)
 
 ### google spdy
 
-再后来啊，google看不下去了，认为http确实存在不少问题。
+再后来啊，google看不下去了，认为http确实存在不少问题。于是乎搞了另一种协议[spdy](https://en.wikipedia.org/wiki/SPDY), 最开始只在chrome有实现，后来各大浏览器见到这个技术比较牛逼，都加入了进来。spdy对http协议做了很多方面的优化，包括压缩header等等，我们这里只谈spdy对connection作了哪些改进。显然地，跟http pipelining比，它完美解决了队头阻塞问题，以至于http速度得到了非常大的提升。模型如下：
+
+![](/assets/http2-spdy.png)
+
+它的请求可以并行发送，响应也可以不依赖请求的顺序返回，所有的都是并行的。
+
+### http2
+
+终于说到了重点，后来啊有个牛逼的组织（她们的使命是推进http更快）就在spdy的基础上提出一个正式的规范[http2](https://http2.github.io/), h2的连接模型跟spdy一样，这里就不多讨论了，关于h2的更深入的讨论将在之后的文章中更新。
+
+
+
+### 参考：
+
+https://http2.github.io/
+
+http://www.guypo.com/http-pipelining-not-so-fast-nor-slow/
+
+https://devcentral.f5.com/blogs/us/http-pipelining-a-security-risk-without-real-performance-benefits
+
+http://stackoverflow.com/questions/14810890/what-are-the-disadvantages-of-using-http-
+
+pipelininghttps://varvy.com/pagespeed/slow-start.html
 
 
 
