@@ -32,6 +32,7 @@
   * [javascript简单算法](javascript-algorithm.md)
   * [flex布局最佳实践](flex-layout-best-practice.md)
   * [Promise catch vs reject](promise-catch-vs-reject.md)
+  * [javascript asynchronous exception handling](javascript-asynchronous-exception-handling.md)
 * Rect服务端渲染
   * [commonjs vs commonjs2](commonjs-vs-commonjs2.md)
 * [http2](http.md)

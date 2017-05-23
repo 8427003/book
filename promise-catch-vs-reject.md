@@ -71,6 +71,8 @@ p2.catch(function(e) {
 })
 ```
 
+深入理解 [javascript异步异常处理](/javascript-asynchronous-exception-handling.md)
+
 # 参考
 
 [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Promise/catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch)
