@@ -24,21 +24,17 @@
 
 3.同构的过程是学习webpack的过程
 
-解决服端渲染，同构问题最后演变成了学习webpack构建工具的过程。webpack既要构建前端，又要构建后端，且webpack的构建性能也是一大问题。构建打包后引发的源码调试等问题。
+解决服端渲染，同构问题最后演变成了学习webpack构建工具的过程。webpack既要构建前端，又要构建后端。所以css-loader具体是干啥，style-loader, file-loader等具体干啥必须清楚。要想构建实现工程化，commonjs vs commonjs2， amd等概念必须弄明白，还有webpack的api的每一个属性节点是起什么作用，必须熟悉。webpack的构建性能也是一大问题。构建打包后引发的源码调试等问题都必须解决。
 
 #### 服务端渲染，同构不是解决问题唯一途径
 
 在手机端，我们减少白屏时间的方法很多，比如将资源模版等预埋在客户端里。pc端网络环境并没有这么极端，白屏问题影响不严重。当然追求极致速度和开发体验时，同构也许在所难免。
 
-
-
 #### 参考项目
 
-https://reactjsnews.com/isomorphic-react-in-real-life
+[https://reactjsnews.com/isomorphic-react-in-real-life](https://reactjsnews.com/isomorphic-react-in-real-life)
 
-https://github.com/DavidWells/isomorphic-react-example
+[https://github.com/DavidWells/isomorphic-react-example](https://github.com/DavidWells/isomorphic-react-example)
 
-https://github.com/8427003/bdj-build
-
-
+[https://github.com/8427003/bdj-build](https://github.com/8427003/bdj-build)
 
