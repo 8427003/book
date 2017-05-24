@@ -33,8 +33,9 @@
   * [flex布局最佳实践](flex-layout-best-practice.md)
   * [Promise catch vs reject](promise-catch-vs-reject.md)
   * [javascript asynchronous exception handling](javascript-asynchronous-exception-handling.md)
-* Rect服务端渲染
+* [Rect服务端渲染](rectfu-wu-duan-xuan-ran.md)
   * [commonjs vs commonjs2](commonjs-vs-commonjs2.md)
+  * [同构并非想象中完美](isomorphic-Is-not-perfect-as-you-think.md)
 * [http2](http.md)
   * [1.http connection history](http-history.md)
 
