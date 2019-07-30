@@ -30,7 +30,7 @@
 
 * [tickeys](http://www.yingdev.com/projects/tickeys) 让普通键盘出发机械键盘声音，用了后会有抛弃机械键盘的想法，建议不要使用。
 
-* Keyboard Pilot mac\(\)
+* [Keyboard Pilot](https://mac.orsoon.com/Mac/149345.html) 切换应用时，希望固定到某种输入法。比如切换到chrome时，希望切换到英文输入法，就可以直接网址了。
 
 ---
 
