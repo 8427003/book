@@ -2,7 +2,7 @@
 
 * [关于我](README.md)
   * [简历](resume.md)
-  * [工具栈](util-stack.md)
+  * [工具收集](util-stack.md)
 * Linux
   * [linux文件权限](linux-file-permissions.md)
   * [user相关](linux-cmd-user.md)
