@@ -1,7 +1,7 @@
 # Summary
 
 * [关于我](README.md)
-  * [简历](resume.md)
+  * [简历-web前端](resume.md)
   * [工具收集](util-stack.md)
   * [简历详细](resume-detail.md)
 * Linux
