@@ -46,7 +46,7 @@ docker run (可选参数）
 例子2:  docker run -d -P aespinosa/jenkins
 例子3:  docker run -t -i  ubuntu bash （打开bash）
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - -
+
 
 docker ps -a 
 说明：查看contaner 状态及其列表
