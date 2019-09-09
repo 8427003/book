@@ -15,5 +15,74 @@ docker exec -it b07599e429fb bash
 说明：通用链接容器命令行：
 
 
+docker 实现宿主机随机端口
+说明：容器的端口必须确定，要么Dockerfile  EXPOSE 指令暴露， 要么docker 使用者知道容器端口）
+1. -p :3000（docker 使用者知道容器端口）
+2. -P （大写P，依赖Dockerfile  EXPOSE 指令暴露）
+
+Docker file 是为了build image， no for container
+
+docker-compose.yml   命令：docker-compose up.  docker-compose -f xxx.yml up -d
+https://docs.docker.com/compose/gettingstarted/
+
+docker images 
+说明：查看 image 列表
+
+docker rmi 
+说名： 删除 image
+
+docker run 
+说明：针对image
+例子：docker run -t -i  ubuntu bash
+
+docker run (可选参数）
+```
+[-P] (随机端口映射） 
+[-p xxx:8080] 本机到docker端口映射
+[-d] background 运行
 
 
+docker export:
+说明: persist a container (not an image)
+例子：docker export <CONTAINER ID> > /home/export.tar
+
+docker import:
+说明：还原一个container 和 image 从一个 docker export 打包的文件
+例子：cat /home/export.tar | sudo docker import - busybox-1-export:latest
+
+docker save vs docker export
+从历史可以看到：sudo docker images --tree
+docker load 还原的image更大，包含较多提交历史,
+docker import 只是一个镜像，相对少
+
+
+
+docker build:
+说明：Build an image from a Dockerfile
+例子： docker build - < Dockerfile
+
+
+
+docker commit <container-id> <image-name>
+说明：保存当前container 为image
+例子：sudo docker commit <CONTAINER ID> busybox-1
+
+
+
+公司私有源
+
+http://100.73.46.2/repositories/100
+
+
+命令手册
+
+https://docs.docker.com/engine/reference/commandline/build/#build-with--
+
+mongo
+https://www.thachmai.info/2015/04/30/running-mongodb-container/
+
+
+
+修改docker 镜像
+https://www.docker-cn.com/registry-mirror
+[“https://ovrybrlc.mirror.aliyuncs.com", "https://registry.docker-cn.com”]
