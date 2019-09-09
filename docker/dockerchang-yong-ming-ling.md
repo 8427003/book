@@ -107,7 +107,7 @@ docker build:
 
 ———————————————————————————————————————————————————————————
 
-docker commit <container-id> <image-name>
+```docker commit <container-id> <image-name>```
 说明：保存当前container 为image
 例子：```sudo docker commit <CONTAINER ID> busybox-1```
 
