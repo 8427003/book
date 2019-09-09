@@ -25,7 +25,6 @@ Docker file 是为了build image， no for container
 
 docker-compose.yml   命令：docker-compose up.  docker-compose -f xxx.yml up -d
 https://docs.docker.com/compose/gettingstarted/
-—————————————————————————————————————————————————————
 
 docker images 
 说明：查看 image 列表
