@@ -18,7 +18,7 @@ cookie vs  localstorege
 
 
 其它离线存储方案：
-- [ ] https://blog.csdn.net/u013063153/article/details/52458348
+https://blog.csdn.net/u013063153/article/details/52458348
 
 localstage使用注意事项
 
