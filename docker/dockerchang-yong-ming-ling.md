@@ -101,17 +101,4 @@ docker import 只是一个镜像，相对少
 
 
 
-公司私有源
-
-http://100.73.46.2/repositories/100
-
-
-命令手册
-
-https://docs.docker.com/engine/reference/commandline/build/#build-with--
-
-mongo
-https://www.thachmai.info/2015/04/30/running-mongodb-container/
-
-
 
