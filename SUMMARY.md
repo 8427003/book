@@ -45,4 +45,6 @@
   * [1.通俗易懂讲链接](cao-zuo-xi-tong/tong-su-yi-dong-jiang-lian-jie.md)
   * [2.通俗易懂讲ELF](cao-zuo-xi-tong/tong-su-yi-dong-jiang-elf.md)
   * [3.通俗易懂讲寻址](cao-zuo-xi-tong/tong-su-yi-dong-jiang-xun-zhi.md)
+* [c/c++](cc++.md)
+  * [c++move与移动构造函数](cc++/c++moveyu-yi-dong-gou-zao-han-shu.md)
 
