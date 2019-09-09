@@ -1,9 +1,8 @@
 Fastclick
 
+[https://thx.github.io/mobile/300ms-click-delay](https://thx.github.io/mobile/300ms-click-delay)
 
-https://thx.github.io/mobile/300ms-click-delay
-
-https://zhuanlan.zhihu.com/p/66845055
+[https://zhuanlan.zhihu.com/p/66845055](https://zhuanlan.zhihu.com/p/66845055)
 
 1. 300ms 是为了解决缩放 ios 引入的，后期其它浏览器厂商模仿
 2. 后来网页生产者适配了手机屏幕，不再强依赖缩放，所以300ms延迟没有意义。其它厂商开始干掉通过viewpot init-scale
@@ -22,3 +21,6 @@ function startApp() {
     attachFastClick.attach(document.body);
 }
 ```
+
+
+
