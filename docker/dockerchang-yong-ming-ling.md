@@ -76,21 +76,6 @@ docker logs:
 例子：docker logs --follow   <CONTAINER ID>
 
 
-docker save: 
-说明：persist an image (not a container)
-例子：docker save busybox-1 > /home/save.tar
-
-docker load:
-说明：还原一个image 从 docker save 生成的压缩包
-docker load < /home/save.tar 
-
-
-
-docker export:
-说明: persist a container (not an image)
-例子：docker export <CONTAINER ID> > /home/export.tar
-
-
 
 
 
