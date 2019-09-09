@@ -35,6 +35,7 @@
   * [Promise catch vs reject](promise-catch-vs-reject.md)
   * [javascript asynchronous exception handling](javascript-asynchronous-exception-handling.md)
   * [cookie vs  localStorage](cookie-vs-localstorege.md)
+  * [javascript历史、语法标准](javascriptli-shi-3001-yu-fa-biao-zhun.md)
 * [React架构](rectfu-wu-duan-xuan-ran.md)
   * [commonjs vs commonjs2](commonjs-vs-commonjs2.md)
   * [同构并非想象中完美](isomorphic-Is-not-perfect-as-you-think.md)
