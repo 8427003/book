@@ -65,6 +65,6 @@
 # 常去网站
 
 * [Hacker News](https://news.ycombinator.com/) 很多牛逼项目，创业项目，程序员必看网站
-* [免费电子书](https://b-ok.org/) 英文免费电子书，全球最牛逼，没有之一
+* [免费电子书b-ok.org](https://b-ok.org/) 英文免费电子书，全球最牛逼，没有之一
 
 
