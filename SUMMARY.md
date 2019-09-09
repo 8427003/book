@@ -21,6 +21,8 @@
   * [gitbook生成静态blog通过travis发布到github托管](travis-gitbook-github.md)
   * [通过travis部署代码到远程服务器](deploy-code-to-remote-server-with-travis.md)
   * [nginx静态http2博客](nginx-https-blog.md)
+* [最佳实践](zui-jia-shi-jian.md)
+  * [node-zip压缩库选择](zui-jia-shi-jian/zipya-suo.md)
 * [前端基础](front_end_base.md)
   * [http缓存](http_cache.md)
   * [bigpipe实现理论背景篇](bigpipe.md)
@@ -46,6 +48,4 @@
   * [1.通俗易懂讲链接](cao-zuo-xi-tong/tong-su-yi-dong-jiang-lian-jie.md)
   * [2.通俗易懂讲ELF](cao-zuo-xi-tong/tong-su-yi-dong-jiang-elf.md)
   * [3.通俗易懂讲寻址](cao-zuo-xi-tong/tong-su-yi-dong-jiang-xun-zhi.md)
-* [c/c++](cc++.md)
-  * [c++move与移动构造函数](cc++/c++moveyu-yi-dong-gou-zao-han-shu.md)
 
