@@ -1,5 +1,5 @@
 Docker 常用
-
+```
 docker 常用命令速查手册
 —————————————————————————————————————————————————————
 docker run --name mycentos   -it  centos:latest bash
@@ -130,3 +130,4 @@ https://www.thachmai.info/2015/04/30/running-mongodb-container/
 修改docker 镜像
 https://www.docker-cn.com/registry-mirror
 [“https://ovrybrlc.mirror.aliyuncs.com", "https://registry.docker-cn.com”]
+```
