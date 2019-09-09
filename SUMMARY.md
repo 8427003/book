@@ -26,7 +26,6 @@
   * [bigpipe实现理论背景篇](bigpipe.md)
   * [bigpipe-php+nginx实战篇](bigpipe-nginx-php.md)
   * [如何排查bug](debug_bug.md)
-  * [h5适配](h5-layout.md)
   * [GET请求与POST的秘密](get-vs-post.md)
   * [如何理解css的BFC抽象概念](bfc-css.md)
   * [javascript继承的演变](javascript-extend-history.md)
