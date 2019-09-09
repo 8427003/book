@@ -92,7 +92,7 @@ docker export:
 
 docker import:
 说明：还原一个container 和 image 从一个 docker export 打包的文件
-例子：cat /home/export.tar | sudo docker import - busybox-1-export:latest
+例子：cat /home/export.tar   sudo docker import - busybox-1-export:latest
 
 docker save vs docker export
 从历史可以看到：sudo docker images --tree
