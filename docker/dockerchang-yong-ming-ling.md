@@ -99,7 +99,7 @@ docker save vs docker export
 docker load 还原的image更大，包含较多提交历史,
 docker import 只是一个镜像，相对少
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - -
+—————————————————————————————————————————————————————
 
 docker build:
 说明：Build an image from a Dockerfile
