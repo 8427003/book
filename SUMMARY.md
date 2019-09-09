@@ -23,6 +23,7 @@
   * [nginx静态http2博客](nginx-https-blog.md)
 * [最佳实践](zui-jia-shi-jian.md)
   * [node-zip压缩库选择](zui-jia-shi-jian/zipya-suo.md)
+  * [js浮点数运算不准确](zui-jia-shi-jian/jsfu-dian-shu-yun-suan.md)
 * [前端基础](front_end_base.md)
   * [http缓存](http_cache.md)
   * [bigpipe实现理论背景篇](bigpipe.md)
