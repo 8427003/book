@@ -82,7 +82,7 @@ docker save:
 
 docker load:
 说明：还原一个image 从 docker save 生成的压缩包
-docker load < /home/save.tar 
+docker load ```<``` /home/save.tar 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - -
 
