@@ -69,20 +69,3 @@ docker commit <container-id> <image-name>
 
 
 
-公司私有源
-
-http://100.73.46.2/repositories/100
-
-
-命令手册
-
-https://docs.docker.com/engine/reference/commandline/build/#build-with--
-
-mongo
-https://www.thachmai.info/2015/04/30/running-mongodb-container/
-
-
-
-修改docker 镜像
-https://www.docker-cn.com/registry-mirror
-[“https://ovrybrlc.mirror.aliyuncs.com", "https://registry.docker-cn.com”]
