@@ -103,7 +103,7 @@ docker import 只是一个镜像，相对少
 
 docker build:
 说明：Build an image from a Dockerfile
-例子： docker build - ```<``` Dockerfile
+例子： docker build -  Dockerfile
 
 ———————————————————————————————————————————————————————————
 ```
