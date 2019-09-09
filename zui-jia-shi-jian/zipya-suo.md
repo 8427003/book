@@ -1,5 +1,7 @@
 # Zip 压缩
 
+**背景：很多zip压缩库对中文文件名支持有问题**
+
 // 优点，适合web，缺点：不支持本地文件，中文未测试  
 const JSZip = require\('jszip'\)
 
