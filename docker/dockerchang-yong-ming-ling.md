@@ -86,9 +86,7 @@ docker load < /home/save.tar
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - -
 
-docker export:
-说明: persist a container (not an image)
-例子：docker export <CONTAINER ID> > /home/export.tar
+
 
 docker import:
 说明：还原一个container 和 image 从一个 docker export 打包的文件
