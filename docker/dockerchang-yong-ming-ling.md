@@ -73,7 +73,7 @@ docker rename CONTAINER NEW_NAME
 
 docker logs:
 说明：观察查容器日志，遇到过一个场景，docker 一直处于restarting 状态，起不来，打开日志后发现共享目录权限拒绝。chmod后容器就起来了。
-例子：docker logs --follow   <CONTAINER ID>
+例子：docker logs --follow   ```<CONTAINER ID>```
 
 ———————————————————————————————————————————————————————————
 docker save: 
@@ -88,7 +88,7 @@ docker load < /home/save.tar
 
 docker export:
 说明: persist a container (not an image)
-例子：docker export <CONTAINER ID> > /home/export.tar
+例子：docker export ```<CONTAINER ID> >``` /home/export.tar
 
 docker import:
 说明：还原一个container 和 image 从一个 docker export 打包的文件
@@ -107,10 +107,10 @@ docker build:
 
 ———————————————————————————————————————————————————————————
 ```
-docker commit <container-id> <image-name>
+docker commit ```<container-id> <image-name>```
 ```
 说明：保存当前container 为image
-例子：sudo docker commit <CONTAINER ID> busybox-1
+例子：sudo docker commit ```<CONTAINER ID>``` busybox-1
 
 ———————————————————————————————————————————————————————————
 
