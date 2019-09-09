@@ -1,7 +1,8 @@
 Docker 常用
-```
+
 docker 常用命令速查手册
-—————————————————————————————————————————————————————
+
+
 docker run --name mycentos   -it  centos:latest bash
 说明：通用启动镜像为容器并且命令行：
    - -  name  为容器取一个别名，- -rm容器退出后自动删除容器（可以不用这个）
@@ -130,4 +131,3 @@ https://www.thachmai.info/2015/04/30/running-mongodb-container/
 修改docker 镜像
 https://www.docker-cn.com/registry-mirror
 [“https://ovrybrlc.mirror.aliyuncs.com", "https://registry.docker-cn.com”]
-```
