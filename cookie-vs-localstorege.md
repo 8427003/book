@@ -1,4 +1,4 @@
-# cookie vs  localStorege
+# cookie vs  localStorage
 
 1. 存储空间
    1. cookie有以下3方面大小限制。a.每个域名即cookie键值对数量限制，小的只有20-50个，如ie6.7。大的有600个。b.每个键值对大小有限制，小的4k左右。c.每个域名下，整体cookie容量有限制，小的只有4k。如ie。具体见表  [http://browsercookielimits.squawky.net/](http://browsercookielimits.squawky.net/)  
