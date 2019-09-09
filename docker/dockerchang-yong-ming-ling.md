@@ -36,10 +36,6 @@ docker run
 例子：docker run -t -i  ubuntu bash
 
 docker run (可选参数）
-```
-[-P] (随机端口映射） 
-[-p xxx:8080] 本机到docker端口映射
-[-d] background 运行
 
 
 docker export:
