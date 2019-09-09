@@ -69,7 +69,64 @@ docker rm
 docker rename CONTAINER NEW_NAME
 说明：重新命名
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - -
+
+docker logs:
+说明：观察查容器日志，遇到过一个场景，docker 一直处于restarting 状态，起不来，打开日志后发现共享目录权限拒绝。chmod后容器就起来了。
+例子：docker logs --follow   <CONTAINER ID>
+
+———————————————————————————————————————————————————————————
+docker save: 
+说明：persist an image (not a container)
+例子：docker save busybox-1 > /home/save.tar
+
+docker load:
+说明：还原一个image 从 docker save 生成的压缩包
+docker load < /home/save.tar 
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - -
+
+docker export:
+说明: persist a container (not an image)
+例子：docker export <CONTAINER ID> > /home/export.tar
+
+docker import:
+说明：还原一个container 和 image 从一个 docker export 打包的文件
+例子：cat /home/export.tar | sudo docker import - busybox-1-export:latest
+
+docker save vs docker export
+从历史可以看到：sudo docker images --tree
+docker load 还原的image更大，包含较多提交历史,
+docker import 只是一个镜像，相对少
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - -
+
+docker build:
+说明：Build an image from a Dockerfile
+例子： docker build - < Dockerfile
+
+———————————————————————————————————————————————————————————
+
+docker commit <container-id> <image-name>
+说明：保存当前container 为image
+例子：```sudo docker commit <CONTAINER ID> busybox-1```
+
+———————————————————————————————————————————————————————————
+
+公司私有源
+
+http://100.73.46.2/repositories/100
+———————————————————————————————————————————————————————————
+
+命令手册
+
+https://docs.docker.com/engine/reference/commandline/build/#build-with--
+
+mongo
+https://www.thachmai.info/2015/04/30/running-mongodb-container/
 
 
 
-
+修改docker 镜像
+https://www.docker-cn.com/registry-mirror
+[“https://ovrybrlc.mirror.aliyuncs.com", "https://registry.docker-cn.com”]
