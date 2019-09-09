@@ -1,4 +1,4 @@
-# cookie vs  localstorege
+# cookie vs  localStorege
 
 1. 存储空间
    1. cookie有以下3方面大小限制。a.每个域名即cookie键值对数量限制，小的只有20-50个，如ie6.7。大的有600个。b.每个键值对大小有限制，小的4k左右。c.每个域名下，整体cookie容量有限制，小的只有4k。如ie。具体见表  [http://browsercookielimits.squawky.net/](http://browsercookielimits.squawky.net/)  
@@ -15,8 +15,6 @@
    1. cookie 需要封装，localStorage 有较好的api使用。他们的键值都只能是string，其它数据类型会隐式转型。所以存放时一般都JSON.stringify.取数据时，JSON.parse解开。
    2. cookie 父子域名间可共享数据，而且比较复杂, 比如host-only（父亲设置一个host-only，子是不可读的），以及域名是否前面有一个点（在老的规范中前面有一个点表示子域名可读，没有表示当前域名可读[https://stackoverflow.com/questions/18492576/share-cookie-between-subdomain-and-domain）。https://stackoverflow.com/questions/12387338/what-is-a-host-only-cookie参见](https://stackoverflow.com/questions/18492576/share-cookie-between-subdomain-and-domain）。https://stackoverflow.com/questions/12387338/what-is-a-host-only-cookie参见) 
    3. localStorage 严格同源策略
-
-
 
 **其它离线存储方案**  
 [https://blog.csdn.net/u013063153/article/details/52458348](https://blog.csdn.net/u013063153/article/details/52458348)
