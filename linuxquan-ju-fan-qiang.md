@@ -6,9 +6,7 @@ iptables 最通俗易懂的学习网站
 
 [http://www.zsythink.net/archives/1199](http://www.zsythink.net/archives/1199)
 
-
-
-以下代码来自github项目[https://github.com/8427003/linux-global-GFW](https://github.com/8427003/linux-global-GFW)
+**以下代码来自github项目**[**https://github.com/8427003/linux-global-GFW**](https://github.com/8427003/linux-global-GFW)
 
 ```
 #!/bin/bash
