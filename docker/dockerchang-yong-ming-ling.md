@@ -41,39 +41,6 @@ docker run (可选参数）
 [-p xxx:8080] 本机到docker端口映射
 [-d] background 运行
 
-docker ps -a 
-说明：查看contaner 状态及其列表
-
-docker exec
-说明： 真对container
-例子：docker exec -it facenode_facenode_1 bash
-
-docker start
-说明：启动container
-
-docker attach 
-说明：链接container，必须等docker start
-例子：docker attach topdemo
-
-docker rm 
-说明：删除container
-例子：docker rm -v redis
-
-docker rename CONTAINER NEW_NAME
-说明：重新命名
-
-docker logs:
-说明：观察查容器日志，遇到过一个场景，docker 一直处于restarting 状态，起不来，打开日志后发现共享目录权限拒绝。chmod后容器就起来了。
-例子：docker logs --follow   <CONTAINER ID>
-
-docker save: 
-说明：persist an image (not a container)
-例子：docker save busybox-1 > /home/save.tar
-
-docker load:
-说明：还原一个image 从 docker save 生成的压缩包
-docker load < /home/save.tar 
-
 
 docker export:
 说明: persist a container (not an image)
