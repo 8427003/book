@@ -46,7 +46,7 @@ docker run (可选参数）
 例子2:  docker run -d -P aespinosa/jenkins
 例子3:  docker run -t -i  ubuntu bash （打开bash）
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - -
+—————————————————————————————————————————————————————
 
 docker ps -a 
 说明：查看contaner 状态及其列表
@@ -69,7 +69,7 @@ docker rm
 docker rename CONTAINER NEW_NAME
 说明：重新命名
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - -
+—————————————————————————————————————————————————————
 
 docker logs:
 说明：观察查容器日志，遇到过一个场景，docker 一直处于restarting 状态，起不来，打开日志后发现共享目录权限拒绝。chmod后容器就起来了。
@@ -84,7 +84,7 @@ docker load:
 说明：还原一个image 从 docker save 生成的压缩包
 docker load < /home/save.tar 
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - -
+—————————————————————————————————————————————————————
 
 docker export:
 说明: persist a container (not an image)
