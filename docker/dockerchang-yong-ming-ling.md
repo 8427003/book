@@ -28,28 +28,6 @@ https://docs.docker.com/compose/gettingstarted/
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - -
 
 
-
-docker ps -a 
-说明：查看contaner 状态及其列表
-
-docker exec
-说明： 真对container
-例子：docker exec -it facenode_facenode_1 bash
-
-docker start
-说明：启动container
-
-docker attach 
-说明：链接container，必须等docker start
-例子：docker attach topdemo
-
-docker rm 
-说明：删除container
-例子：docker rm -v redis
-
-docker rename CONTAINER NEW_NAME
-说明：重新命名
-
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - -
 
 docker logs:
