@@ -1,4 +1,11 @@
-linux全局翻墙
+# linux全局翻墙
+
+利用shadowsocks + iptables
+
+iptables 最通俗易懂的学习网站
+
+[http://www.zsythink.net/archives/1199](http://www.zsythink.net/archives/1199)
+
 
 
 ```
@@ -70,3 +77,6 @@ exit 0
 #iptables -t nat  -L
 #iptables -t nat  -F
 ```
+
+
+
