@@ -36,19 +36,6 @@ https://docs.docker.com/compose/gettingstarted/
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - -
 
-docker build:
-说明：Build an image from a Dockerfile
-例子： docker build - < Dockerfile
-
-———————————————————————————————————————————————————————————
-
-docker commit <container-id> <image-name>
-说明：保存当前container 为image
-例子：sudo docker commit <CONTAINER ID> busybox-1
-
-———————————————————————————————————————————————————————————
-
-公司私有源
 
 http://100.73.46.2/repositories/100
 ———————————————————————————————————————————————————————————
