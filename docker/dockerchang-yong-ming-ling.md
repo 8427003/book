@@ -115,6 +115,3 @@ https://www.thachmai.info/2015/04/30/running-mongodb-container/
 
 
 
-修改docker 镜像
-https://www.docker-cn.com/registry-mirror
-[“https://ovrybrlc.mirror.aliyuncs.com", "https://registry.docker-cn.com”]
