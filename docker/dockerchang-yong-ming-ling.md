@@ -71,7 +71,6 @@ docker logs:
 说明：观察查容器日志，遇到过一个场景，docker 一直处于restarting 状态，起不来，打开日志后发现共享目录权限拒绝。chmod后容器就起来了。
 例子：docker logs --follow   <CONTAINER ID>
 
-———————————————————————————————————————————————————————————
 docker save: 
 说明：persist an image (not a container)
 例子：docker save busybox-1 > /home/save.tar
