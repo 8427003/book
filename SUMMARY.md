@@ -47,8 +47,9 @@
 * [网络](http.md)
   * [1.http connection history](http-history.md)
   * [2.ssl握手](sslwo-shou.md)
-* [操作系统-通俗易懂讲寻址](cao-zuo-xi-tong.md)
-  * [1.通俗易懂讲链接](cao-zuo-xi-tong/tong-su-yi-dong-jiang-lian-jie.md)
+* [通俗易懂讲操作系统寻址](cao-zuo-xi-tong.md)
+  * [前言](cao-zuo-xi-tong/qian-yan.md)
   * [2.通俗易懂讲ELF](cao-zuo-xi-tong/tong-su-yi-dong-jiang-elf.md)
+  * [1.通俗易懂讲链接](cao-zuo-xi-tong/tong-su-yi-dong-jiang-lian-jie.md)
   * [3.通俗易懂讲寻址](cao-zuo-xi-tong/tong-su-yi-dong-jiang-xun-zhi.md)
 
