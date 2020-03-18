@@ -22,5 +22,5 @@ componet: \(\) =&gt; {  moduleId: \(\) =&gt; getMoudleId\(\), requestText: \(\) 
 
 4、初始化数据。一般spa项目中，咱们获取服务端数据会放在didMount生命周期中。如果是服务端渲染api，这个生命周期是不走的。咱们的解决方案和nextjs 一样，作为页面组件的静态方法，并且建议使用axios这种在浏览器和nodejs环境都能运行的http库。没错现在阶段仅支持http。rpc是一种很流行的方案，但是目前阶段没在项目中尝试过。服务端和浏览器端可以通过typeof window来判别，或者是服务端host映射，走更稳定的内网环境。总之这不是我们考虑的范围。当页面组件被下载ready后，我们会调用他的静态方法来获取服务端数据。细心的小伙伴可能发现了一个优化点，就是服务端数据和页面组件分包是串连下载的。如果我们把静态方法放到和页面组件路由配置地方，是可以解决这个问题的。但是main包可能会随着业务增大。
 
-5、导出前端产出，作为库供后端项目引入。由于nodejs 走的是commonjs 模块规范，
+5、导出前端产出，作为库供后端项目引入。这个点需要考验webpack功底了。webpack 有一套简单的数据结构来装载模块。简单说就是require一个模块时，webpack需要知道这个模块的bundle有没有下载下来。如果没有下载，需要先去下载bundle。存放的这些数据的数据结构通常挂在全局对象上，浏览器挂载window下，nodejs挂在global。这是你为什么buidle nodejs时需要设置target为node的原因之一。我们这里不设置这个target为node，因为我们不区别编译。要想两端都能跑，还可以设置globalObject这个属性为"\(typeof window !== 'undefined' ? window : global\)", 就能自动识别全局环境了。还有一个地方有同样的问题，就是mini-css-extract-plugin产生的代码，它需要判断css是否加载。如果没有,会创建并挂载 link 标签到window下。如果是服务端，咱们可没有window对象，也不能创建link标签，必定报错。所以我们在服务端需要跳过这个逻辑，毕竟服务端拼字符串时不需要关注css。我们和mini-css-extract-plugin 提issu了，但是并没有采纳我们意见。只有自己发布一个mini-css-extract-plugin-ssr，只改了一行代码。仅仅为了跳过这个逻辑。ok最后一步，咱们把indexjs作为umd模块导出，为啥作为umd，因为umd包括commonjs所以能作为库云行，又能在没有模块规范时自动运行。即既能作为库，又能作为一个自执行代码，这个特性很重要。我们这里不讨论amd，跟它没一毛钱关系。
 
