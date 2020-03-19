@@ -16,7 +16,9 @@
 
 往简单说，当输入一个url给咱们的路由模块时，路由应该返回给我们url对应的模块组件 。然后咱们拿这个模块组件去调用服务端渲染api，就可以得到字符串dom。但是你会发现基于代码按页分包路由，你只会得到“占位组件“。除非你实现一个占位组件，把两部分切割开。第一部分，你先让占位组件加载分包组件，然后回调你并表明此时分包已下载，组件已经ready。第二部，当你再次调用这个占位组件，让它自动检测，是否你需要的模块已经ready，如果ready直接返回真正的url对应的模块组件。占位组件由于第一步去访问网络了，第二部就不用访问网络，所以就是同步了。
 
-3、从访问的url，得到分包的静态资源路径。因为服务端渲染api 实际上只是为你拼接一个字符串。当这个字符串到前端后，需要显示样式，响应事件等。所以这个页面组件对应css 和 js 资源必须手动挂在到相应的位置。从url找出页面模块很容易，比如react-router 就提供了一个静态方法matchPath，所以可以很容分析到访问的url命中哪个页面模块。但是从页面模块找到具体的分包有点难度。import\('模块路径‘\)， 这就是我们模块。第一难点，如果我们要找某个模块的分包（在webpack里叫bundle），那以什么为key去找呢？模块路径，模块在webpack里唯一的标识符？要处理这个问题的前置条件是对webpack的stats.json需要充分了解和分析。我们利用了webpack 特殊参数会产生一个stats.json。里面的数据结构大致是 \[ { bundle: \["xxxx.js",  "xxx.css"\], origin: {}, modules:\[\]\]，咱们通过modules 节点，判断这个moudles是否包含咱们的页面模块，是可以查出这个bundle的。也可以通过origin节点，'模块路径‘ 也可以找出这个bundle。我们用的是后者，但是这两种方法都有一定风险。因为一个module 可以被多个bundle 引用。咱们约定下只有页面module才用import（）api吧。刚才提到，key的问题，我们的key现在确定了，可以有两种。第一种是moduleId，第二种是requestText（就是import\(）的参数\)。这里虽然我们只用到了第二种，但是我们提供了一个babel插件，把component:\(\) =&gt; import（）这个语句重新改写了，加上了，moduleId，和requestText（免得用户要写两次这个字符串） 变成了
+3、从访问url，得到匹配的页面模块。
+
+3、从页面模块，得到对应分包。因为服务端渲染api 实际上只是为你拼接一个字符串。当这个字符串到前端后，需要显示样式，响应事件等。所以这个页面组件对应css 和 js 资源必须手动挂在到相应的位置。从url找出页面模块很容易，比如react-router 就提供了一个静态方法matchPath，所以可以很容分析到访问的url命中哪个页面模块。但是从页面模块找到具体的分包有点难度。import\('模块路径‘\)， 这就是我们模块。第一难点，如果我们要找某个模块的分包（在webpack里叫bundle），那以什么为key去找呢？模块路径，模块在webpack里唯一的标识符？要处理这个问题的前置条件是对webpack的stats.json需要充分了解和分析。我们利用了webpack 特殊参数会产生一个stats.json。里面的数据结构大致是 \[ { bundle: \["xxxx.js",  "xxx.css"\], origin: {}, modules:\[\]\]，咱们通过modules 节点，判断这个moudles是否包含咱们的页面模块，是可以查出这个bundle的。也可以通过origin节点，'模块路径‘ 也可以找出这个bundle。我们用的是后者，但是这两种方法都有一定风险。因为一个module 可以被多个bundle 引用。咱们约定下只有页面module才用import（）api吧。刚才提到，key的问题，我们的key现在确定了，可以有两种。第一种是moduleId，第二种是requestText（就是import\(）的参数\)。这里虽然我们只用到了第二种，但是我们提供了一个babel插件，把component:\(\) =&gt; import（）这个语句重新改写了，加上了，moduleId，和requestText（免得用户要写两次这个字符串） 变成了
 
 componet: \(\) =&gt; {  moduleId: \(\) =&gt; getMoudleId\(\), requestText: \(\) =&gt; getRequestText\(\), module: import\(\)}
 
