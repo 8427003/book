@@ -7,7 +7,7 @@ node_js:
 - node
 install:
 - npm install gitbook -g
-- npm install -g gitbook-cli
+- npm install -g gitbook-cli --force
 - gitbook install
 script:
 - gitbook build
