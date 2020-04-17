@@ -40,7 +40,7 @@ bug解除。
 
 # 总结了一些关键概念和技巧，将在后续文章中介绍。
 
-1、net.core.somaxconn相关的tcp两个队列，以及操作系统如何观察这两个队列。  
+1、net.core.somaxconn相关的tcp两个队列，以及操作系统如何观察这两个队列。以及容器如何调优，且确保生效。  
 2、tcpdump 分析包的过程，海量日志中如何收集，锁定某次请求。滑动窗口，mtu，mss相关概念，以及ping工具在网络调试的重要性。  
 3、iptable debugg过程，和基本操作。  
 4、负载均衡+k8s+spring-cloud-gateway这套流量是如何负载。
