@@ -10,7 +10,7 @@
     	}
     },
     "plugins": [
-        "theme-offical",
+        "theme-official",
         "ga",
         "baidu_gio",
         "-search",
