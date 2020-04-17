@@ -4,7 +4,7 @@
   * [简历-web前端](resume.md)
   * [工具收集](util-stack.md)
   * [简历详细](resume-detail.md)
-* Linux
+* [Linux](linux.md)
   * [linux文件权限](linux-file-permissions.md)
   * [user相关](linux-cmd-user.md)
   * [如何使用yum安装最新软件包](how-yum-install-release-soft.md)
@@ -48,6 +48,7 @@
 * [网络](http.md)
   * [1.http connection history](http-history.md)
   * [2.ssl握手](sslwo-shou.md)
+  * [记容器mtu引发的低概率502问题追踪](rong-qi-mtu-yin-fa-de-fu-wu-di-gai-lv-502-wen-ti-zhui-zong.md)
 * [通俗易懂讲操作系统寻址](cao-zuo-xi-tong.md)
   * [前言](cao-zuo-xi-tong/qian-yan.md)
   * [2.通俗易懂讲ELF](cao-zuo-xi-tong/tong-su-yi-dong-jiang-elf.md)
