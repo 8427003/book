@@ -38,6 +38,7 @@
             "shortName": "css3io"
         },
         "intopic-toc": {
+            "visible": true,
             "label": "Navigation"
         }
     }
