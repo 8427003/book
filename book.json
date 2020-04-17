@@ -16,8 +16,7 @@
         "-lunr",
         "-sharing",
         "sitemap",
-        "disqus",
-        "intopic-toc"
+        "disqus"
     ],
     "pluginsConfig": {
        "ga": {
@@ -35,10 +34,6 @@
         },
         "disqus": {
             "shortName": "css3io"
-        },
-        "intopic-toc": {
-            "visible": true,
-            "label": "Navigation"
         }
     }
 }
