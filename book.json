@@ -15,7 +15,8 @@
         "-search",
         "-lunr",
         "-sharing",
-        "sitemap"
+        "sitemap",
+        "disqus"
     ],
     "pluginsConfig": {
        "ga": {
@@ -30,6 +31,9 @@
         },
         "sitemap": {
             "hostname": "https://www.css3.io/"
+        },
+        "disqus": {
+            "shortName": "css3io"
         }
     }
 }
