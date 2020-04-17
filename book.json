@@ -10,6 +10,7 @@
     	}
     },
     "plugins": [
+        "theme-offical",
         "ga",
         "baidu_gio",
         "-search",
