@@ -75,7 +75,7 @@ LISTEN     0      128         :::8219                    :::*
 
 state 为listen的时候，Send-Q 为最大队列值，Recv-Q为当前队列中所有存在的连接。
 
-**ss 与 netstat 区别**
+**netstat 可能不是统计accept 全连接队列的工具**
 
 ```
 netstat -na|grep ESTABLISHED
