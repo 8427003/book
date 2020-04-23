@@ -154,4 +154,19 @@ func handleRequest(conn net.Conn) {
 
 # 总结
 
+如果你的somaxconn设置有问题，你还可以通过查看，如果丢包多，很有可能是因为sommaxconn引起。当然具体原因得具体分析。
+```
+netstat -s | grep -E 'overflow|drop'
+
+327 dropped because of missing route
+502 ICMP packets dropped because they were out-of-window
+204 ICMP packets dropped because socket was locked
+22783 SYNs to LISTEN sockets dropped
+```
+另外比如协议栈的读写缓存大小也很重要, 不过我们没遇到，没有调整。
+```
+sysctl -w net.core.wmem_default=8388608
+sysctl -w net.core.rmem_default=8388608
+```
+重要的是系统参数调整后，确保生效的手段，记住`ss -lnt` 命令。我们在实战中，就遇到了宿主机调了，容器没同步。容器同步了，应用没重启这些坑。
 
