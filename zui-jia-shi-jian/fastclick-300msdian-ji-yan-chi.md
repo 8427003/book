@@ -18,7 +18,19 @@ function startApp() {
         <App />,
         document.getElementById('root')
     );
-    attachFastClick.attach(document.body);
+    
+    //对input 失效     https://blog.csdn.net/a460550542/article/details/86508646
+    const str= navigator.userAgent.toLowerCase()
+    const ver=str.match(/cpu iphone os (.*?) like mac os/)
+    if(!ver){//非IOS系统
+        attachFastClick.attach(document.body);
+    }
+    else {
+        if(parseInt(ver[1])< 11){
+            // 引入fastclick 做相关处理
+            attachFastClick.attach(document.body);
+        }
+    }
 }
 ```
 
