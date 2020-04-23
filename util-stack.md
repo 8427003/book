@@ -67,5 +67,17 @@
 * [Hacker News](https://news.ycombinator.com/) 很多牛逼项目，创业项目，程序员必看网站
 * [免费电子书b-ok.org](https://b-ok.org/) 英文免费电子书，全球最牛逼，没有之一
 
+# 速查工具网站
+
+* [devhints.io](https://devhints.io/) 各种js库api速查
+* [godbolt.org](https://godbolt.org/) 源码转汇编
+* [tinypng.com](https://tinypng.com/) 图片压缩
+* [projects.wojtekmaj.pl](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/) react生命周期
+* [caniuse.com](https://caniuse.com/) 浏览器兼容性查询
+* [tongji.baidu.com](https://tongji.baidu.com/research) app、浏览器用户数据分析
+
+
+
+
 
 
