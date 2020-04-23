@@ -168,5 +168,5 @@ netstat -s | grep -E 'overflow|drop'
 sysctl -w net.core.wmem_default=8388608
 sysctl -w net.core.rmem_default=8388608
 ```
-重要的是系统参数调整后，确保生效的手段，记住`ss -lnt` 命令。我们在实战中，就遇到了宿主机调了，容器没同步。容器同步了，应用没重启这些坑。
+重要的是系统参数调整后，确保生效的手段，记住`ss -lnt` 命令。我们在实战中，就遇到了宿主机调了，容器没同步。容器同步了，应用没重启，应用本身backlog也需要调大这些坑。
 
