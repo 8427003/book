@@ -58,6 +58,7 @@ sysctl -w net.core.somaxconn=1024 或 echo 1024 > /proc/sys/net/core/somaxconn
 如果你是容器，你一定要注意了，得去容器里面查看或修改。
 修改完了系统参数也不一定你的队列就这么大了。因为在用户层还可以控制，就是new Socket的时候，一般会有一个`backlog` 参数。`backlog`的值与系统参数取小的一个作为真实的队列值。一般情况下，nginx=511，nodejs=511，tomact=100。但是系统somaxconn默认为128，如果你不调整的话，很大概率你的队列最大值为128或100。
 
+**确定生效**
 另外，一般情况下，你设置了需要重启应用才会生效。那如何检验这个队列最大值是否成功设置呢？
 
 ```
@@ -70,6 +71,85 @@ LISTEN     0      128          *:80                       *:*
 LISTEN     0      128          *:22                       *:*
 LISTEN     0      128    172.17.40.192:10010                    *:*
 LISTEN     0      128         :::8219                    :::*
+```
+
+state 为listen的时候，Send-Q 为最大队列值，Recv-Q为当前队列中所有存在的连接。
+
+**ss 与 netstat 区别**
+
+```
+netstat -na|grep ESTABLISHED
+
+# 统计ESTABLISHED数量
+# netstat -na|grep ESTABLISHED|wc -l 
+
+tcp        0      0 172.17.40.192:443       223.64.133.155:46807    ESTABLISHED
+tcp        0      0 172.17.40.192:443       182.125.40.131:19303    ESTABLISHED
+tcp        0      0 172.17.40.192:443       119.250.226.12:26476    ESTABLISHED
+tcp        0      0 172.17.40.192:443       117.59.84.9:40353       ESTABLISHED
+tcp        0      0 172.17.40.192:443       117.178.12.241:11486    ESTABLISHED
+
+```
+注意：netstat ESTABLISHED 所统计的是 accept全连接的 + 已经被用户accept的总和。无法展示acept 全连接队列数量。
+
+**用程序来解读accept全连接队列**
+
+如果咱们不调用Accept函数，那么accept全连接队列就会随着连接的增多而溢出。这时候通过`ss -lnt`会发现Recv-Q 会不断增加。但是通过`netstat -na|grep ESTABLISHED` 会发现连接依然是ESTABLISHED状态。所以netstat 不可以测量accept队列状态，ss 可以。如果的真实环境中，发现Recv-Q 这个值不是0，并且趋近于Send-Q，说明你的应用程序负荷有点大了。当Recv-Q大于等于Send-Q时，你对连接将会被丢掉。反应到负载均衡，就是健康检查异常。
+
+```
+package main
+
+import (
+    "fmt"
+    "net"
+    "os"
+    //"time"
+)
+
+const (
+    CONN_HOST = "localhost"
+    CONN_PORT = "3333"
+    CONN_TYPE = "tcp"
+)
+
+func main() {
+    // Listen for incoming connections.
+    l, err := net.Listen(CONN_TYPE, CONN_HOST+":"+CONN_PORT)
+    if err != nil {
+        fmt.Println("Error listening:", err.Error())
+        os.Exit(1)
+    }
+    // Close the listener when the application closes.
+    defer l.Close()
+    fmt.Println("Listening on " + CONN_HOST + ":" + CONN_PORT)
+    for {
+        //time.Sleep(1000)
+        // Listen for an incoming connection.
+        conn, err := l.Accept()
+        if err != nil {
+            fmt.Println("Error accepting: ", err.Error())
+            os.Exit(1)
+        }
+        // Handle connections in a new goroutine.
+        go handleRequest(conn)
+    }
+}
+
+// Handles incoming requests.
+func handleRequest(conn net.Conn) {
+  // Make a buffer to hold incoming data.
+  buf := make([]byte, 1024)
+  // Read the incoming connection into the buffer.
+  reqLen, err := conn.Read(buf)
+  if err != nil {
+    fmt.Println("Error reading:", err.Error(), reqLen)
+  }
+  // Send a response back to person contacting us.
+  conn.Write([]byte("Message received."))
+  // Close the connection when you're done with it.
+  conn.Close()
+}
+
 ```
 
 
