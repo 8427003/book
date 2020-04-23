@@ -90,11 +90,11 @@ tcp        0      0 172.17.40.192:443       117.59.84.9:40353       ESTABLISHED
 tcp        0      0 172.17.40.192:443       117.178.12.241:11486    ESTABLISHED
 
 ```
-注意：netstat ESTABLISHED 所统计的是 accept全连接的 + 已经被用户accept的总和。无法展示acept 全连接队列数量。
+注意：netstat ESTABLISHED 所统计的是 accept全连接的 + 已经被用户程序accept的总和。无法展示acept 全连接队列数量。具体分析看**用程序来解读accept全连接队列**
 
 **用程序来解读accept全连接队列**
 
-如果咱们不调用Accept函数，那么accept全连接队列就会随着连接的增多而溢出。这时候通过`ss -lnt`会发现Recv-Q 会不断增加。但是通过`netstat -na|grep ESTABLISHED` 会发现连接依然是ESTABLISHED状态。所以netstat 不可以测量accept队列状态，ss 可以。如果的真实环境中，发现Recv-Q 这个值不是0，并且趋近于Send-Q，说明你的应用程序负荷有点大了。当Recv-Q大于等于Send-Q时，你对连接将会被丢掉。反应到负载均衡，就是健康检查异常。
+如果咱们应用程序不调用Accept函数，那么accept全连接队列就会随着连接的增多而溢出。这时候通过`ss -lnt`会发现Recv-Q 会不断增加。但是通过`netstat -na|grep ESTABLISHED` 会发现连接依然是ESTABLISHED状态。所以netstat 的ESTABLISHED 统计包括accept队列里的连接和已经被用户程序accept的连接。如果的真实环境中，发现Recv-Q 这个值不是0，并且趋近于Send-Q，说明你的应用程序负荷有点大了。当Recv-Q大于等于Send-Q时，你对连接将会被丢掉。反应到负载均衡，就是健康检查异常。
 
 ```
 package main
@@ -151,5 +151,7 @@ func handleRequest(conn net.Conn) {
 }
 
 ```
+
+# 总结
 
 
