@@ -168,5 +168,19 @@ netstat -s | grep -E 'overflow|drop'
 sysctl -w net.core.wmem_default=8388608
 sysctl -w net.core.rmem_default=8388608
 ```
-重要的是系统参数调整后，确保生效的手段，记住`ss -lnt` 命令。我们在实战中，就遇到了宿主机调了，容器没同步。容器同步了，应用没重启，应用本身backlog也需要调大这些坑。
+重要的是系统参数调整后，确保生效的手段，记住`ss -lnt` 命令。我们在实战中，就遇到了宿主机调了，容器没同步。容器同步了，应用没重启，应用本身backlog也需要调大这些坑。得清楚理解tcp是系统内核维护的，accept 这种系统调用对accept 全连接队列的影响等基本概念。
 
+# 参考
+
+TCP SYN flood洪水攻击原理和防御破解
+https://www.cnblogs.com/sunsky303/p/11811097.html
+
+分析全队列，和半队列 具体分析
+http://jm.taobao.org/2017/05/25/525-1/
+https://cjting.me/2019/08/28/tcp-queue/
+
+内核源码分析
+https://my.oschina.net/moooofly/blog/666048
+
+跟内存有关系？
+https://serverfault.com/questions/757305/what-does-syns-to-listen-sockets-dropped-from-netstat-s-mean
