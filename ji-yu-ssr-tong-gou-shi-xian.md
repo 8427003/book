@@ -20,7 +20,11 @@
 
 4、从页面模块，得到对应分包。因为服务端渲染api 实际上只是为你拼接一个字符串。当这个字符串到前端后，需要显示样式，响应事件等。所以这个页面组件对应css 和 js 资源必须手动挂在到相应的位置。从url找出页面模块很容易，比如react-router 就提供了一个静态方法matchPath，所以可以很容分析到访问的url命中哪个页面模块。但是从页面模块找到具体的分包有点难度。import\('模块路径‘\)， 这就是我们模块。第一难点，如果我们要找某个模块的分包（在webpack里叫bundle），那以什么为key去找呢？模块路径，模块在webpack里唯一的标识符？要处理这个问题的前置条件是对webpack的stats.json需要充分了解和分析。我们利用了webpack 特殊参数会产生一个stats.json。里面的数据结构大致是 \[ { bundle: \["xxxx.js",  "xxx.css"\], origin: {}, modules:\[\]\]，咱们通过modules 节点，判断这个moudles是否包含咱们的页面模块，是可以查出这个bundle的。也可以通过origin节点，'模块路径‘ 也可以找出这个bundle。我们用的是后者，但是这两种方法都有一定风险。因为一个module 可以被多个bundle 引用。咱们约定下只有页面module才用import（）api吧。刚才提到，key的问题，我们的key现在确定了，可以有两种。第一种是moduleId，第二种是requestText（就是import\(）的参数\)。这里虽然我们只用到了第二种，但是我们提供了一个babel插件，把component:\(\) =&gt; import（）这个语句重新改写了，加上了，moduleId，和requestText（免得用户要写两次这个字符串） 变成了
 ```
-componet: () => { moduleId: () => getMoudleId(), requestText: () => getRequestText(), module: import()}
+componet: () => { 
+     moduleId: () => getMoudleId(),
+     requestText: () => getRequestText(),
+     module: import()
+}
 ```
 4、初始化数据。一般spa项目中，咱们获取服务端数据会放在didMount生命周期中。如果是服务端渲染api，这个生命周期是不走的。咱们的解决方案和nextjs 一样，作为页面组件的静态方法，并且建议使用axios这种在浏览器和nodejs环境都能运行的http库。没错现在阶段仅支持http。rpc是一种很流行的方案，但是目前阶段没在项目中尝试过。服务端和浏览器端可以通过typeof window来判别，或者是服务端host映射，走更稳定的内网环境。总之这不是我们考虑的范围。当页面组件被下载ready后，我们会调用他的静态方法来获取服务端数据。细心的小伙伴可能发现了一个优化点，就是服务端数据和页面组件分包是串连下载的。如果我们把静态方法放到和页面组件路由配置地方，是可以解决这个问题的。但是main包可能会随着业务增大。
 
