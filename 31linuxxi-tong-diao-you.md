@@ -20,3 +20,5 @@ tcp_tw_recycle = 0
 net.ipv4.tcp_tw_reuse = 1
 net.ipv4.tcp_fin_timeout = 30
 ```
+
+## 最重要的`net.core.somaxconn`
