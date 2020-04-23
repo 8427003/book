@@ -55,5 +55,21 @@ cat /proc/sys/net/core/somaxconn
 sysctl -w net.core.somaxconn=1024 或 echo 1024 > /proc/sys/net/core/somaxconn
 ```
 
-如果你是容器，你一定要注意了，得去容器里面查看。
+如果你是容器，你一定要注意了，得去容器里面查看或修改。
+修改完了系统参数也不一定你的队列就这么大了。因为在用户层还可以控制，就是new Socket的时候，一般会有一个`backlog` 参数。`backlog`的值与系统参数取小的一个作为真实的队列值。一般情况下，nginx=511，nodejs=511，tomact=100。但是系统somaxconn默认为128，如果你不调整的话，很大概率你的队列最大值为128或100。
+
+另外，一般情况下，你设置了需要重启应用才会生效。那如何检验这个队列最大值是否成功设置呢？
+
+```
+ss -lnt
+
+State      Recv-Q Send-Q Local Address:Port               Peer Address:Port
+LISTEN     0      128          *:443                      *:*
+LISTEN     0      1      127.0.0.1:32000                    *:*
+LISTEN     0      128          *:80                       *:*
+LISTEN     0      128          *:22                       *:*
+LISTEN     0      128    172.17.40.192:10010                    *:*
+LISTEN     0      128         :::8219                    :::*
+```
+
 
