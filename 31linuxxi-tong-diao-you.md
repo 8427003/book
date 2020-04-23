@@ -182,5 +182,6 @@ https://cjting.me/2019/08/28/tcp-queue/
 内核源码分析
 https://my.oschina.net/moooofly/blog/666048
 
-跟内存有关系？
+协议栈读写内存溢出
 https://serverfault.com/questions/757305/what-does-syns-to-listen-sockets-dropped-from-netstat-s-mean
+https://www.cyberciti.biz/faq/linux-tcp-tuning/
