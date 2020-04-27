@@ -13,7 +13,7 @@
   * [linux全局翻墙](linuxquan-ju-fan-qiang.md)
 * [VIM](vim.md)
   * [undo持久化](undo.md)
-* git
+* [git](git.md)
   * [回滚revert和reset区别](hui-gun.md)
   * [3图带你理解rebase和merge](rebase-vs-merge.md)
 * [开始实践](getting_started.md)
@@ -22,6 +22,7 @@
   * [gitbook生成静态blog通过travis发布到github托管](travis-gitbook-github.md)
   * [通过travis部署代码到远程服务器](deploy-code-to-remote-server-with-travis.md)
   * [nginx静态http2博客](nginx-https-blog.md)
+  * [nodejs源码分析](nodejsyuan-ma-fen-xi.md)
 * [最佳实践](zui-jia-shi-jian.md)
   * [node-zip压缩库选择](zui-jia-shi-jian/zipya-suo.md)
   * [js浮点数运算不准确](zui-jia-shi-jian/jsfu-dian-shu-yun-suan.md)
