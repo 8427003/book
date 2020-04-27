@@ -23,6 +23,7 @@
   * [通过travis部署代码到远程服务器](deploy-code-to-remote-server-with-travis.md)
   * [nginx静态http2博客](nginx-https-blog.md)
   * [nodejs源码分析](nodejsyuan-ma-fen-xi.md)
+  * [v8源码分析](v8yuan-ma-fen-xi.md)
 * [最佳实践](zui-jia-shi-jian.md)
   * [node-zip压缩库选择](zui-jia-shi-jian/zipya-suo.md)
   * [js浮点数运算不准确](zui-jia-shi-jian/jsfu-dian-shu-yun-suan.md)
