@@ -34,4 +34,4 @@ commonjs 的require 具体实现是nodejs文件+module.js文件
 ```
 3.addon 扩展模块，具体封装在module.js中，走了libuv的dlopen 打开动态连接库实现
 
-所以单看nodejs的实现是非常简单的，也没有复杂的设计在里面，是一个入门级c++项目
+所以单从这个版本看nodejs的实现是非常简单的，也没有复杂的设计在里面，是一个入门级c++项目，主要的设计和难点在libuv和v8引擎上。
