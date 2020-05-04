@@ -50,7 +50,7 @@
   * [3.记容器mtu引发的低概率502问题追踪](rong-qi-mtu-yin-fa-de-fu-wu-di-gai-lv-502-wen-ti-zhui-zong.md)
   * [3.1.linux系统调优](31linuxxi-tong-diao-you.md)
   * [3.2.tcpdum+wireshark抓包分析](32tcpdum+wiresharkzhua-bao-fen-xi.md)
-  * [3.3.mtu不一致导致丢包](33mtubu-yi-zhi-dao-zhi-diu-bao.md)
+  * [3.3.mtu, 滑动窗口等理解](33mtubu-yi-zhi-dao-zhi-diu-bao.md)
 * [v8引擎](v8yin-qing.md)
   * [nodejs源码分析](nodejsyuan-ma-fen-xi.md)
   * [v8引擎helloworld](v8_helloworld.md)
