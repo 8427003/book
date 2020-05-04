@@ -45,6 +45,8 @@ tcp握手一个重要的作用是，商量mss，滑动窗口大小。假如我�
 ping -s 1423 -M do 10.42.1.62
 ```
 
+**所以结论是，容器内部mtu一定不会大于overlay网络mtu值。**
+
 # 参考
 
 TCP Window Scale 概念  
