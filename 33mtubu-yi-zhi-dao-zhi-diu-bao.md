@@ -5,7 +5,7 @@
 
 #### 当我们发现滑动窗口非常小时不要紧张，需要进一步分析 `calculated window size`
 
-`window size value: 56` 我们这个包是一个异常包，滑动窗口56，这窗口也太小了，难道是有问题？当然不是，真正的滑动窗口是`calculated window size: 28672` 。这个值根据`window size scaling factor :512`  和 `window size value: 56`计算出来。
+`window size value: 56` 我们这个包是一个异常包，滑动窗口56，这窗口也太小了，难道是有问题？当然不是，真正的滑动窗口是`calculated window size: 28672` 。这个值根据`window size scaling factor :512`  和 `window size value: 56`计算出来。具体计算规则可以参考我们后面的引用链接
 
 # MTU vs MSS
 
@@ -45,7 +45,7 @@ tcp握手一个重要的作用是，商量mss，滑动窗口大小。假如我�
 ping -s 1423 -M do 10.42.1.62
 ```
 
-**所以结论是，容器内部mtu一定不会大于overlay网络mtu值。**
+**所以结论是，容器内部mtu一定不要大于overlay网络mtu值。**
 
 # 参考
 
@@ -59,5 +59,6 @@ mtu, udp不可靠
 [https://zhuanlan.zhihu.com/p/25622691](https://zhuanlan.zhihu.com/p/25622691)
 
 ping固定包大小
+
 https://blog.csdn.net/liuliuzi_hz/article/details/87632122
 
