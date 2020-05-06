@@ -24,8 +24,8 @@ define('hello', ['jquery'], function(require, exports, module) {
 ```
 一般情况下，我们不写第一参数。会遇到与requirejs一样打包问题。seajs我们一般也不写第二个参数，因为可以通过require关键字达到一样的效果。
 这里就比较坑了。如果模块代码通过require来申明依赖，那么只有在运行时通过Function.toString()然后正则提取关键字require来静态分析获取依赖。我们通常要对代码进行优化混淆，require关键字通常会被以更短的变量名替换。所以seajs在这种情况下，一定要保留require关键字，不能给它整没了。解决方案有两种，1.在混淆的时候避开关键字require   uglifyjs支持 --reserved 'require'  参数。2. spm3(https://github.com/seajs/seajs/issues/538), 来预提取require，然后把提取的依赖放到第二个参数（就tm跟requirejs的语法一样了）。具体可参见为什么要有约定和构建工具https://github.com/seajs/seajs/issues/426。
-**
-以依赖jquery为例子，requirejs 与seajs区别**
+
+**以依赖jquery为例子，requirejs 与seajs区别**
 require 语法
 ```
 define("foo/title", ["jquery"], function($) {
