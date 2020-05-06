@@ -30,3 +30,5 @@ componet: () => {
 
 5、导出前端产出，作为库供后端项目引入。这个点需要考验webpack功底了。webpack 有一套简单的数据结构来装载模块。简单说就是require一个模块时，webpack需要知道这个模块的bundle有没有下载下来。如果没有下载，需要先去下载bundle。存放的这些数据的数据结构通常挂在全局对象上，浏览器挂载window下，nodejs挂在global。这是你为什么buidle nodejs时需要设置target为node的原因之一。我们这里不设置这个target为node，因为我们不区别编译。要想两端都能跑，还可以设置globalObject这个属性为`"\(typeof window !== 'undefined' ? window : global\)"`, 就能自动识别全局环境了。还有一个地方有同样的问题，就是`mini-css-extract-plugin`产生的代码，它需要判断css是否加载。如果没有,会创建并挂载 link 标签到window下。如果是服务端，咱们可没有window对象，也不能创建link标签，必定报错。所以我们在服务端需要跳过这个逻辑，毕竟服务端拼字符串时不需要关注css。我们和`mini-css-extract-plugin` 提issu了，但是并没有采纳我们意见。只有自己发布一个`mini-css-extract-plugin-ssr`，只改了一行代码。仅仅为了跳过这个逻辑。ok最后一步，咱们把index.js作为umd模块导出，为啥作为umd，因为umd包括commonjs所以能作为库云行，又能在没有模块规范时自动运行。即既能作为库，又能作为一个自执行代码，这个特性很重要。我们这里不讨论amd，跟它没一毛钱关系。
 
+**具体实现**
+https://github.com/8427003/react-ssr-build
