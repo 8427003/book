@@ -39,6 +39,7 @@
   * [javascript asynchronous exception handling](javascript-asynchronous-exception-handling.md)
   * [cookie vs  localStorage](cookie-vs-localstorege.md)
   * [javascript标准制定，babeljs关系](javascriptli-shi-3001-yu-fa-biao-zhun.md)
+  * [requirejs vs seajs ](requirejs-vs-seajs.md)
 * [React架构](rectfu-wu-duan-xuan-ran.md)
   * [commonjs vs commonjs2](commonjs-vs-commonjs2.md)
   * [同构并非想象中完美](isomorphic-Is-not-perfect-as-you-think.md)
