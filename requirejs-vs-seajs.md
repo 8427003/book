@@ -2,7 +2,7 @@
 
 
 #### 模块名与打包的关系
-先说requirejs
+**先说requirejs**
 已知，requirejs定义一个模块语法如下
 ```
 define("foo/title", ["my/cart", "my/inventory"], function(cart, inventory) {
@@ -14,7 +14,7 @@ define("foo/title", ["my/cart", "my/inventory"], function(cart, inventory) {
 问题来了，如果一个文件里面定义了两个模块，这个时候省略第一个参数是不行的。因为不可能两个模块都叫同样的模块名（文件路径）。
 这就跟打包情况一样了，因为打包本质是把所有文件内容合并到一个。因此requirejs的打包必须依赖一个叫r.js（在项目bin文件夹中），这个工具的目的是，如果遇到没有显示写模块名的定义函数，就在构建的时候以文件名作为第一个参数加上去。
 
-seajs问题更大，我们来看语法先
+**seajs问题更大，我们来看语法先**
 ```
 define(id?, deps?, factory)
 
