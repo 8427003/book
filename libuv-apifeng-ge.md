@@ -84,7 +84,27 @@ int main() {
 
 我们先回答第一个问题，其实答案已经在第一个代码demo中。c语言风格的程序，内存管理需要透明。这种设计可以使我们自由为uv_xxx_t分配以及释放内存。
 
-第二个问题，为啥有一堆uv_xxx_t这样的结构体呢? libuv从用户角度划分了多种业务类型。但是这些业务类型又不能高度抽像为同一个结构体比如timer 和 tcp 肯定有不同的业务属性，所以抽像了不同的结构体。
+第二个问题，为啥有一堆uv_xxx_t这样的结构体呢? libuv从用户角度划分了多种业务类型。但是这些业务类型又不能高度抽像为同一个结构体比如timer 和 tcp 肯定有不同的业务属性，所以抽像了不同的结构体。以下为抽象的结构体。
+```
+uv_loop_t — Event loop
+uv_handle_t — Base handle
+uv_req_t — Base request
+uv_timer_t — Timer handle
+uv_prepare_t — Prepare handle
+uv_check_t — Check handle
+uv_idle_t — Idle handle
+uv_async_t — Async handle
+uv_poll_t — Poll handle
+uv_signal_t — Signal handle
+uv_process_t — Process handle
+uv_stream_t — Stream handle
+uv_tcp_t — TCP handle
+uv_pipe_t — Pipe handle
+uv_tty_t — TTY handle
+uv_udp_t — UDP handle
+uv_fs_event_t — FS Event handle
+uv_fs_poll_t — FS Poll handle
+```
 
 # 参考：
 
