@@ -143,12 +143,15 @@ nan 与 n-api的本质都是一个抽象层。区别是nan用的宏实现，简�
 https://www.quora.com/What-are-the-differences-between-a-linux-binary-and-a-windows-binary-file-Why-cant-we-run-one-on-other-e-g-exe-file-on-linux
 
 只能是同系统，同硬件，不同nodejs版本，不需要多次编译
+
 https://medium.com/the-node-js-collection/n-api-next-generation-node-js-apis-for-native-modules-169af5235b06
 
 https://github.com/msatyan/MyNodeC#why-n-api-
 
 实验是否NAN需要多次编译在不同nodejs版本
+
 https://juejin.im/post/5de484bef265da05ef59feb5
 
 原生模块开发方式变迁
+
 https://cnodejs.org/topic/5957626dacfce9295ba072e0	
