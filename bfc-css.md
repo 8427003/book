@@ -41,9 +41,9 @@ Block Formatting Contexts，我们先理解什么是`Formatting Contexts`。
 
 # 总结
 
-最后，`Block Formatting Contexts` 在css中我理解为，在一个限定范围，范围内的元素，或者内容，如何布局排列的一个规则名称。
+最后，`Block Formatting Contexts` 我们要理解语言的博大精深。contexts 才是名词，其它都是修饰词。所以最后是要落在contexts上。在css中我理解为，去划分了这么一个限定范围，范围内的元素，或者内容要遵循一定规则去排列布局。而且范围外的不受范围内的元素排列方式影响。
 
-它与盒子模型概念的区别在于盒子模型更多强调这个盒子本身的属性计算的规则，而`Block Formatting Contexts`强调在一个局部范围、盒子里面，或者盒子之间的一个布局或者位置计算的规则。
+它与盒子模型概念的区别在于盒子模型更多强调这个盒子本身的属性计算的规则，而`Block Formatting Contexts`强调的是一个范围里，有独立的排列布局规则。
 
 # 参考
 
