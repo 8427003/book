@@ -16,7 +16,8 @@
         "-lunr",
         "-sharing",
         "sitemap",
-        "disqus"
+        "disqus",
+        "timeline"
     ],
     "pluginsConfig": {
        "ga": {
