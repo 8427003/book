@@ -39,7 +39,7 @@
 **背景**：公司为初创团队，从零开始。需要搭建一些项目架子，以便快速支撑业务开发。
 **技术栈**：webpack、react、antd、nodejs、cordova、mysql
 **内容**：
-    1. 基于webpack+react+cordova 设计并实现了h5项目骨架。包括目录结构设计，环境路由可配置，资源cdn上传，http缓存、pwa缓存
+    1. 基于webpack+react+cordova 设计并实现了h5项目骨架。包括目录结构设计，环境路由可配置，公共业务组件抽离。
     2. 基于webpack + react + antd 设计并实现了后台运营系统骨架。包括路由菜单可配置，查询表格封装，资源权限接入等。
     3. 基于nodejs + express + mysql/mongodb 设计并实现了node服务端骨架。包括配置文件管理，路由可配置，持久层连接管理，日志、异常管理等。
 **结果/收益**：
