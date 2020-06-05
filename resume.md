@@ -1,4 +1,4 @@
-![](https://www.css3.io/assets/me.jpg)
+<img style="float:left" src="https://www.css3.io/assets/me.jpg">
 
 **姓名**: 李俊         **出生**: 1990年1月         **籍贯**: 重庆市
 
