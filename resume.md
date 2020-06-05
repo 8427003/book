@@ -1,11 +1,13 @@
 <img style="float:left" src="https://www.css3.io/assets/me.jpg">
 
+<div class="a2">
+
 **姓名**: 李俊         **出生**: 1990年1月         **籍贯**: 重庆市
 
 **学历**: 重庆理工大学（本科） **工作经验**: 6年\(2014.7毕业）
 
 **联系电话**: 13146065900        **邮箱**: 8427003@qq.com **    技术blog**：www.css3.io
-
+</div>
 ---
 
 
