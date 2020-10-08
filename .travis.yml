@@ -4,7 +4,7 @@ addons:
     packages:
     - sshpass
 node_js:
-- node
+- 10
 install:
 - npm install gitbook -g
 - npm install -g gitbook-cli --force
