@@ -52,13 +52,13 @@ cat /proc/sys/net/ipv4/tcp_max_syn_backlog
 # 查看
 cat /proc/sys/net/core/somaxconn 
 # 修改
-sysctl -w net.core.somaxconn=1024 或 echo 1024 > /proc/sys/net/core/somaxconn
+sysctl -w net.core.somaxconn=1024 或 echo 1024 > /proc/sys/net/core/somaxconn
 ```
 
-如果你是容器，你一定要注意了，得去容器里面查看或修改。
+如果你是容器，你一定要注意了，得去容器里面查看或修改。  
 修改完了系统参数也不一定你的队列就这么大了。因为在用户层还可以控制，就是new Socket的时候，一般会有一个`backlog` 参数。`backlog`的值与系统参数取小的一个作为真实的队列值。一般情况下，nginx=511，nodejs=511，tomact=100。但是系统somaxconn默认为128，如果你不调整的话，很大概率你的队列最大值为128或100。
 
-**确定生效**
+**确定生效**  
 另外，一般情况下，你设置了需要重启应用才会生效。那如何检验这个队列最大值是否成功设置呢？
 
 ```
@@ -88,8 +88,8 @@ tcp        0      0 172.17.40.192:443       182.125.40.131:19303    ESTABLISHED
 tcp        0      0 172.17.40.192:443       119.250.226.12:26476    ESTABLISHED
 tcp        0      0 172.17.40.192:443       117.59.84.9:40353       ESTABLISHED
 tcp        0      0 172.17.40.192:443       117.178.12.241:11486    ESTABLISHED
-
 ```
+
 注意：netstat ESTABLISHED 所统计的是 accept全连接的 + 已经被用户程序accept的总和。无法展示acept 全连接队列数量。具体分析看**用程序来解读accept全连接队列**
 
 **用程序来解读accept全连接队列**
@@ -103,15 +103,16 @@ import (
     "fmt"
     "net"
     "os"
-    //"time"
+    "time"
 )
 
 const (
-    CONN_HOST = "localhost"
-    CONN_PORT = "3333"
+    CONN_HOST = "0.0.0.0"
+    CONN_PORT = "8080"
     CONN_TYPE = "tcp"
 )
 
+var count int
 func main() {
     // Listen for incoming connections.
     l, err := net.Listen(CONN_TYPE, CONN_HOST+":"+CONN_PORT)
@@ -123,7 +124,9 @@ func main() {
     defer l.Close()
     fmt.Println("Listening on " + CONN_HOST + ":" + CONN_PORT)
     for {
-        //time.Sleep(1000)
+        fmt.Println("reading===111111111111")
+        time.Sleep(time.Duration(50)*time.Millisecond)
+        fmt.Println("reading===2222222222222")
         // Listen for an incoming connection.
         conn, err := l.Accept()
         if err != nil {
@@ -135,8 +138,11 @@ func main() {
     }
 }
 
+
 // Handles incoming requests.
 func handleRequest(conn net.Conn) {
+        count++
+    fmt.Println("reading===%d", count)
   // Make a buffer to hold incoming data.
   buf := make([]byte, 1024)
   // Read the incoming connection into the buffer.
@@ -145,16 +151,16 @@ func handleRequest(conn net.Conn) {
     fmt.Println("Error reading:", err.Error(), reqLen)
   }
   // Send a response back to person contacting us.
-  conn.Write([]byte("Message received."))
+  conn.Write([]byte("HTTP/1.1 200 OK\nContent-Type:application/json; charset=utf-8\nContent-Length:2\n\r\nok"))
   // Close the connection when you're done with it.
-  conn.Close()
+  //conn.Close()
 }
-
 ```
 
 # 总结
 
 如果你的somaxconn设置有问题，你还可以通过查看，如果丢包多，很有可能是因为sommaxconn引起。当然具体原因得具体分析。
+
 ```
 netstat -s | grep -E 'overflow|drop'
 
@@ -163,25 +169,29 @@ netstat -s | grep -E 'overflow|drop'
 204 ICMP packets dropped because socket was locked
 22783 SYNs to LISTEN sockets dropped
 ```
+
 另外比如协议栈的读写缓存大小也很重要, 不过我们没遇到，没有调整。
+
 ```
 sysctl -w net.core.wmem_default=8388608
 sysctl -w net.core.rmem_default=8388608
 ```
+
 重要的是系统参数调整后，确保生效的手段，记住`ss -lnt` 命令。我们在实战中，就遇到了宿主机调了，容器没同步。容器同步了，应用没重启，应用本身backlog也需要调大这些坑。得清楚理解tcp是系统内核维护的，accept 这种系统调用对accept 全连接队列的影响等基本概念。
 
 # 参考
 
-TCP SYN flood洪水攻击原理和防御破解
-https://www.cnblogs.com/sunsky303/p/11811097.html
+TCP SYN flood洪水攻击原理和防御破解  
+[https://www.cnblogs.com/sunsky303/p/11811097.html](https://www.cnblogs.com/sunsky303/p/11811097.html)
 
-分析全队列，和半队列 具体分析
-http://jm.taobao.org/2017/05/25/525-1/
-https://cjting.me/2019/08/28/tcp-queue/
+分析全队列，和半队列 具体分析  
+[http://jm.taobao.org/2017/05/25/525-1/](http://jm.taobao.org/2017/05/25/525-1/)  
+[https://cjting.me/2019/08/28/tcp-queue/](https://cjting.me/2019/08/28/tcp-queue/)
 
-内核源码分析
-https://my.oschina.net/moooofly/blog/666048
+内核源码分析  
+[https://my.oschina.net/moooofly/blog/666048](https://my.oschina.net/moooofly/blog/666048)
 
-协议栈读写内存溢出
-https://serverfault.com/questions/757305/what-does-syns-to-listen-sockets-dropped-from-netstat-s-mean
-https://www.cyberciti.biz/faq/linux-tcp-tuning/
+协议栈读写内存溢出  
+[https://serverfault.com/questions/757305/what-does-syns-to-listen-sockets-dropped-from-netstat-s-mean](https://serverfault.com/questions/757305/what-does-syns-to-listen-sockets-dropped-from-netstat-s-mean)  
+[https://www.cyberciti.biz/faq/linux-tcp-tuning/](https://www.cyberciti.biz/faq/linux-tcp-tuning/)
+
