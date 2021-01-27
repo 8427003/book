@@ -10,7 +10,6 @@
   * [如何使用yum安装最新软件包](how-yum-install-release-soft.md)
   * [让命令行飞](ming_ling_xing_kuai_jie_jian.md)
   * [Shell中 2&gt;&1理解](in-the-shell-what-does-21-mean.md)
-  * [linux全局翻墙](linuxquan-ju-fan-qiang.md)
 * [开发环境](git.md)
   * [git-回滚revert和reset区别](hui-gun.md)
   * [git-3图带你理解rebase和merge](rebase-vs-merge.md)
