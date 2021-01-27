@@ -8,7 +8,7 @@
 
 籍贯: 重庆市
 
-年龄: 27
+年龄: 31
 
 ---
 
@@ -25,8 +25,6 @@
 ---
 
 # 其它
-
-[个人简历](https://www.css3.io/resume.html)
 
 [工具栈](https://www.css3.io/resume.html)
 
